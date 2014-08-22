@@ -1,4 +1,4 @@
 lds-bwq-transform
 =================
 
-DCLIB Tempates for LS/BWQ
+DCLIB Tempates for LDS/BWQ
