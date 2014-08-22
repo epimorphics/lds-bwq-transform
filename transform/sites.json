@@ -1,0 +1,31 @@
+{ "type" : "Composite" ,
+  "name" : "sites",
+  "required"  : [ "samplingpoint", "ncsx","ncsy", "longitude_etrs89","latitude_etrs89","description_english","eubwid","sediment_types","bathing_water_type","os_uri","gss","country","rbdid","rbdname","impact_from_heavy_rainfall","bb_xmin","bb_xmax","bb_ymin","bb_ymax","des_year","ea_region" ],
+  "bind":  [ { "$def_bw": "http://environment.data.gov.uk/def/bathing-water",
+               "$def_sp": "http://location.data.gov.uk/def/em/SamplingPoint",
+               "$id_bw":  "http://environment.data.gov.uk/id/bathing-water",
+               "$so_sp":  "http://location.data.gov.uk/so/em/SamplingPoint/bwsp.eaew",
+               "$bwspid": "{samplingpoint.format('%05d')}",
+               "$eubwid": "{eubwid.trim().toLowerCase().replaceAll('\\\\s+','-')}"
+               }
+            ], 
+  "templates" : [ "bathing-water", "sampling-point" ],
+     "referenced": [
+       { "name": "bathing-water",
+          "@id":           "<{$id_bw}/{$eubwid}>",
+          "<rdf:type>":    "<def-bw:BathingWater>",
+          "<rdfs:label>":      [ "{description_english.lang('en')}", "{empty(description_welsh) ? null : description_welsh.lang('cy') }" ],
+          "<skos:prefLabel>":  [ "{description_english.lang('en')}", "{empty(description_welsh) ? null : description_welsh.lang('cy') }" ],
+          "<def-bw:eubwidNotation>" : "{$eubwid.datatype('def-bw:eubwid')}",
+          "<skos:notation>"         : [ "{$eubwid.datatype('def-bw:eubwid')}", "{$eubwid}" ],
+          "<onsadmingeo:country>" : "<{country == 'E' ? 'http://data.ordnancesurvey.co.uk/id/country/england' : country == 'W' ? 'http://data.ordnancesurvey.co.uk/id/country/wales' : null }>",
+          "<def-sp:samplingPoint>" : "<{$so_sp}/{$bwspid}>"
+       },
+       { "name": "sampling-point",
+         "@id": "<{$so_sp}/{$bwspid}>", 
+         "<rdf:type>": "<{$def_sp}/SamplingPoint>"
+       }        
+   ]    
+
+    
+}

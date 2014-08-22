@@ -1,0 +1,23 @@
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix spatialrelations: <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+@prefix onsadmingeo: <http://statistics.data.gov.uk/def/administrative-geography/> .
+
+@prefix def-bw:  <http://environment.data.gov.uk/def/bathing-water/> .
+@prefix def-bwp: <http://environment.data.gov.uk/def/bathing-water-profile/> .
+@prefix def-bwq: <http://environment.data.gov.uk/def/bathing-water-quality/> .
+@prefix def-sp: <http://location.data.gov.uk/def/ef/SamplingPoint/> .
+@prefix def-stp: <http://environment.data.gov.uk/def/bwq-stp/> .
+@prefix def-zoi: <http://location.data.gov.uk/def/ef/ZoneOfInfluence/> .
+@prefix id-bw:   <http://environment.data.gov.uk/id/bathing-water/> .
+@prefix dgu:   <http://reference.data.gov.uk/def/reference/> .
+@prefix def-geom: <http://location.data.gov.uk/def/common/Geometry/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix so_sp:  <http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/> .
+
+id-bw:uk101 a def-bw:BathingWater .
