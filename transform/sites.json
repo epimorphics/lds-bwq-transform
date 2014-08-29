@@ -40,10 +40,10 @@
             "$sediment":"{sediment_types.toLowerCase().replaceAll('\\\\sand\\\\s',',')}",
             "$srsDim":"2",
             "$srs":"http://www.opengis.net/def/crs/EPSG/0/27700",
-            "$bb_xmax":"{bb_xmax.value >= bb_xmin.value ? bb_xmax : bb_xmin}",
-            "$bb_xmin":"{bb_xmax.value >= bb_xmin.value ? bb_xmin : bb_xmax}",
-            "$bb_ymax":"{bb_ymax.value >= bb_ymin.value ? bb_ymax : bb_ymin}",
-            "$bb_ymin":"{bb_ymax.value >= bb_ymin.value ? bb_ymin : bb_ymax}"
+            "$bb_xmax":"{round((bb_xmax.value >= bb_xmin.value ? bb_xmax : bb_xmin).value + 0.5)}",
+            "$bb_xmin":"{round((bb_xmax.value >= bb_xmin.value ? bb_xmin : bb_xmax).value - 0.5)}",
+            "$bb_ymax":"{round((bb_ymax.value >= bb_ymin.value ? bb_ymax : bb_ymin).value + 0.5)}",
+            "$bb_ymin":"{round((bb_ymax.value >= bb_ymin.value ? bb_ymin : bb_ymax).value - 0.5)}"
         },
         {
             "$envelopeGML":"\\<gml:Envelope xmlns:gml=\"http://www.opengis.net/gml/3.2\" srsName=\"http://www.opengis.net/def/crs/EPSG/0/27700\"> <gml:lowerCorner>{$bb_xmin} {$bb_ymin}</gml:lowerCorner><gml:upperCorner>{$bb_xmax} {$bb_ymax}</gml:upperCorner></gml:Envelope>"
@@ -155,8 +155,8 @@
             "@id":"<{$so_env}/{$eubwid}:1>",
             "<rdf:type>":"<def-geom:Envelope>",
             "<rdfs:label>":"Map Bounds for {description_english}@en",
-            "<geometry:asGML>":"{$envelopeGML.datatype('rdf:XMLLiteral')}",
-            "<def-geom:dimensions>":"{$srsDim.datatype('xsd:integer')}",
+            "<geometry:asGML>":"{$envelopeGML}^^rdf:XMLLiteral",
+            "<def-geom:dimensions>":"{$srsDim}^^xsd:integer",
             "<def-geom:srs>":"<{$srs}",
             "<def-geom:lowerCorner>":"<{$so_env}/{$eubwid}:1/lowerCorner>",
             "<def-geom:upperCorner>":"<{$so_env}/{$eubwid}:1/upperCorner>"
@@ -167,10 +167,10 @@
             "<rdf:type>":"<def-geom:Point>",
             "<def-geom:dimensions>":"{$srsDim}^^xsd:integer",
             "<def-geom:srs>":"<{$srs}>",
-            "<def-geom:x>":"{$bb_xmin.datatype('xsd:decimal')}",
-            "<def-geom:y>":"{$bb_ymin.datatype('xsd:decimal')}",
-            "<spatialrelations:easting>":"{$bb_xmin.datatype('xsd:decimal')}",
-            "<spatialrelations:northing>":"{$bb_ymin.datatype('xsd:decimal')}"
+            "<def-geom:x>":"{$bb_xmin}^^xsd:decimal",
+            "<def-geom:y>":"{$bb_ymin}^^xsd:decimal",
+            "<spatialrelations:easting>":"{$bb_xmin}^^xsd:decimal",
+            "<spatialrelations:northing>":"{$bb_ymin}^^xsd:decimal"
         },
         {
             "name":"envelope-upper",
@@ -178,10 +178,10 @@
             "<rdf:type>":"<def-geom:Point>",
             "<def-geom:dimensions>":"{$srsDim}^^xsd:integer",
             "<def-geom:srs>":"<{$srs}>",
-            "<def-geom:x>":"{$bb_xmax.datatype('xsd:decimal')}",
-            "<def-geom:y>":"{$bb_ymax.datatype('xsd:decimal')}",
-            "<spatialrelations:easting>":"{$bb_xmax.datatype('xsd:decimal')}",
-            "<spatialrelations:northing>":"{$bb_ymax.datatype('xsd:decimal')}"
+            "<def-geom:x>":"{$bb_xmax}^^xsd:decimal",
+            "<def-geom:y>":"{$bb_ymax}^^xsd:decimal",
+            "<spatialrelations:easting>":"{$bb_xmax}^^xsd:decimal",
+            "<spatialrelations:northing>":"{$bb_ymax}^^xsd:decimal"
         },
         {
             "name":"sampling-point",
