@@ -28,7 +28,6 @@
         {
             "$source_base" : "http://environment.data.gov.uk/sources/bwq",
             "$body_slug"   : "eaew",
-            "$sourceFileName" : "bw_sites.csv",
             "$outputFileName" : "reference.ttl",
             "$runDate"     : "2014-09-05T18:46:32^^xsd:dateTime", 
             "$def_bw"  : "http://environment.data.gov.uk/def/bathing-water",
@@ -68,7 +67,7 @@
           "<rdfs:label>"      : "Bathing waters monitored by the Environment Agency for England and Wales.@en",
           "<dct:description>" : "URI Set of Bathing Waters in England and Wales monitored by the Environment Agency for compliance with the EU Bathing Water Directive@en",
           "<dct:license>"     : "<http://reference.data.gov.uk/id/open-government-licence>",
-          "<dct:source>"      : "<{$source_base}/{$body_slug}/input/{$sourceFileName}>",
+          "<dct:source>"      : "<{$source_base}/{$body_slug}/input/{$fileName}>",
           "<dct:modified>"    : "{$runDate}",
           "<void:uriRegexPattern>" : "<{$id_bw}/.*>",
           "<void:dataDump>"   : "<{$source_base}/{$body_slug}/output/{$outputFileName}>",
@@ -135,7 +134,24 @@
             "<onsadmingeo:district>"                  : [ "<{os_uri}>" ,
                                                           "<{empty(gss) ? null : 
                                                                          'http://statistics.data.gov.uk/id/statistical-geography/' + gss}>"
-                                                        ]                                                         
+                                                        ],
+             "<onsadmingeo:county>"                      : 
+               "{ { var r_district = os_uri.fetch('rdf:type','rdfs:label','skos:prefLabel','skos:altLabel','admingeo:inCounty').asRDFNode();
+                                       
+                    inCounty = r_district.getPropertyValue('admingeo:inCounty') ;
+                    label    = r_district.getPropertyValue('rdfs:label');
+                    
+                    county = r_district.hasPropertyValue('rdf:type', 'admingeo:County') ? r_district : 
+                             inCounty != null  ? inCounty : 
+                             label != null && value(label.lexicalForm).toLowerCase().matches('*.county.*') ? r_district : null ;
+                    
+                    if(county != null) {
+                      value(county.getURI()).fetch('rdf:type','rdfs:label','skos:prefLabel','skos:altLabel')
+                    }
+                     
+                    return county ;                 
+                } }"
+                                                                                                                 
         },
     #############################################################################################################################
     # Bathing-water zone of influence
@@ -232,7 +248,7 @@
     # Vestiguial ONS and OS Admin geo entries for disrticts
     #############################################################################################################################
         { "name"                                      : "os-district",
-          "@id"                                       : "<{os_uri}>",
+          "@id"                                       : "<{os_uri>",
           "<rdf:type>"                                : "<admingeo:CivilAdministrativeArea>",
           "<admingeo:gssCode>"                        : "{gss}"
         },
