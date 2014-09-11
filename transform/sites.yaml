@@ -45,6 +45,7 @@
 
             "$source_base" : "http://environment.data.gov.uk/sources/bwq",
             "$body_slug"   : "eaew",
+            "$outputFileName" : "reference.ttl",
             "$def_bw"  : "http://environment.data.gov.uk/def/bathing-water",
             "$def_sp"  : "http://location.data.gov.uk/def/ef/SamplingPoint",
             "$id_bw"   : "http://environment.data.gov.uk/id/bathing-water",
@@ -60,6 +61,15 @@
             "$srsDim"  : "2",
             "$srs"     : "http://www.opengis.net/def/crs/EPSG/0/27700",
             "$EA"      : "http://reference.data.gov.uk/id/public-body/environment-agency",
+            "$england"  : "http://data.ordnancesurvey.co.uk/id/country/england",
+            "$scotland" : "http://data.ordnancesurvey.co.uk/id/country/scotland",
+            "$wales"    : "http://data.ordnancesurvey.co.uk/id/country/wales",
+            "$snac_england"  : "http://statistics.data.gov.uk/id/country/921",
+            "$snac_scotland" : "http://statistics.data.gov.uk/id/country/923",
+            "$snac_wales"    : "http://statistics.data.gov.uk/id/country/924",
+            "$gss_england"  : "http://statistics.data.gov.uk/id/statistical-geography/E92000001",
+            "$gss_scotland" : "http://statistics.data.gov.uk/id/statistical-geography/S92000003",
+            "$gss_wales"    : "http://statistics.data.gov.uk/id/statistical-geography/W92000004",
          ## Add 0.0 to coerce decimal literals
            "$northing" : "{ncsy.value}^^xsd:decimal",
            "$easting"  : "{ncsx.value}^^xsd:decimal",        
@@ -106,14 +116,14 @@
           "<void:uriRegexPattern>" : "{$id_bw}/.*",
           "<void:dataDump>"        : "<{$source_base}/{$body_slug}/output/{$outputFileName}>",
           "<dgu:itemType>"         : "<def-bw:BathingWater>",
-          "<dgu:status>"           : "<dgu:draft>"         
+          "<dgu:status>"           : "<status:draft>"         
         },
         { "name"                   : "bathing-water-bounding-box-uriset",
           "@id"                    : "<{$so_env}/>",
           "<rdf:type>"             : [ "<dgu:URIset>", "<void:Dataset>" ],
 # [SPATIALREL, GEOWGS84, SKOS, GEOMETRY, SP, BW]
           "<void:vocabulary>"      : [ "<{$spatialrelations_voc}>",  "<{$geo_voc}>", "<{$skos_voc}>", "<{$geometry_voc}>", "<{$def_sp_voc}>", "<{$def_bw_voc}>", "<{$dgu_voc}>", "<{$def_geom_voc}>", "<{$void_voc}>"  ] ,
-          "<rdfs:label>"           : "{'Environment Agency Bathing Water Profile Map Extent Bounding Boxes for England and Wales.'}@en",
+          "<rdfs:label>"           : "{'Environment Agency Bathing Water Profile Map Extent Bounding Boxes for England and Wales'}@en",
           "<dct:description>"      : "{'This dataset containing suggested map extents for use in rending Bathing Water Profiles.'}@en",
           "<dct:license>"          : "<http://reference.data.gov.uk/id/open-government-licence>",
           "<dct:source>"           : "<{$source_base}/{$body_slug}/input/{$fileName}>",
@@ -121,7 +131,7 @@
           "<void:uriRegexPattern>" : "{$so_env}/[^/]+(:[^/]*)?",
           "<void:dataDump>"        : "<{$source_base}/{$body_slug}/output/{$outputFileName}>",
           "<dgu:itemType>"         : "<def-geom:Envelope>",
-          "<dgu:status>"           : "<dgu:draft>"         
+          "<dgu:status>"           : "<status:draft>"         
         },
         { "name"                   : "bathing-water-zoi-uriset",
           "@id"                    : "<{$so_zoi}/>",
@@ -136,28 +146,104 @@
           "<void:uriRegexPattern>" : "{$so_zoi}/[^/]+(:[^/]*)?",
           "<void:dataDump>"        : "<{$source_base}/{$body_slug}/output/{$outputFileName}>",
           "<dgu:itemType>"         : "<def-zoi:ZoneOfInfluence>",
-          "<dgu:status>"           : "<dgu:draft>"         
+          "<dgu:status>"           : "<status:draft>"         
         },
         { "name"                   : "bathing-water-samplingpoint-uriset",
           "@id"                    : "<{$so_sp}/>",
           "<rdf:type>"             : [ "<dgu:URIset>", "<void:Dataset>" ],
  # [QB, VOID, TIME, BWQ, DCTERMS, DGU, SP, BW, ZOI, GEOMETRY, LOCGEOM, SPATIALREL, GEOWGS84, AGEO, SKOS, ADMINGEO],
           "<void:vocabulary>"      : [ "<{$qb_voc}>", "<{$void_voc}>", "<{$time_voc}>", "<{$def_bwq_voc}>", "<{$dct_voc}>","<{$dgu_voc}>", "<{$def_sp_voc}>", "<{$def_bw_voc}>","<{$def_zoi_voc}>", "<{$geometry_voc}>", "<{$def_geom_voc}>","<{$spatialrelations_voc}>", "<{$geo_voc}>",  "<{$skos_voc}>",   "<{$onsadmingeo_voc}>", "<{$admingeo_voc}>" ] ,
-          "<rdfs:label>"           : "{'Environment Agency Bathing Water Profile Map Extent Bounding Boxes for England and Wales.'}@en",
-          "<dct:description>"      : "{'This dataset containing suggested map extents for use in rendering Bathing Water Profiles.'}@en",
+          "<rdfs:label>"           : "{'Environment Agency Bathing Water Quality Monitoring Sampling Points for England and Wales'}@en",
+          "<dct:description>"      : "{'This dataset contains the location of bathing water quality sampling points used by the Environment Agency to monitor bathing waters in England and Wales for compliance with the EU Bathing Water Directive.'}@en",
           "<dct:license>"          : "<http://reference.data.gov.uk/id/open-government-licence>",
           "<dct:source>"           : "<{$source_base}/{$body_slug}/input/{$fileName}>",
           "<dct:modified>"         : "{$exectime}",
           "<void:uriRegexPattern>" : "{$so_sp}/[0-9]\\{5\\}(:[^/]*)?",
           "<void:dataDump>"        : "<{$source_base}/{$body_slug}/output/{$outputFileName}>",
           "<dgu:itemType>"         : "<def-sp:SamplingPoint>",
-          "<dgu:status>"           : "<dgu:draft>"         
+          "<dgu:status>"           : "<status:draft>"         
         },
         { "name"                 : "public-body-import",
-          "@id"                 : "<{$EA.fetch()}>",
+          "@id"                  : 
+             "<{{
+                  var r_ea = $EA.fetch().asRDFNode() ;               
+                  r_ea.listPropertyValues('org:hasUnit').fetch('rdfs:label','rdf:type', 'skos:prefLabel');
+                  return r_ea
+              }}>",
 #          "<rdfs:label>"         : "{$EA.fetch().asRDFNode().getPropertyValue('rdfs:label').lexicalForm}"
+        },
+#######################################################################################################################
+# OS Country reference data
+#######################################################################################################################
+        { "name"                  : "os-england",
+           "@id"                  : "<{$england.fetch()}>",
+           "<rdf:type>"           : "<onsadmingeo:Country>",
+           "<owl:sameAs>"         : [ "<{$snac_england}>", "<{$gss_england}>" ],
+           "<rdfs:label>"         : [ "England@en","Lloegr@cy" ],
+           "<skos:prefLabel>"     : [ "England@en","Lloegr@cy" ]
+        },
+        { "name"                  : "os-wales",
+           "@id"                  : "<{$wales.fetch()}>",
+           "<rdf:type>"           : "<onsadmingeo:Country>",
+           "<owl:sameAs>"         : [ "<{$snac_wales}>", "<{$gss_wales}>" ],
+           "<rdfs:label>"         : [ "Wales@en","Cymru@cy" ],
+           "<skos:prefLabel>"     : [ "Wales@en","Cymru@cy" ]
+        },
+        { "name"                  : "os-scotland",
+           "@id"                  : "<{$scotland.fetch()}>",
+           "<rdf:type>"           : "<onsadmingeo:Country>",
+           "<owl:sameAs>"         : [ "<{$snac_scotland}>", "<{$gss_scotland}>" ],
+           "<rdfs:label>"         : [ "Scotland@en","Yr Alban@cy" ],
+           "<skos:prefLabel>"     : [ "Scotland@en","Yr Alban@cy" ]
+        },
+#######################################################################################################################
+# ONS SNAC coded Country reference data
+#######################################################################################################################
+        { "name"                  : "snac-england",
+           "@id"                  : "<{$snac_england}>",
+           "<rdf:type>"           : "<onsadmingeo:Country>",
+           "<owl:sameAs>"         : [ "<{$england}>", "<{$gss_england}>" ],
+           "<rdfs:label>"         : [ "England@en","Lloegr@cy" ],
+           "<skos:prefLabel>"     : [ "England@en","Lloegr@cy" ]
+        },
+        { "name"                  : "snac-wales",
+           "@id"                  : "<{$snac_wales}>",
+           "<rdf:type>"           : "<onsadmingeo:Country>",
+           "<owl:sameAs>"         : [ "<{$wales}>", "<{$gss_wales}>" ],
+           "<rdfs:label>"         : [ "Wales@en","Cymru@cy" ],
+           "<skos:prefLabel>"     : [ "Wales@en","Cymru@cy" ]
+        },
+        { "name"                  : "snac-scotland",
+           "@id"                  : "<{$snac_scotland}>",
+           "<rdf:type>"           : "<onsadmingeo:Country>",
+           "<owl:sameAs>"         : [ "<{$scotland}>", "<{$gss_scotland}>" ],
+           "<rdfs:label>"         : [ "Scotland@en","Yr Alban@cy" ],
+           "<skos:prefLabel>"     : [ "Scotland@en","Yr Alban@cy" ]
+        },
+#######################################################################################################################
+# ONS GSS coded Country reference data
+#######################################################################################################################
+        { "name"                  : "gss-england",
+           "@id"                  : "<{$gss_england}>",
+           "<rdf:type>"           : "<onsadmingeo:Country>",
+           "<owl:sameAs>"         : [ "<{$england}>", "<{$snac_england}>" ],
+           "<rdfs:label>"         : [ "England@en","Lloegr@cy" ],
+           "<skos:prefLabel>"     : [ "England@en","Lloegr@cy" ]
+        },
+        { "name"                  : "gss-wales",
+           "@id"                  : "<{$gss_wales}>",
+           "<rdf:type>"           : "<onsadmingeo:Country>",
+           "<owl:sameAs>"         : [ "<{$wales}>", "<{$snac_wales}>" ],
+           "<rdfs:label>"         : [ "Wales@en","Cymru@cy" ],
+           "<skos:prefLabel>"     : [ "Wales@en","Cymru@cy" ]
+        },
+        { "name"                  : "gss-scotland",
+           "@id"                  : "<{$gss_scotland}>",
+           "<rdf:type>"           : "<onsadmingeo:Country>",
+           "<owl:sameAs>"         : [ "<{$scotland}>", "<{$snac_scotland}>" ],
+           "<rdfs:label>"         : [ "Scotland@en","Yr Alban@cy" ],
+           "<skos:prefLabel>"     : [ "Scotland@en","Yr Alban@cy" ]
         }
-
     ],
     "sources" : [
         {
@@ -222,14 +308,14 @@
                                                           "<{empty(gss) ? null : 
                                                                          'http://statistics.data.gov.uk/id/statistical-geography/' + gss}>"
                                                         ],
-             "<onsadmingeo:county>"                      : 
+             "<onsadmingeo:county>"                   : 
                 "{ { var r_district = os_uri.asRDFNode().fetch('rdf:type','rdfs:label','skos:prefLabel','skos:altLabel','admingeo:inCounty', 'admingeo:gssCode') ;
                      var inCounty = r_district.getPropertyValue('admingeo:inCounty') ;
                      var label    = r_district.getPropertyValue('rdfs:label') ;
                      var county = 
                               r_district.hasPropertyValue('rdf:type', 'admingeo:County') ? r_district : 
                               inCounty != null  ? inCounty : 
-                              label != null && label.lexicalForm.toLowerCase().matches('*.county.*') ? r_district : null ;                 
+                              label != null && label.lexicalForm.toLowerCase().matches('.*county.*') ? r_district : null ;                 
                      county != null ? county.getURI().fetch('rdf:type','rdfs:label','skos:prefLabel','skos:altLabel') : null ;
                      return county ;                 
                  } }"
@@ -279,10 +365,13 @@
             "@id"                                     : "<{$id_bw}/{$altBwId}>",
             "<rdf:type>"                               : [ "<def-bw:BathingWater>", "<{bathing_water_type.map('bw_type')}>" ],
             "<owl:sameAs>"                            : "<{$id_bw}/{$eubwid}>",
-            "<rdfs:label>"                            : [ "{description_english.lang('en')}",
+            "<rdfs:label>"                            : [ 
+#                                                          "{description_english.lang('en')}",
                                                           "{empty(description_welsh) ? null : description_welsh.lang('cy') }" ],
-            "<skos:prefLabel>"                        : [ "{description_english.lang('en')}", 
-                                                          "{empty(description_welsh) ? null : description_welsh.lang('cy') }" ]
+            "<skos:prefLabel>"                        : [ 
+                                                          "{description_english.lang('en')}"
+                                                          ,"{empty(description_welsh) ? null : description_welsh.lang('cy')}" 
+                                                        ]
         },
     #############################################################################################################################
     # Map-bound envelope for a bathing-water

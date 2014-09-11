@@ -23,6 +23,7 @@
 @prefix def-zoi: <http://location.data.gov.uk/def/ef/ZoneOfInfluence/> .
 @prefix id-bw:   <http://environment.data.gov.uk/id/bathing-water/> .
 @prefix dgu:     <http://reference.data.gov.uk/def/reference/> .
+@prefix status:  <http://reference.data.gov.uk/def/status/> .
 @prefix def-geom: <http://location.data.gov.uk/def/common/Geometry/> .
 
 @prefix so-sp:   <http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/> .
