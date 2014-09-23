@@ -1,3 +1,13 @@
+###############################################################################################################
+# @@TODO's
+#
+# 1: Fix prediction expiry time. Waiting for date/time arithmetic
+# 2: Fix various publication time related values/slugs to be local time.
+# 3: rationalise dump file name
+# 4: check source file referencing
+#
+###############################################################################################################
+
 {
     type : "Composite",
     "name" : "short-term-pollution-risk-prediction",
@@ -10,22 +20,25 @@
          ],
     "bind" : [
         {
-            "$source_base"  : "http://environment.data.gov.uk/sources/bwq",
-            "$data_base"    : "http://environment.data.gov.uk/data/bathing-water-quality",
-            "$body_slug"    : "eaew",
-            "$def_bw"  : "http://environment.data.gov.uk/def/bathing-water",
-            "$def_sp"  : "http://location.data.gov.uk/def/ef/SamplingPoint",
-            "$def_stp" : "http://environment.data.gov.uk/def/bwq-stp",
-            "$id_bw"   : "http://environment.data.gov.uk/id/bathing-water",
-            "$so_sp"   : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew",
-            "$so_env"  : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew",
-            "$so_zoi"  : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew",
-            "$bwspid"  : "{site.format('%05d')}",
+            "$source_base" : "http://environment.data.gov.uk/sources/bwq",
+            "$data_base"   : "http://environment.data.gov.uk/data/bathing-water-quality",
+            "$body_slug"   : "eaew",
+            "$body_org"    : "http://reference.data.gov.uk/id/public-body/environment-agency",
+            "$def_bw"      : "http://environment.data.gov.uk/def/bathing-water",
+            "$def_sp"      : "http://location.data.gov.uk/def/ef/SamplingPoint",
+            "$def_stp"     : "http://environment.data.gov.uk/def/bwq-stp",
+            "$id_bw"       : "http://environment.data.gov.uk/id/bathing-water",
+            "$so_sp"       : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew",
+            "$so_env"      : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew",
+            "$so_zoi"      : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew",
+            "$bwspid"      : "{site.format('%05d')}",
+# @@ TODO :2 convert to local time.          
             "$pubDateTime" : "{$exectime.asDate('xsd:dateTime')}",
 
             "$predictionDateTime" : "{datetime.replaceAll('([+-])([0-9]:?[0-9])([0-9][0-9])$','').asDate('xsd:dateTime')}",
-# @@ TODO add 23:59:59 to get an expiry date time.
-            "$expiresDateTime"    : "{$predictionDateTime}"
+# @@ TODO:1 add 23:59 to get an expiry date time.
+            "$expiresDateTime"    : "{$predictionDateTime}",
+            "$ns"                 : "{= asResource($$).replaceAll('#$','') }"
         }, 
         {
 ############################################################################################################            
@@ -43,23 +56,80 @@
 # Temporary Map source for mapping sampling-point codes to bathing water URI
 ############################################################################################################
     "sources" : [
-       { "name" : "sp-to-bw",
+       { "name"       : "sp-to-bw",
          "sourceType" : "RDF",
-         "source" : "sites.ttl",
-         "key"  : "<skos:notation>",
-         "value": "<def-bw:bathingWater>",
-         "type" : "<def-sp:SamplingPoint>",
-         "makeURI" : true
+         "source"     : "sites.ttl",
+         "key"        : "<skos:notation>",
+         "value"      : "<def-bw:bathingWater>",
+         "type"       : "<def-sp:SamplingPoint>",
+         "makeURI"    : true
        }
     ],
+    "oneOffs" : [
+       { "name"              : "stp-dataset" ,
+         "@id"               : "$stpDataset" ,
+         "<rdf:type>"        : ["<void:Dataset>", "<qb:DataSet>", "<def-stp:RiskPredictionDataSet>" ],
+         "<rdfs:label>"      : "Bathing Water Quality Short Term Pollution Risk Prediction@en" ,
+         "<dct:description>" : "Top level dataset recording predictions of short term pollution risk, typically due to rainfall, associated with designated bathing waters in the UK.@en",
+         "<dct:license>"     : "<http://reference.data.gov.uk/id/open-government-licence>",
+         "<qb:structure>"    : "<def-stp:riskDsd>",
+         "<void:subset>"     : "<{$bodyStpDataset>",
+         "<void:uriRegexPattern>" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/(.*)",
+         "<void:vocabulary>"      : [ "<{$ns.apply('dgu:'     )}>", 
+                                      "<{$ns.apply('def-bwq:' )}>", 
+                                      "<{$ns.apply('skos:'    )}>",
+                                      "<{$ns.apply('def-bw:'  )}>",
+                                      "<{$ns.apply('def-sp:'  )}>",
+                                      "<{$ns.apply('def-stp:' )}>",
+                                      "<{$ns.apply('qb:'      )}>" ]
+       },{
+         "name"              : "body-stp-dataset",
+         "@id"               : "<{$bodyStpDataset}>",
+         "<rdf:type>"        : [ "<void:Dataset>", "<qb:DataSet>", "<def-stp:RiskPredictionDataSet>" ],
+         "<rdfs:label>"      : "Bathing Water Quality Short Term Pollution Risk Prediction Dataset - ({$body_slug})@en" ,
+         "<dct:description>" : "Dataset recording recording predictions of short term pollution risk, typically due to rainfall, associated with designated bathing waters monitored by a monitoring body - ({$body_slug})@en",
+         "<dct:license>"     : "<http://reference.data.gov.uk/id/open-government-licence>",
+         "<qb:structure>"    : "<def-stp:riskDsd>",
+         "<void:uriRegexPattern>" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/(.*)",
+         "<dct:publisher>"   : "<{$body_org}>",
+         "<void:vocabulary>" : [ "<{$ns.apply('dgu:')}>", 
+                                   "<{$ns.apply('def-bwq:')}>", 
+                                   "<{$ns.apply('skos:'   )}>",
+                                   "<{$ns.apply('def-bw:' )}>",
+                                   "<{$ns.apply('def-sp:' )}>",
+                                   "<{$ns.apply('def-stp:')}>",
+                                   "<{$ns.apply('qb:')    }>" ],
+         "<dct:modified>"    : "{$pubDateTime}",
+         "<void:subset>"     : "<{$incrementalStpDataset}>"
+       },{
+         "name"              : "incremental-stp-dataset",
+         "@id"               : "<{$incrementalStpDataset}>",
+         "<rdf:type>"        : [ "<void:Dataset>" ],
+         "<rdfs:label>"      : "Bathing Water Quality - short-term pollution risk prediction dataset - ({$body_slug} {$pubDateTime})@en" ,
+         "<dct:description>" : "Incremental short-term pollution risk prediction dataset - ({$body_slug}  {$pubDateTime})@en",
+         "<dct:license>"     : "<http://reference.data.gov.uk/id/open-government-licence>",
+         "<dct:publisher>"   : "<{$body_org}>",
+         "<void:vocabulary>" : [ "<{$ns.apply('dgu:')}>", 
+                                   "<{$ns.apply('def-bwq:')}>", 
+                                   "<{$ns.apply('skos:'   )}>",
+                                   "<{$ns.apply('def-bw:' )}>",
+                                   "<{$ns.apply('def-sp:' )}>",
+                                   "<{$ns.apply('def-stp:')}>",
+                                   "<{$ns.apply('qb:')    }>" ],
+         "<dct:modified>"    : "{$pubDateTime}",
+# @@TODO 3: rationalise dump file name
+         "<void:datadump>"   : "<{$source_base}/{$body_slug}/output/{$filebasename}-{$pubDateTime}.ttl>"
+       }         
+    ],
  ##########################################################################################################
- # @@ TODO oneOffs
+ # Main STP conversion template.
  ##########################################################################################################
     "templates" : [ "stp" ] ,
     "referenced" : [
        { "name" : "stp",
          "@id"  : "<{$stpDataset}/point/{$bwspid}/dateTime/{$pubDateTimeSlug}>",
          "<rdfs:type>"            : "<{$def_stp}/RiskPrediction>",
+         "<def-stp:publishedAt>"  : "{$pubDateTime}",
          "<def-stp:predictedAt>"  : "{$predictionDateTime}",
  # There may be a better way to extract date from dateTime, but a simple .asDate('xsd:date') doesn't do it
          "<def-stp:predictedOn>"  : "{$predictionDateTime.year.format('%04d').append('-').append($predictionDateTime.month.format('%02d')).append('-').append($predictionDateTime.day.format('%02d')).asDate('YYYY-MM-dd','xsd:date')}",
@@ -70,6 +140,7 @@
          "<def-stp:samplingPoint>": "<{$so_sp}/{$bwspid}>",
          "<def-stp:bathingWater>" : "<{$bwspid.map('sp-to-bw')}",
          "<rdfs:comment>"         : [ "{prediction_text_en.lang('en')}", "{prediction_text_cy.lang('cy')}" ],
+ # @@TODO 4: check source file referencing
          "<dct:source>"           : "<{$source_base}/{$body_slug}/input/{$filename}#line={value($row.number).format('%04d')}>",
          "<qb:dataSet>"           : [ "<{$stpDataset}>", "<{$bodyStpDataset}>" ]
        }
