@@ -1,8 +1,6 @@
 ###############################################################################################################
 # @@TODO's
 #
-# 1: Fix prediction expiry time. Waiting for date/time arithmetic
-# 2: Fix various publication time related values/slugs to be local time.
 # 3: rationalise dump file name
 # 4: check source file referencing
 #
@@ -20,24 +18,21 @@
          ],
     "bind" : [
         {
-            "$source_base" : "http://environment.data.gov.uk/sources/bwq",
-            "$data_base"   : "http://environment.data.gov.uk/data/bathing-water-quality",
-            "$body_slug"   : "eaew",
-            "$body_org"    : "http://reference.data.gov.uk/id/public-body/environment-agency",
-            "$def_bw"      : "http://environment.data.gov.uk/def/bathing-water",
-            "$def_sp"      : "http://location.data.gov.uk/def/ef/SamplingPoint",
-            "$def_stp"     : "http://environment.data.gov.uk/def/bwq-stp",
-            "$id_bw"       : "http://environment.data.gov.uk/id/bathing-water",
-            "$so_sp"       : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew",
-            "$so_env"      : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew",
-            "$so_zoi"      : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew",
-            "$bwspid"      : "{site.format('%05d')}",
-# @@ TODO :2 convert to local time.          
-            "$pubDateTime" : "{$exectime.asDate('xsd:dateTime')}",
-
-            "$predictionDateTime" : "{datetime.replaceAll('([+-])([0-9]:?[0-9])([0-9][0-9])$','').asDate('xsd:dateTime')}",
-# @@ TODO:1 add 23:59 to get an expiry date time.
-            "$expiresDateTime"    : "{$predictionDateTime}",
+            "$source_base"        : "http://environment.data.gov.uk/sources/bwq",
+            "$data_base"          : "http://environment.data.gov.uk/data/bathing-water-quality",
+            "$body_slug"          : "eaew",
+            "$body_org"           : "http://reference.data.gov.uk/id/public-body/environment-agency",
+            "$def_bw"             : "http://environment.data.gov.uk/def/bathing-water",
+            "$def_sp"             : "http://location.data.gov.uk/def/ef/SamplingPoint",
+            "$def_stp"            : "http://environment.data.gov.uk/def/bwq-stp",
+            "$id_bw"              : "http://environment.data.gov.uk/id/bathing-water",
+            "$so_sp"              : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew",
+            "$so_env"             : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew",
+            "$so_zoi"             : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew",
+            "$bwspid"             : "{site.format('%05d')}",
+            "$pubDateTime"        : "{$exectime.asDate('xsd:dateTime').toWholeSeconds().toLocalTime()}",
+            "$predictionDateTime" : "{datetime.asDate('YYYY-MM-dd\\'T\\'hh:mm:ss|YYYY-MM-dd\\'T\\'hh:mm:ssZZ|YYYY-MM-dd\\'T\\'hh:mm:ssZ','xsd:dateTime').toLocalTime()}",
+            "$expiresDateTime"    : "{$predictionDateTime.plus(23,59,0)}",
             "$ns"                 : "{= asResource($$).replaceAll('#$','') }"
         }, 
         {
@@ -49,7 +44,7 @@
             "$stpDataset"      : "{$data_base}/stp-risk-prediction",
             "$bodyStpDataset"  : "{$data_base}/{$body_slug}/stp-risk-prediction"
         },{
-            "$incrementalStpDataset" : "{$bodyStpDataset}/dataset-increment/{$pubDateTimeSlug}",
+            "$incrementalStpDataset" : "{$bodyStpDataset}/dataset-increment/{$pubDateTimeSlug}"
         }
     ],
 ############################################################################################################
@@ -105,7 +100,7 @@
          "name"              : "incremental-stp-dataset",
          "@id"               : "<{$incrementalStpDataset}>",
          "<rdf:type>"        : [ "<void:Dataset>" ],
-         "<rdfs:label>"      : "Bathing Water Quality - short-term pollution risk prediction dataset - ({$body_slug} {$pubDateTime})@en" ,
+         "<rdfs:label>"      : "Bathing Water Quality - short-term pollution risk prediction incremental dataset - ({$body_slug} {$pubDateTime})@en" ,
          "<dct:description>" : "Incremental short-term pollution risk prediction dataset - ({$body_slug}  {$pubDateTime})@en",
          "<dct:license>"     : "<http://reference.data.gov.uk/id/open-government-licence>",
          "<dct:publisher>"   : "<{$body_org}>",
