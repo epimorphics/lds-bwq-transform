@@ -3,6 +3,7 @@
 #
 # 3: rationalise dump file name
 # 4: check source file referencing
+# 5: Check/replace sp-to-bw map (based on RDF using output from sites transformation)
 #
 ###############################################################################################################
 
@@ -39,8 +40,9 @@
 ############################################################################################################            
 # The following expression is a monster because I couldn't get format('%1tY%1tM%1td-%1tH%1tm%1ts') to work.
 ############################################################################################################
-            "$pubDateTimeSlug" : 
-                 "{$pubDateTime.year.format('%04d')}{$pubDateTime.month.format('%02d')}{$pubDateTime.day.format('%02d')}-{$pubDateTime.hour.format('%02d')}{$pubDateTime.minute.format('%02d')}{$pubDateTime.fullSecond.format('%02d')}",
+#            "$pubDateTimeSlug" : 
+#                 "{$pubDateTime.year.format('%04d')}{$pubDateTime.month.format('%02d')}{$pubDateTime.day.format('%02d')}-{$pubDateTime.hour.format('%02d')}{$pubDateTime.minute.format('%02d')}{$pubDateTime.fullSecond.format('%02d')}",
+            "$pubDateTimeSlug" : "{$pubDateTime.format('YYYYMMdd-hhmmss')}",
             "$stpDataset"      : "{$data_base}/stp-risk-prediction",
             "$bodyStpDataset"  : "{$data_base}/{$body_slug}/stp-risk-prediction"
         },{
@@ -50,6 +52,9 @@
 ############################################################################################################
 # Temporary Map source for mapping sampling-point codes to bathing water URI
 ############################################################################################################
+
+# @@TODO 5: Possibly replace with some LDS-BWQ infrastructure map (several transforms will need it).
+ 
     "sources" : [
        { "name"       : "sp-to-bw",
          "sourceType" : "RDF",
