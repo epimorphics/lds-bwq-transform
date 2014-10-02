@@ -67,13 +67,13 @@
     ],
     "oneOffs" : [
        { "name"              : "stp-dataset" ,
-         "@id"               : "$stpDataset" ,
+         "@id"               : "<{$stpDataset}>" ,
          "<rdf:type>"        : ["<void:Dataset>", "<qb:DataSet>", "<def-stp:RiskPredictionDataSet>" ],
          "<rdfs:label>"      : "Bathing Water Quality Short Term Pollution Risk Prediction@en" ,
          "<dct:description>" : "Top level dataset recording predictions of short term pollution risk, typically due to rainfall, associated with designated bathing waters in the UK.@en",
          "<dct:license>"     : "<http://reference.data.gov.uk/id/open-government-licence>",
          "<qb:structure>"    : "<def-stp:riskDsd>",
-         "<void:subset>"     : "<{$bodyStpDataset>",
+         "<void:subset>"     : "<{$bodyStpDataset}>",
          "<void:uriRegexPattern>" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/(.*)",
          "<void:vocabulary>"      : [ "<{$ns.apply('dgu:'     )}>", 
                                       "<{$ns.apply('def-bwq:' )}>", 
@@ -118,7 +118,7 @@
                                    "<{$ns.apply('qb:')    }>" ],
          "<dct:modified>"    : "{$pubDateTime}",
 # @@TODO 3: rationalise dump file name
-         "<void:datadump>"   : "<{$source_base}/{$body_slug}/output/{$filebasename}-{$pubDateTime}.ttl>"
+         "<void:dataDump>"   : "<{$source_base}/{$body_slug}/output/{$filebasename}-{$pubDateTime}.ttl>"
        }         
     ],
  ##########################################################################################################
@@ -128,7 +128,7 @@
     "referenced" : [
        { "name" : "stp",
          "@id"  : "<{$stpDataset}/point/{$bwspid}/dateTime/{$pubDateTimeSlug}>",
-         "<rdfs:type>"            : "<{$def_stp}/RiskPrediction>",
+         "<rdf:type>"             : "<{$def_stp}/RiskPrediction>",
          "<def-stp:publishedAt>"  : "{$pubDateTime}",
          "<def-stp:predictedAt>"  : "{$predictionDateTime}",
          "<def-stp:predictedOn>"  : "{$predictedOnDateTime.format('yyyy-MM-dd').asDate('yyyy-MM-dd','xsd:date')}",
@@ -137,7 +137,7 @@
                                        prediction.value == 1 ? $def_stp.append('/normal')  :
                                        prediction.value == 2 ? $def_stp.append('/increased') : null}>",
          "<def-stp:samplingPoint>": "<{$so_sp}/{$bwspid}>",
-         "<def-stp:bathingWater>" : "<{$bwspid.map('sp-to-bw')}",
+         "<def-stp:bathingWater>" : "<{$bwspid.map('sp-to-bw')}>",
          "<rdfs:comment>"         : [ "{prediction_text_en.lang('en')}", "{prediction_text_cy.lang('cy')}" ],
  # @@TODO 4: check source file referencing
          "<dct:source>"           : "<{$source_base}/{$body_slug}/input/{$filename}#line={value($row.number).format('%04d')}>",
