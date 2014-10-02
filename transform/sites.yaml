@@ -274,10 +274,9 @@
                     "sampling-point",  "os-district", "ons-district" ],
     "referenced" : [
     #############################################################################################################################
+    #
     # Bathing-water reference data
     # 
-    # @@TODO@@ : resolve county references and import OS linked data fragments
-    #
     #############################################################################################################################
         {   "name"                                     : "bathing-water",
             "@id"                                      : "<{$id_bw}/{$eubwid}>",
