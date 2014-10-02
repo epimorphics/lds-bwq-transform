@@ -32,7 +32,7 @@
             "$so_zoi"             : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew",
             "$bwspid"             : "{site.format('%05d')}",
             "$pubDateTime"        : "{$exectime.asDate('xsd:dateTime').toWholeSeconds().toLocalTime()}",
-            "$predictionDateTime" : "{datetime.asDate('YYYY-MM-dd\\'T\\'hh:mm:ss|YYYY-MM-dd\\'T\\'hh:mm:ssZZ|YYYY-MM-dd\\'T\\'hh:mm:ssZ','xsd:dateTime').toLocalTime()}",
+            "$predictionDateTime" : "{datetime.asDate('yyyy-MM-dd\\'T\\'hh:mm:ss|yyyy-MM-dd\\'T\\'hh:mm:ssZZ|yyyy-MM-dd\\'T\\'HH:mm:ssZ','xsd:dateTime').toLocalTime()}",
             "$expiresDateTime"    : "{$predictionDateTime.plus(23,59,0)}",
             "$ns"                 : "{= asResource($$).replaceAll('#$','') }"
         }, 
@@ -42,7 +42,7 @@
 ############################################################################################################
 #            "$pubDateTimeSlug" : 
 #                 "{$pubDateTime.year.format('%04d')}{$pubDateTime.month.format('%02d')}{$pubDateTime.day.format('%02d')}-{$pubDateTime.hour.format('%02d')}{$pubDateTime.minute.format('%02d')}{$pubDateTime.fullSecond.format('%02d')}",
-            "$pubDateTimeSlug" : "{$pubDateTime.format('YYYYMMdd-hhmmss')}",
+            "$pubDateTimeSlug" : "{$pubDateTime.format('yyyyMMdd-HHmmss')}",
             "$stpDataset"      : "{$data_base}/stp-risk-prediction",
             "$bodyStpDataset"  : "{$data_base}/{$body_slug}/stp-risk-prediction"
         },{
@@ -131,8 +131,7 @@
          "<rdfs:type>"            : "<{$def_stp}/RiskPrediction>",
          "<def-stp:publishedAt>"  : "{$pubDateTime}",
          "<def-stp:predictedAt>"  : "{$predictionDateTime}",
- # There may be a better way to extract date from dateTime, but a simple .asDate('xsd:date') doesn't do it
-         "<def-stp:predictedOn>"  : "{$predictionDateTime.year.format('%04d').append('-').append($predictionDateTime.month.format('%02d')).append('-').append($predictionDateTime.day.format('%02d')).asDate('YYYY-MM-dd','xsd:date')}",
+         "<def-stp:predictedOn>"  : "{$predictedOnDateTime.format('yyyy-MM-dd').asDate('yyyy-MM-dd','xsd:date')}",
          "<def-stp:expiresAt>"    : "{$expiresDateTime}",
          "<def-stp:riskLevel>"    : "<{prediction.value == 0 ? $def_stp.append('/unknown') :
                                        prediction.value == 1 ? $def_stp.append('/normal')  :
