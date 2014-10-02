@@ -1,0 +1,187 @@
+@prefix sp:      <http://location.data.gov.uk/def/ef/SamplingPoint/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix dgu:     <http://reference.data.gov.uk/def/reference/> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix intervals:  <http://reference.data.gov.uk/def/intervals/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix version:  <http://environment.data.gov.uk/def/version/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix def_bw:  <http://environment.data.gov.uk/def/bathing-water/> .
+@prefix time:    <http://www.w3.org/2006/time#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bwp:     <http://environment.data.gov.uk/def/bathing-water-profile/> .
+@prefix ageo:    <http://statistics.data.gov.uk/def/administrative-geography/> .
+@prefix bwq:     <http://environment.data.gov.uk/def/bathing-water-quality/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+
+<http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukc2102-03600/2014>
+      a       bwp:EnduringBathingWaterProfile ;
+      version:currentVersion
+              <http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03600/2014:1> ;
+      dcterms:hasVersion <http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03600/2014:1> .
+
+<http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03700/2014:1>
+      a       bwp:BathingWaterProfile ;
+      rdfs:label "2014 Bathing Water Profile for Bamburgh Castle"@en ;
+      bwp:applicableYear <http://reference.data.gov.uk/id/year/2014> ;
+      bwp:bathingWaterDescription
+              "Bamburgh Castle Beach is a long remote, sandy beach situated on the north Northumberland coast. The beach is 2.5 kilometres long and slopes gently, resulting in a long distance to the sea at low tide. The Mill Burn crosses the beach to the north of the Environment Agency’s designated sampling point."@en ;
+      bwp:countyName "Northumberland"@en ;
+      bwp:esoOutfallsStatement
+              "There are no outfalls discharging directly onto the bathing beach. Within the catchment of Bamburgh bathing water there are two storm and one emergency outfalls that discharge to the Mill Burn. These protect domestic properties and the pumping station in Bamburgh from being flooded by sewage during heavy rainfall."@en ;
+      bwp:historyStatement
+              "The Environment Agency have worked closely with Northumbrian Water to identify and deliver significant investment in the sewage infrastructure around this bathing water."@en ;
+      bwp:macroAlgaeStatement
+              "Environment Agency research suggests this bathing water does not have a history of large amounts of seaweed (macroalgae)."@en ;
+      bwp:misconnectionsStatement
+              "Modern sewerage systems have two separate systems, one takes foul sewage to sewage treatment, the other takes rainwater runoff through surface water drains to rivers, lakes and the sea. Misconnections occur when waste water pipes are plumbed into surface water drains instead of the foul water sewerage system. This can give rise to pollution when the waste water is discharged directly to the environment through the surface water drain. For example, a washing machine or toilet may be incorrectly plumbed so that it discharges to the surface drain rather than the foul sewage drain."@en ;
+      bwp:phytoplanktonStatement
+              "Environment Agency research suggests this bathing water does not have a history of phytoplankton blooms."@en ;
+      bwp:standardLanguageCollection
+              <http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2014-03700:1> ;
+      bwp:stwOutfallsStatement
+              "There are no sewage treatment outfalls within the bathing beach. Since 2006, sewage from the Bamburgh area has been pumped to Seahouses Sewage Treatment Works for treatment."@en ;
+      bwp:webResImage <http://environment.data.gov.uk/media/image/bathing-water-profile/ukc2102-03700_1-webres.jpg> ;
+      bwp:workingWithPrivateOwnersStatement
+              "There are a number of caravan parks and isolated dwellings which are not on the main sewerage system and have private sewage treatment arrangements. The Environment Agency does not believe these are a source of pollution to the bathing water at present. If any concerns arise, the Environment Agency will investigate and request immediate remedial action from those responsible."@en ;
+      bwp:zoiDescription """The natural drainage (hydrological) catchment surrounding the bathing water is approximately 5.2 square kilometres. The catchment slopes gently throughout.
+The majority of the land in the catchment is agricultural with some mixed livestock and arable. The area immediately surrounding Bamburgh mainly consists of farm land with small developments and caravan parks."""@en ;
+      def_bw:bathingWater <http://environment.data.gov.uk/id/bathing-water/ukc2102-03700> ;
+      version:interval <http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03700/2014:1/intervals/interval> ;
+      version:versionString
+              "1" ;
+      dcterms:isVersionOf <http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukc2102-03700/2014> ;
+      dcterms:source <http://environment.data.gov.uk/sources/bwq/eaew/input/profile-profile-EngWal_bw_profile_sample-20141002-110439-1.csv#line=000002> ;
+      ageo:localAuthority <http://location.data.gov.uk/id/au/localAuthority/ons:gss/E06000048> ;
+      skos:prefLabel "2014 Bathing Water Profile for Bamburgh Castle"@en .
+
+<http://environment.data.gov.uk/id/bathing-water/ukc2102-03600>
+      bwp:latestBathingWaterProfile
+              <http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03600/2014:1> .
+
+<http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03600/2014:1/intervals/interval>
+      time:hasBeginning <http://reference.data.gov.uk/id/gregorian-instant/2014-01-01T00:00:00> .
+
+<http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2014-03700:1>
+      a       bwp:StandardLanguageCollection ;
+      rdfs:label "2014 Bathing Water Profile Standard Language"@en ;
+      bwp:algaeGeneralStatement
+              "Seaweed (macroalgae) and phytoplankton (microscopic algae) are a natural part of the marine and freshwater environment. Below we note whether these have been recorded in quantities sufficient to be a nuisance."@en ;
+      bwp:esoOutfallsGeneralStatement
+              "The majority of sewers in England are “combined sewers” and carry both sewage and surface water from roofs and drains. A storm overflow operates during heavy rainfall when the sewerage system becomes overwhelmed by the amount of surface water. The overflow prevents sewage from backing up pipes and flooding properties and gardens. An emergency overflow will only operate infrequently, for example due to pump failure or blockage in the sewerage system."@en ;
+      bwp:localAuthorityGeneralStatement
+              "Heavy rain falling on pavements and roads often flows into surface water drains or highway drains, ending up in local rivers and ultimately the sea. The quality of bathing water may be adversely affected as a result of such events."@en ;
+      bwp:pollutionManagementGeneralStatement
+              "It is the Environment Agency role to drive improvement of water quality at bathing waters that are at risk of failing European standards. It is natural for water to run off the land to the sea. Water quality at a bathing water is dependent upon the type and area of land (the catchment) draining to the water and the activities undertaken in that catchment."@en ;
+      bwp:stwOutfallsGeneralStatement
+              "Discharges from sewage treatment works have improved substantially in England since the 1980s."@en ;
+      skos:prefLabel "2014 Bathing Water Profile Standard language"@en .
+
+<http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03600/2014:1>
+      a       bwp:BathingWaterProfile ;
+      rdfs:label "2014 Bathing Water Profile for Spittal"@en ;
+      bwp:applicableYear <http://reference.data.gov.uk/id/year/2014> ;
+      bwp:bathingWaterDescription
+              "Spittal Beach is a gently sloping resort beach approximately one kilometre long situated immediately south of the mouth of the River Tweed."@en ;
+      bwp:countyName "Northumberland"@en ;
+      bwp:eaInvestigationsStatement
+              "The Environment Agency's investigations have been aimed at identifying non water company sources of pollution that may be affecting the bathing water so that we can implement measures to address them.  We believe that agricultural sources in the Tweed catchment may be significant, particularly in wet weather, although we have not found evidence pointing to any particularly important source."@en ;
+      bwp:esoOutfallsStatement
+              "A combined sewer overflow (CSO) which could discharge onto the beach during heavy rainfall was removed in early 2012.  Other CSOs discharge to the estuary and contribute to pollution at the bathing water when river flows are high during wet weather."@en ;
+      bwp:historyStatement
+              "Since 1995, the Environment Agency have worked closely with Northumbrian Water to identify and deliver significant investment in the sewage infrastructure around this bathing water.  Most recently, an investigation by Northumbrian water into the effects of their systems on bating water quality has led to improvements at 2 CSOs."@en ;
+      bwp:macroAlgaeStatement
+              "Environment Agency research suggests this bathing water does not have a history of large amounts of seaweed (macroalgae)."@en ;
+      bwp:misconnectionsStatement
+              "Modern sewerage systems have two separate systems, one takes foul sewage to sewage treatment, the other takes rainwater runoff through surface water drains to rivers, lakes and the sea. Misconnections occur when waste water pipes are plumbed into surface water drains instead of the foul water sewerage system. This can give rise to pollution when the waste water is discharged directly to the environment through the surface water drain. For example, a washing machine or toilet may be incorrectly plumbed so that it discharges to the surface drain rather than the foul sewage drain."@en ;
+      bwp:phytoplanktonStatement
+              "Environment Agency research suggests this bathing water does not have a history of phytoplankton blooms."@en ;
+      bwp:standardLanguageCollection
+              <http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2014-03600:1> ;
+      bwp:streamsRiversStatement
+              "The Tweed Estuary discharges to the sea at the north end of the bathing water. Diffuse run off from agricultural land and upstream settlements affects the bacteriological quality of the river. After heavy rain, this can have a short-term impact on bathing water quality.  High river flows also shorten residence times in the estuary, exacerbating the impact of discharges from the sewerage system in and around Berwick."@en ;
+      bwp:stwOutfallsStatement
+              "Sewage from Berwick, Spittal and Tweedmouth is treated at a sewage works that discharges to the Tweed estuary to the west of the town."@en ;
+      bwp:webResImage <http://environment.data.gov.uk/media/image/bathing-water-profile/ukc2102-03600_1-webres.jpg> ;
+      bwp:workingWithFarmersStatement
+              "The catchment of the River Tweed is largely agricultural with a mixture of arable and livestock farming. During and after periods of heavy rainfall, runoff from agricultural areas will be greatly increased. The quality of the bathing water may be adversely affected as a result of such events.  The limited data collected on sources of bacteria suggests that livestock are a significant source, particularly when river flows are high, and we are aiming to raise awareness of this in the farming community."@en ;
+      bwp:zoiDescription "The River Tweed rises over 100km to the west and drains a catchment of approx 4000 sq km. The lower part of the catchment which influences bathing water quality is predominantly devoted to arable and livestock farming. The historic town of Berwick-upon-Tweed and its satellites, Spittal and Tweedmouth, lie at the mouth of the estuary."@en ;
+      def_bw:bathingWater <http://environment.data.gov.uk/id/bathing-water/ukc2102-03600> ;
+      version:interval <http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03600/2014:1/intervals/interval> ;
+      version:versionString
+              "1" ;
+      dcterms:isVersionOf <http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukc2102-03600/2014> ;
+      dcterms:source <http://environment.data.gov.uk/sources/bwq/eaew/input/profile-profile-EngWal_bw_profile_sample-20141002-110439-1.csv#line=000001> ;
+      ageo:localAuthority <http://location.data.gov.uk/id/au/localAuthority/ons:gss/E06000048> ;
+      skos:prefLabel "2014 Bathing Water Profile for Spittal"@en .
+
+<http://location.data.gov.uk/id/au/localAuthority/ons:gss/E06000048>
+      rdfs:label "Northumberland"@en ;
+      ageo:district <http://statistics.data.gov.uk/id/statistical-geography/E06000048> .
+
+<http://reference.data.gov.uk/id/gregorian-instant/2014-01-01T00:00:00>
+      time:inXSDDateTime "2014-01-01T00:00:00"^^xsd:dateTime .
+
+<http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2014-03600:1>
+      a       bwp:StandardLanguageCollection ;
+      rdfs:label "2014 Bathing Water Profile Standard Language"@en ;
+      bwp:algaeGeneralStatement
+              "Seaweed (macroalgae) and phytoplankton (microscopic algae) are a natural part of the marine and freshwater environment. Below we note whether these have been recorded in quantities sufficient to be a nuisance."@en ;
+      bwp:esoOutfallsGeneralStatement
+              "The majority of sewers in England are “combined sewers” and carry both sewage and surface water from roofs and drains. A storm overflow operates during heavy rainfall when the sewerage system becomes overwhelmed by the amount of surface water. The overflow prevents sewage from backing up pipes and flooding properties and gardens. An emergency overflow will only operate infrequently, for example due to pump failure or blockage in the sewerage system."@en ;
+      bwp:localAuthorityGeneralStatement
+              "Heavy rain falling on pavements and roads often flows into surface water drains or highway drains, ending up in local rivers and ultimately the sea. The quality of bathing water may be adversely affected as a result of such events."@en ;
+      bwp:pollutionManagementGeneralStatement
+              "It is the Environment Agency role to drive improvement of water quality at bathing waters that are at risk of failing European standards. It is natural for water to run off the land to the sea. Water quality at a bathing water is dependent upon the type and area of land (the catchment) draining to the water and the activities undertaken in that catchment."@en ;
+      bwp:stwOutfallsGeneralStatement
+              "Discharges from sewage treatment works have improved substantially in England since the 1980s."@en ;
+      skos:prefLabel "2014 Bathing Water Profile Standard language"@en .
+
+<http://environment.data.gov.uk/id/bathing-water/ukc2102-03700>
+      bwp:latestBathingWaterProfile
+              <http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03700/2014:1> .
+
+<http://environment.data.gov.uk/data/bathing-water-profile-dataset/eaew/2014>
+      a       void:Dataset ;
+      rdfs:label "2014 Profiles for bathing waters monitored by the Environment Agency for England and Wales."@en ;
+      dcterms:description "Dataset of profiles, published in 2014, of bathing waters in England and Wales monitored by the Environment Agency for compliance with the EU Bathing Water Directive"@en ;
+      dcterms:license <http://reference.data.gov.uk/id/open-government-licence> ;
+      dcterms:modified "2014-10-02T11:04:46.703Z"^^xsd:dateTime ;
+      dcterms:source <http://environment.data.gov.uk/sources/bwq/eaew/input/profile-profile-EngWal_bw_profile_sample-20141002-110439-1.csv> ;
+      void:dataDump <http://environment.data.gov.uk/sources/bwq/eaew/output/profile-profile-EngWal_bw_profile_sample-20141002-110439-1.ttl> ;
+      void:uriRegexPattern
+              "http://environment.data.gov.uk/data/bathing-water-profile/.*" , "http://environment.data.gov.uk/data/bathing-water-profile-endurant/.*" ;
+      void:vocabulary sp: , ageo: , def_bw: , bwq: , <http://www.w3.org/2004/02/skos/core> , <http://www.w3.org/2006/time> , dcterms: , version: , intervals: , <http://rdfs.org/ns/void> , bwp: , dgu: .
+
+<http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03700/2014:1/intervals/interval>
+      time:hasBeginning <http://reference.data.gov.uk/id/gregorian-instant/2014-01-01T00:00:00> .
+
+<http://environment.data.gov.uk/data/bathing-water-profile-dataset>
+      a       void:Dataset ;
+      rdfs:label "Profiles for UK bathing waters."@en ;
+      dcterms:description "Dataset of profiles for UK bathing waters."@en ;
+      dcterms:license <http://reference.data.gov.uk/id/open-government-licence> ;
+      dcterms:modified "2014-10-02T11:04:46.703Z"^^xsd:dateTime ;
+      void:subset <http://environment.data.gov.uk/data/bathing-water-profile-dataset/eaew> ;
+      void:uriRegexPattern
+              "http://environment.data.gov.uk/data/bathing-water-profile/.*" , "http://environment.data.gov.uk/data/bathing-water-profile-endurant/.*" ;
+      void:vocabulary sp: , ageo: , bwq: , def_bw: , <http://www.w3.org/2004/02/skos/core> , <http://www.w3.org/2006/time> , dcterms: , version: , intervals: , <http://rdfs.org/ns/void> , dgu: .
+
+<http://environment.data.gov.uk/data/bathing-water-profile-dataset/eaew>
+      a       void:Dataset ;
+      rdfs:label "Profiles for bathing waters monitored by the Environment Agency for England and Wales."@en ;
+      dcterms:description "Dataset of profiles of bathing waters in England and Wales monitored by the Environment Agency for compliance with the EU Bathing Water Directive"@en ;
+      dcterms:license <http://reference.data.gov.uk/id/open-government-licence> ;
+      dcterms:modified "2014-10-02T11:04:46.703Z"^^xsd:dateTime ;
+      void:subset <http://environment.data.gov.uk/data/bathing-water-profile-dataset/eaew/2014> ;
+      void:uriRegexPattern
+              "http://environment.data.gov.uk/data/bathing-water-profile/.*" , "http://environment.data.gov.uk/data/bathing-water-profile-endurant/.*" ;
+      void:vocabulary sp: , ageo: , bwq: , <http://www.w3.org/2004/02/skos/core> , def_bw: , <http://www.w3.org/2006/time> , dcterms: , version: , intervals: , <http://rdfs.org/ns/void> , dgu: .
+
+<http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukc2102-03700/2014>
+      a       bwp:EnduringBathingWaterProfile ;
+      version:currentVersion
+              <http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03700/2014:1> ;
+      dcterms:hasVersion <http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03700/2014:1> .
