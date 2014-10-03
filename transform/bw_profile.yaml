@@ -132,8 +132,8 @@ referenced :
 
     - "@id"                      : "<{$profileURI}>"
       "<rdf:type>"               : "<def-bwp:BathingWaterProfile>"
-      "<rdfs:label>"             : "{profile_year} Bathing Water Profile for {$sp.map('sp-to-bw', 'label', true)}"
-      "<skos:prefLabel>"         : "{profile_year} Bathing Water Profile for {$sp.map('sp-to-bw', 'label', true)}"
+      "<rdfs:label>"             : "{profile_year} Bathing Water Profile for {$sp.map('sp-to-bw', 'label', true)}@en"
+      "<skos:prefLabel>"         : "{profile_year} Bathing Water Profile for {$sp.map('sp-to-bw', 'label', true)}@en"
       "<def-bwp:standardLanguageCollection>" : "{$slcRes}"
       "<def-bw:bathingWater>"    : "{$bw}"
       "<def-bwp:applicableYear>" : "<http://reference.data.gov.uk/id/year/{profile_year}>"
