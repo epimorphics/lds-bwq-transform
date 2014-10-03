@@ -1,0 +1,89 @@
+@prefix sp:      <http://location.data.gov.uk/def/ef/SamplingPoint/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix dgu:     <http://reference.data.gov.uk/def/reference/> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix geowgs84:  <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix version:  <http://environment.data.gov.uk/def/version/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix def_bw:  <http://environment.data.gov.uk/def/bathing-water/> .
+@prefix time:    <http://www.w3.org/2006/time#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix spatialrel:  <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix feat:    <http://location.data.gov.uk/def/ef/BathingWaterProfileFeature/> .
+
+<http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/>
+      a       void:Dataset , dgu:URIset ;
+      rdfs:label "Features that may influence water quality of bathing waters monitored by the Environment Agency for England and Wales."@en ;
+      dcterms:description "URI Set of features that may influence water quality of bathing waters in England and Wales monitored by the Environment Agency for compliance with the EU Bathing Water Directive"@en ;
+      dcterms:license <http://reference.data.gov.uk/id/open-government-licence> ;
+      dcterms:modified "2014-10-03T12:44:01.645Z"^^xsd:dateTime ;
+      dcterms:source <http://environment.data.gov.uk/sources/bwq/eaew/input/profile-feature-profile-feature-sample-20141003-124401-2.csv> ;
+      void:dataDump <http://environment.data.gov.uk/sources/bwq/eaew/output/profile-feature-profile-feature-sample-20141003-124401-2.ttl> ;
+      void:uriRegexPattern
+              "http://location.data.gov.uk/so/ef/BathingWaterProfileFeatureEndurant/.*" , "http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/.*" ;
+      void:vocabulary sp: , spatialrel: , feat: , <http://www.w3.org/2003/01/geo/wgs84_pos> , foaf: , def_bw: , <http://www.w3.org/2006/time> , dcterms: , version: , <http://rdfs.org/ns/void> , dgu: ;
+      dgu:itemType def_bw:BathingWater ;
+      dgu:status <http://reference.data.gov.uk/def/status/draft> ;
+      foaf:isPrimaryTopicOf
+              <http://environment.data.gov.uk/sources/bwq/eaew/outputcompliance/profile-feature-profile-feature-sample-20141003-124401-2.ttl> .
+
+<http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/ID-210.1349-1-1:1>
+      a       feat:ESO , feat:Feature ;
+      rdfs:label "Feature ID-210.1349-1-1" ;
+      spatialrel:easting "400700"^^xsd:decimal ;
+      spatialrel:northing "651590"^^xsd:decimal ;
+      def_bw:bathingWater <http://environment.data.gov.uk/id/bathing-water/ukc2102-03600> ;
+      def_bw:regionalOrganization
+              <http://reference.data.gov.uk/id/public-body/environment-agency/unit/north-east-north-east-office> ;
+      version:interval <http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/ID-210.1349-1-1:1/intervals/interval> ;
+      version:versionString
+              "1" ;
+      dcterms:isVersionOf <http://location.data.gov.uk/so/ef/BathingWaterProfileFeatureEndurant/bwpf.eaew/ID-210.1349-1-1> ;
+      dcterms:source <http://environment.data.gov.uk/sources/bwq/eaew/input/profile-feature-profile-feature-sample-20141003-124401-2.csv#line=000001> ;
+      dgu:uriSet <http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/> ;
+      geowgs84:lat 55.7577000000000 ;
+      geowgs84:long -1.99040000000000 .
+
+<http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/ID-210.1349-1-1:1/intervals/interval>
+      time:hasBeginning <http://reference.data.gov.uk/id/gregorian-instant/2011-01-01T00:00:00> .
+
+<http://location.data.gov.uk/so/ef/BathingWaterProfileFeatureEndurant/bwpf.eaew/FI-417942-635460>
+      a       feat:EnduringFeature ;
+      version:currentVersion
+              <http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/FI-417942-635460:1> ;
+      dcterms:hasVersion <http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/FI-417942-635460:1> ;
+      dgu:uriSet <http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/> .
+
+<http://reference.data.gov.uk/id/gregorian-instant/2011-01-01T00:00:00>
+      time:inXSDDateTime "2011-01-01T00:00:00"^^xsd:dateTime .
+
+<http://location.data.gov.uk/so/ef/BathingWaterProfileFeatureEndurant/bwpf.eaew/ID-210.1349-1-1>
+      a       feat:EnduringFeature ;
+      version:currentVersion
+              <http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/ID-210.1349-1-1:1> ;
+      dcterms:hasVersion <http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/ID-210.1349-1-1:1> ;
+      dgu:uriSet <http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/> .
+
+<http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/FI-417942-635460:1/intervals/interval>
+      time:hasBeginning <http://reference.data.gov.uk/id/gregorian-instant/2011-01-01T00:00:00> .
+
+<http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/FI-417942-635460:1>
+      a       feat:RSI , feat:Feature ;
+      rdfs:label "Feature FI-417942-635460" ;
+      spatialrel:easting "417942"^^xsd:decimal ;
+      spatialrel:northing "635460"^^xsd:decimal ;
+      def_bw:bathingWater <http://environment.data.gov.uk/id/bathing-water/ukc2102-03700> ;
+      def_bw:regionalOrganization
+              <http://reference.data.gov.uk/id/public-body/environment-agency/unit/north-east-north-east-office> ;
+      version:interval <http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/FI-417942-635460:1/intervals/interval> ;
+      version:versionString
+              "1" ;
+      dcterms:isVersionOf <http://location.data.gov.uk/so/ef/BathingWaterProfileFeatureEndurant/bwpf.eaew/FI-417942-635460> ;
+      dcterms:source <http://environment.data.gov.uk/sources/bwq/eaew/input/profile-feature-profile-feature-sample-20141003-124401-2.csv#line=000002> ;
+      dgu:uriSet <http://location.data.gov.uk/so/ef/BathingWaterProfileFeature/bwpf.eaew/> ;
+      geowgs84:lat 55.6124000000000 ;
+      geowgs84:long -1.71670000000000 .

@@ -1,6 +1,6 @@
 ###############################################################################################################
 #
-# Template for both Engilsh and Welsh profiles.
+# Template for both Engilish and Welsh profiles.
 #
 # @@TODO's
 #
@@ -14,7 +14,6 @@ name : bw-profile
 required :
   - samplingPoint
   - profile_year
-  - county
 
 bind :
   - "$source_base"        : "http://environment.data.gov.uk/sources/bwq"
@@ -24,8 +23,11 @@ bind :
     "$imagesURI"          : "http://environment.data.gov.uk/media/image/bathing-water-profile"
     "$sp"                 : "{samplingpoint.format('%05d')}"
     "$pubDateTime"        : "{$exectime.asDate('xsd:dateTime').toWholeSeconds().toLocalTime()}"
+    "$filestub"           : "{$filename.replaceAll('\\.csv$','')}"
 
   - "$eubwid"             : "{$sp.map('sp-to-bw', 'eubwid', true)}"
+    "$outfile"            : "{$source_base}/{$body_slug}/output/{$filestub}.ttl"
+    "$infile"             : "{$source_base}/{$body_slug}/input/{$filename}"
 
   - "$profileURI"         : "{$data_base}/{$eubwid}/{profile_year}:{$version}"
     "$slcRes"             : "<{$data_base}-standard-language/{profile_year}-{$sp}:{$version}>"
@@ -39,6 +41,7 @@ sources :
   - name       : 'sp-to-bw'
     sourceType : RDFSparql
     source     : 'data/expected/bw-site-sample.ttl'
+#    source     : 'data/output/bw_sites.ttl'
     query      : >
       SELECT ?key ?value ?eubwid ?label ?district ?gss
       WHERE
@@ -73,8 +76,8 @@ oneOffs :
       "<dct:description>"      : "Dataset of profiles, published in {profile_year}, of bathing waters in England and Wales monitored by the Environment Agency for compliance with the EU Bathing Water Directive@en"
       "<dct:license>"          : "<http://reference.data.gov.uk/id/open-government-licence>"
       "<dct:modified>"         : "{$pubDateTime}"
-      "<dct:source>"           : "<{$source_base}/{$body_slug}/input/{$filename}>"
-      "<void:dataDump>"        : "<{$source_base}/{$body_slug}/output/{$filename}.ttl>"
+      "<dct:source>"           : "<{$infile}>"
+      "<void:dataDump>"        : "<{$outfile}>"
       "<void:uriRegexPattern>" : ["{$data_base}/.*", "{$data_base}-endurant/.*"]
       "<void:vocabulary>"      : ["<{$ns.apply('dgu:'     )}>", "<{$ns.apply('def-bwq:' )}>", "<{$ns.apply('skos:'    )}>", "<{$ns.apply('def-bw:'  )}>", "<{$ns.apply('def-bwp:' )}>", "<{$ns.apply('time:'    )}>", "<{$ns.apply('intervals:')}>", "<{$ns.apply('dct:'     )}>", "<{$ns.apply('void:'    )}>", "<{$ns.apply('onsadmingeo:')}>", "<{$ns.apply('def-ver:'  )}>"]
 
@@ -84,8 +87,8 @@ oneOffs :
       "<dct:description>"      : "Dataset of profiles of bathing waters in England and Wales monitored by the Environment Agency for compliance with the EU Bathing Water Directive@en"
       "<dct:license>"          : "<http://reference.data.gov.uk/id/open-government-licence>"
       "<dct:modified>"         : "{$pubDateTime}"
-      "<dct:source>"           : "<{$source_base}/{$body_slug}/input/{$filename}>"
-      "<void:dataDump>"        : "<{$source_base}/{$body_slug}/output/{$filename}.ttl>"
+      "<dct:source>"           : "<{$infile}>"
+      "<void:dataDump>"        : "<{$outfile}>"
       "<void:uriRegexPattern>" : ["{$data_base}/.*", "{$data_base}-endurant/.*"]
       "<void:vocabulary>"      : ["<{$ns.apply('dgu:'     )}>", "<{$ns.apply('def-bwq:' )}>", "<{$ns.apply('skos:'    )}>", "<{$ns.apply('def-bw:'  )}>", "<{$ns.apply('def-bwp:' )}>", "<{$ns.apply('time:'    )}>", "<{$ns.apply('intervals:')}>", "<{$ns.apply('dct:'     )}>", "<{$ns.apply('void:'    )}>", "<{$ns.apply('onsadmingeo:')}>", "<{$ns.apply('def-ver:'  )}>"]
       "<void:subset>"          : "<{$void_profiles_eaew_year}>"
@@ -96,8 +99,8 @@ oneOffs :
       "<dct:description>"      : "Dataset of profiles for UK bathing waters.@en"
       "<dct:license>"          : "<http://reference.data.gov.uk/id/open-government-licence>"
       "<dct:modified>"         : "{$pubDateTime}"
-      "<dct:source>"           : "<{$source_base}/{$body_slug}/input/{$filename}>"
-      "<void:dataDump>"        : "<{$source_base}/{$body_slug}/output/{$filename}.ttl>"
+      "<dct:source>"           : "<{$infile}>"
+      "<void:dataDump>"        : "<{$outfile}>"
       "<void:uriRegexPattern>" : ["{$data_base}/.*", "{$data_base}-endurant/.*"]
       "<void:vocabulary>"      : ["<{$ns.apply('dgu:'     )}>", "<{$ns.apply('def-bwq:' )}>", "<{$ns.apply('skos:'    )}>", "<{$ns.apply('def-bw:'  )}>", "<{$ns.apply('def-bwp:' )}>", "<{$ns.apply('time:'    )}>", "<{$ns.apply('intervals:')}>", "<{$ns.apply('dct:'     )}>", "<{$ns.apply('void:'    )}>", "<{$ns.apply('onsadmingeo:')}>", "<{$ns.apply('def-ver:'  )}>"]
       "<void:subset>"          : "<{$void_profiles_eaew}>"
