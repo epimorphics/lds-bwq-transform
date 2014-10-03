@@ -27,24 +27,35 @@
             "$bodyComplianceDataset"        : "{$data_base}/{$body_slug}/compliance"
         },{
             "$incrementalComplianceDataset" : "{$bodyComplianceDataset}/dataset-increment/annual-ea_bw_compliance_{year}",
-            "$bwLabel" : "{$bwspid.map('sp-to-label')}"
+            "$bwLabel" : "{$bwspid.map('sp-to-bw','label',true)}"
         }
     ],
     "sources" : [
-       { "name"       : "sp-to-bw",
-         "sourceType" : "RDF",
-         "source"     : "sites.ttl",
-         "key"        : "<skos:notation>",
-         "value"      : "<def-bw:bathingWater>",
-         "type"       : "<def-sp:SamplingPoint>",
-         "makeURI"    : true
-       },
-       { "name"       : "sp-to-label",
-         "sourceType" : "CSV",
-         "source"     : "data/input/bw_site.csv",
-         "key"        : "samplingpoint",
-         "value"      : "description_english"
+       ###############################################################################
+       # Source for testing only, replace in live service
+       ###############################################################################
+       { "name"        : "sp-to-bw", 
+         "sourceType"  : "RDFSparql", 
+         "source"      : "sites.ttl",
+         "query"       : 
+              "SELECT ?key ?value ?eubwid ?label ?district ?gss
+               WHERE
+               {
+                  [] a def-sp:SamplingPoint; 
+                     skos:notation ?key;
+                     def-bw:bathingWater ?value .
+                     
+                 ?value  skos:notation ?eubwidT ;
+                         skos:prefLabel ?label ;
+                         onsadmingeo:district ?district .
+                         
+                  ?district 
+                     admingeo:gssCode ?gss .
+                  BIND(str(?eubwidT) AS ?eubwid)
+                  FILTER( lang(?label) = 'en' )
+               }"
        }
+       
     ],
     "oneOffs" : [
 #################################################################################################################################
