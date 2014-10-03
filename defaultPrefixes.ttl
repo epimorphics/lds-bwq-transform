@@ -26,5 +26,6 @@
 @prefix dgu:     <http://reference.data.gov.uk/def/reference/> .
 @prefix status:  <http://reference.data.gov.uk/def/status/> .
 @prefix def-geom: <http://location.data.gov.uk/def/common/Geometry/> .
+@prefix def-ver:  <http://environment.data.gov.uk/def/version/> .
 
 @prefix so-sp:   <http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/> .
