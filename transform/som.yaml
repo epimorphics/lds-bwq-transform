@@ -1,0 +1,154 @@
+{ "name" : "suspension-of-monitoring",
+  "type" : "Composite",
+  "required" : [
+      "as_id",
+      "date_time_stamp",
+      "bw_season",
+      "start_date",
+      "start_time",
+#      "expected_end_date",
+#      "end_date",
+#      "end_time",
+      "region",
+      "bathing_water",
+      "bw_ref",
+      "situation_description",
+      "additional_comments",
+#      "nirs_ref"
+   ],
+    "bind" : [
+        {
+#####################################################################################################################
+# URI and slugs
+#####################################################################################################################
+            "$source_base"        : "http://environment.data.gov.uk/sources/bwq",
+            "$data_base"          : "http://environment.data.gov.uk/data/bathing-water-quality",
+            "$body_slug"          : "eaew",
+            "$body_org"           : "http://reference.data.gov.uk/id/public-body/environment-agency",
+            "$def_bw"             : "http://environment.data.gov.uk/def/bathing-water",
+            "$def_sp"             : "http://location.data.gov.uk/def/ef/SamplingPoint",
+            "$def_som"            : "http://environment.data.gov.uk/def/bwq-som",
+            "$id_bw"              : "http://environment.data.gov.uk/id/bathing-water",
+            "$so_sp"              : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew",
+            "$so_env"             : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew",
+#####################################################################################################################
+# Codes and Notations
+#####################################################################################################################
+            "$bwspid"             : "{bw_ref.format('%05d')}",
+#####################################################################################################################
+# Date and time literals
+            "$pubDateTime"        : "{$exectime.asDate('xsd:dateTime').toWholeSeconds().toLocalTime()}",
+#####################################################################################################################
+# There must be an easier way than the following to make an XSD data out of the 'dubious' field content if present...     
+#####################################################################################################################       
+            "$l_expectedEndOfSuspension" : "{empty(expected_end_date) 
+                                                ? null : 
+                                                  expected_end_date.asDate('dd/MM/yyyy|dd-MM-yyyy|yyyy-MM-dd|yyyy/MM/dd|dd/MM/yyyy HH:mm:ss|dd-MM-yyyy HH:mm:ss|yyyy-MM-dd HH:mm:ss|yyyy/MM/dd HH:mm:ss','xsd:dateTime')
+                                                  .format('yyyy-MM-dd')
+                                                  .asDate('xsd:date')
+                                            }",
+            "$l_recordDateTime"    : "{date_time_stamp.asDate('dd/MM/yyyy HH:mm:ss|dd-MM-yyyy HH:mm:ss|yyyy-MM-dd HH:mm:ss|yyyy/MM/dd HH:mm:ss','xsd:dateTime')}",
+
+#####################################################################################################################
+# Helper functions.                 
+#####################################################################################################################
+            "$ns"                 : "{= asResource($$).replaceAll('#$','') }",
+#####################################################################################################################
+# The functions extract date and time from the 'dubiously' presented start and end date and time fields.
+#
+# $extractTime is potentially fragile because it relies on being able to instantiate an xsd:dateTime without date components
+# in the case of _time field actually being just that (as opposed to being pre-pended with a bogus date).
+#
+# Incidentally, at the time of writing .asDate('xsd:time').format('HH:mm:ss) doesn't work on 'xsd:time' literals.
+# SKW 2014-10-07
+#####################################################################################################################
+            "$extractDate"        : "{= $$.asDate('dd/MM/yyyy|dd-MM-yyyy|yyyy-MM-dd|yyyy/MM/dd|dd/MM/yyyy HH:mm:ss|dd-MM-yyyy HH:mm:ss|yyyy-MM-dd HH:mm:ss|yyyy/MM/dd HH:mm:ss','xsd:dateTime').format('yyyy-MM-dd')}",
+            "$extractTime"        : "{= $$.asDate('HH:mm:ss|dd/MM/yyyy HH:mm:ss|dd-MM-yyyy HH:mm:ss|yyyy-MM-dd HH:mm:ss|yyyy/MM/dd HH:mm:ss','xsd:dateTime').format('HH:mm:ss')}"
+        }, 
+        {
+            "$s_startDate"        : "{$extractDate.apply(start_date)}",
+            "$s_startTime"        : "{$extractTime.apply(start_time)}",
+            "$s_endDate"          : "{empty(end_date)   ? null : $extractDate.apply(end_date)}",
+            "$s_endTime"          : "{empty(end_time)   ? null : $extractTime.apply(end_time)}",
+            "$bw"                 : "<{$bwspid.map('sp-to-bw')}>",
+            "$bwLabel"            : "{$bwspid.map('sp-to-bw','label',true)}",
+            "$incrementalSomDataset" : "<{$data_base}/{$body_slug}/suspension/dataset-increment/{$filebasename}>",
+
+            "$pubDateTimeSlug"    : "{$pubDateTime.format('yyyyMMdd-HHmmss')}",
+        },
+        {
+            "$l_startDateTime"    : "{$s_startDate.append('T').append($s_startTime).asDate('xsd:dateTime')}",
+            "$l_endDateTime"      : "{empty($s_endDate) || empty($s_endTime) ? null : $s_endDate.append('T').append($s_endTime).asDate('xsd:dateTime')}"
+        },
+        {
+            "$som"                : "{$data_base}/suspension/point/{$bwspid}/date/{$l_startDateTime.format('yyyyMMdd')}/time/{$l_startDateTime.format('HHmmss')}/recordDateTime/{$l_recordDateTime.format('yyyyMMddHHmmss')}",
+        }
+    ],
+############################################################################################################
+# Temporary Map source for mapping sampling-point codes to bathing water URI
+############################################################################################################
+
+# @@TODO 5: Possibly replace with some LDS-BWQ infrastructure map (several transforms will need it).
+ 
+    "sources" : [
+       ###############################################################################
+       # Source for testing only, replace in live service
+       ###############################################################################
+       { "name"        : "sp-to-bw", 
+         "sourceType"  : "RDFSparql", 
+         "source"      : "sites.ttl",
+         "query"       : 
+              "SELECT ?key ?value ?eubwid ?label ?district ?gss
+               WHERE
+               {
+                  [] a def-sp:SamplingPoint; 
+                     skos:notation ?key;
+                     def-bw:bathingWater ?value .
+                     
+                 ?value  skos:notation ?eubwidT ;
+                         skos:prefLabel ?label ;
+                         onsadmingeo:district ?district .
+                         
+                  ?district 
+                     admingeo:gssCode ?gss .
+                  BIND(str(?eubwidT) AS ?eubwid)
+                  FILTER( lang(?label) = 'en' )
+               }"
+       },
+       {
+            "name"       : "region",
+            "sourceType" : "CSV",
+            "source"     : "transform/ea-region.csv",
+            "key"        : "code",
+            "value"      : "region"
+        }
+    ],
+   
+   "templates" : [ 
+        "som"
+   ],
+   "referenced" : [
+      { "name"                               :  "som",
+         "@id"                               :  "<{$som}>",
+         "<rdf:type>"                        :  "<def-som:SuspensionOfMonitoring>",
+         "<rdfs:label>"                      : "{as_id} {$bwLabel}@en",
+         "<def-som:notation>"                : "{as_id.datatype('def-som:somID')}",
+         "<skos:notation>"                   : [ "{as_id.datatype('def-som:somID')}","{as_id}" ],
+         "<dct:source>"                      : "<{$source_base}/{$body_slug}/input/{$filename}#line={value($row.number).format('%06d')}>",
+         "<def-bw:bathingWater>"             : "<{$bw}>",
+         "<def-sp:samplingPoint>"            : "<{$so_sp}/{$bwspid}>",
+         "<def-bwq:sampleYear>"              : "<{bw_season.asDate('xsd:gYear').referenceTime()}>",
+         "<def-bw:regionalOrganization>"     : "<{region.map('region')}>",
+         "<dgu:uriSet>"                      : "<{$incrementalSomDataset}>",
+ # Date/Time fields
+         "<def-som:startOfSuspension>"       : "{$l_startDateTime}",
+         "<def-som:endOfSuspension>"         : "{$l_endDateTime}",
+         "<def-som:expectedEndOfSuspension>" : "{$l_expectedEndOfSuspension}",
+         "<def-som:recordDateTime>"          : "{$l_recordDateTime}",
+# Narrative fields
+         "<dct:description>"                 : "{situation_description}@en",
+         "<rdfs:comment>"                    : "{additional_comments}@en",
+         
+      } 
+   ]
+}
