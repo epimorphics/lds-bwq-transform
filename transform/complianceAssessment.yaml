@@ -60,24 +60,27 @@
     "oneOffs" : [
 #################################################################################################################################
 # Top level Compliance Assessment Dataset
+#
+# Commented out whole of top-level structure as already in the data and not appropriate to repeat on every increment.
+#
 #################################################################################################################################
-       { "name"              : "compliance-dataset" ,
-         "@id"               : "<{$complianceDataset}>" ,
-         "<rdf:type>"        : ["<void:Dataset>", "<qb:DataSet>", "<def-bwq:ComplianceDataSet>" ],
-         "<rdfs:label>"      : "Bathing Water Quality - Annual Compliance Dataset.@en" ,
-         "<dct:description>" : "Top level aggregate data cube of annual assessments of compliance with the EU Bathing Water Directive based on bathing-water samples taken by monitoring bodies in the UK.@en",
-         "<dct:license>"     : "<http://reference.data.gov.uk/id/open-government-licence>",
-         "<qb:structure>"    : "<def-bwq:complianceDsd>",
-         "<void:subset>"     : "<{$bodyComplianceDataset}>",
-         "<dct:modified>"    : "{$exectime}",
-         "<void:uriRegexPattern>" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance/(.*)",
-         "<void:vocabulary>"      : [ 
-                                      "<{$def_bwq_cc_2012}/>", 
-                                      "<{$ns.apply('def-bwq:' )}>", 
-                                      "<{$ns.apply('time:'  )}>",
-                                      "<{$ns.apply('intervals:'  )}>",
-                                      "<{$ns.apply('qb:'      )}>" ],
-                                      
+#       { "name"              : "compliance-dataset" ,
+#         "@id"               : "<{$complianceDataset}>" ,
+#         "<rdf:type>"        : ["<void:Dataset>", "<qb:DataSet>", "<def-bwq:ComplianceDataSet>" ],
+#         "<rdfs:label>"      : "Bathing Water Quality - Annual Compliance Dataset.@en" ,
+#         "<dct:description>" : "Top level aggregate data cube of annual assessments of compliance with the EU Bathing Water Directive based on bathing-water samples taken by monitoring bodies in the UK.@en",
+#         "<dct:license>"     : "<http://reference.data.gov.uk/id/open-government-licence>",
+#         "<qb:structure>"    : "<def-bwq:complianceDsd>",
+#         "<void:subset>"     : "<{$bodyComplianceDataset}>",
+#         "<dct:modified>"    : "{$exectime}",
+#         "<void:uriRegexPattern>" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance/(.*)",
+#         "<void:vocabulary>"      : [ 
+#                                      "<{$def_bwq_cc_2012}/>", 
+#                                      "<{$ns.apply('def-bwq:' )}>", 
+#                                      "<{$ns.apply('time:'  )}>",
+#                                      "<{$ns.apply('intervals:'  )}>",
+#                                      "<{$ns.apply('qb:'      )}>" ],
+#                                      
 ##################################################################################################################################
 # @@ TODO Currently slice info up to 2011 (ie. BASELINE slices) are only attached to the top level compliance data cube
 #    and post 2011 slices are only attached to the per-body cube (of which there is only one in any case).
@@ -87,35 +90,37 @@
 #     http://environment.data.gov.uk/data/bathing-water-quality/compliance?_view=description
 #
 ##################################################################################################################################
-         "<qb:slice>"        : [
-                                  "<{$complianceDataset}/slice/year/{year.format('%04d')}>",
-                                  "<{$complianceDataset}/slice/point/{$bwspid}>"
-                               ],
-                                      
-       },
+#         "<qb:slice>"        : [
+#                                  "<{$complianceDataset}/slice/year/{year.format('%04d')}>",
+#                                  "<{$complianceDataset}/slice/point/{$bwspid}>"
+#                               ],
+#                                      
+#       },
 #################################################################################################################################
 # Per Body Compliance Assessment Dataset
+# 
+# Commented out all except linkages to incremental dataset and modification date/time
 #################################################################################################################################
        { "name"              : "body-compliance-dataset" ,
          "@id"               : "<{$bodyComplianceDataset}>" ,
-         "<rdf:type>"        : ["<void:Dataset>", "<qb:DataSet>", "<def-bwq:ComplianceDataSet>" ],
-         "<rdfs:label>"      : "Bathing Water Quality - Annual Compliance Dataset ({$body_slug}).@en" ,
-         "<dct:description>" : "Bathing water quality annual compliance assessments for bathing waters monitored by a single monitoring body - ({$body_slug}).@en",
-         "<dct:license>"     : "<http://reference.data.gov.uk/id/open-government-licence>",
-         "<qb:structure>"    : "<def-bwq:complianceDsd>",
+#         "<rdf:type>"        : ["<void:Dataset>", "<qb:DataSet>", "<def-bwq:ComplianceDataSet>" ],
+#         "<rdfs:label>"      : "Bathing Water Quality - Annual Compliance Dataset ({$body_slug}).@en" ,
+#         "<dct:description>" : "Bathing water quality annual compliance assessments for bathing waters monitored by a single monitoring body - ({$body_slug}).@en",
+#         "<dct:license>"     : "<http://reference.data.gov.uk/id/open-government-licence>",
+#         "<qb:structure>"    : "<def-bwq:complianceDsd>",
          "<void:subset>"     : "<{$incrementalComplianceDataset}>",
          "<dct:modified>"    : "{$exectime}",
-         "<void:uriRegexPattern>" : [ 
-            "http://environment.data.gov.uk/data/bathing-water-quality/compliance/point/([0-9]\\{5\\})/year/([0-9]\\{4\\})" ,
-            "http://environment.data.gov.uk/data/bathing-water-quality/compliance/slice/point/([0-9]\\{5\\})",
-            "http://environment.data.gov.uk/data/bathing-water-quality/compliance/slice/year/([0-9]\\{4\\})"
-         ],
-         "<void:vocabulary>"      : [ 
-                                      "<{$def_bwq_cc_2012}/>", 
-                                      "<{$ns.apply('def-bwq:' )}>", 
-                                      "<{$ns.apply('time:'  )}>",
-                                      "<{$ns.apply('intervals:'  )}>",
-                                      "<{$ns.apply('qb:'      )}>" ]
+#         "<void:uriRegexPattern>" : [ 
+#            "http://environment.data.gov.uk/data/bathing-water-quality/compliance/point/([0-9]\\{5\\})/year/([0-9]\\{4\\})" ,
+#            "http://environment.data.gov.uk/data/bathing-water-quality/compliance/slice/point/([0-9]\\{5\\})",
+#            "http://environment.data.gov.uk/data/bathing-water-quality/compliance/slice/year/([0-9]\\{4\\})"
+#         ],
+#        "<void:vocabulary>"      : [ 
+#                                     "<{$def_bwq_cc_2012}/>", 
+#                                     "<{$ns.apply('def-bwq:' )}>", 
+#                                     "<{$ns.apply('time:'  )}>",
+##                                     "<{$ns.apply('intervals:'  )}>",
+#                                     "<{$ns.apply('qb:'      )}>" ]
 ##################################################################################################################################
 # @@TODO, have not attached to source of 2011 baseline compliance results as in current deployment
 ##################################################################################################################################
