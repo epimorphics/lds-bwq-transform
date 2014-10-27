@@ -1,0 +1,302 @@
+@prefix cc12-ttl:       <http://environment.data.gov.uk/sources/def/bwq-cc-2012.ttl> .
+#@prefix cc12-rdf:       <http://environment.data.gov.uk/sources/def/bwq-cc-2012.rdf> .
+@prefix :               <http://environment.data.gov.uk/def/bwq-cc-2012/> .
+
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix time:           <http://www.w3.org/2006/time#> .
+@prefix interval:       <http://reference.data.gov.uk/def/intervals/> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix foaf:           <http://xmlns.com/foaf/0.1/> .
+@prefix def-bwq:        <http://environment.data.gov.uk/def/bathing-water-quality/> .
+
+:
+      a       owl:Ontology ;
+      rdfs:isDefinedBy      cc12-ttl:;
+      dcterms:created       "2012-02-02"^^xsd:date;
+      dcterms:modified      "2012-02-02"^^xsd:date;
+      rdfs:comment          "Bathing Water Quality Classifications for the 2012-2014 transition to use of the Revised Bathing Water Directive (2006/7/EC)"@en;
+      dcterms:contributor   [foaf:mbox "skw@epimorphics.com"; foaf:name "Stuart Williams"@en];
+      # add your names here
+
+      dcterms:license   <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+
+      owl:imports       def-bwq:, skos:;
+
+      owl:versionInfo "0.1"^^xsd:string .
+
+###################################################################
+# Add these code points to the existing concept scheme
+###################################################################
+def-bwq:compliance
+        a                   skos:ConceptScheme;
+        skos:hasTopConcept  :C, :F, :G, :I, :N;
+        .
+
+##########################################################################
+# Transitional Bathing Water Directive Compliance categories.
+##########################################################################
+:C      a                   def-bwq:Compliance, skos:Concept;
+        rdfs:isDefinedBy    cc12-ttl:;
+        skos:inScheme       def-bwq:compliance;
+        skos:topConceptOf   def-bwq:compliance;
+        skos:definition
+"""Bathing water quality compliance classification for use during transition to the Revised Bathing Water Directive - rBWD (2006/7/EC)
+
+Indicates that the bathing water was closed during the bathing season."""@en;
+        rdfs:label          "Closed"@en;
+        rdfs:label          "Ar gau"@cy;
+        skos:prefLabel      "Closed"@en;
+        skos:prefLabel      "Ar gau"@cy;
+        def-bwq:complianceCodeNotation
+                            "C"^^def-bwq:complianceCode;
+        skos:notation       "C"^^def-bwq:complianceCode;
+        skos:notation       "C";
+        dcterms:source      <http://www.legislation.gov.uk/uksi/1991/1597/made>,
+                            <http://www.legislation.gov.uk/uksi/2008/1097/made>;
+        rdfs:seeAlso        <http://www.legislation.gov.uk/uksi/1991/1597/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/1/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/2/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made>,
+                            <http://www.opsi.gov.uk/legislation/european/directive/1976/0160>,
+                            <http://www.opsi.gov.uk/legislation/european/directive/2006/0007>,
+                            <http://www.legislation.gov.uk/uksi/2008/1097/made>,
+                            <http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/3>,
+                            <http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/4>;
+        .
+
+# SKOS Concept used as code-point to classify a bathing water as poor.
+:F      a                   def-bwq:Compliance, skos:Concept;
+        rdfs:isDefinedBy    cc12-ttl:;
+        skos:inScheme       def-bwq:compliance;
+        skos:topConceptOf   def-bwq:compliance;
+        skos:definition
+"""Bathing water quality compliance classification for use during transition to the Revised Bathing Water Directive - rBWD (2006/7/EC)
+
+For annual assessments, \"Fail\" means that fewer than 95% of the samples meet the required mandatory standards of the cBWD Directive (76/0160/EEC).
+
+Sample limits used are:
+
+\"Higher\"    EC: ≤100; IE: ≤100.
+\"Minimum\"   EC: ≤2000
+\"Fail\"      EC: >2000
+
+EC = Escherichia coli, IE = Intestinal enterococci.
+
+All numeric limits are cfu/100ml"""@en;
+        rdfs:label          "Fail"@en;
+        rdfs:label          "Methu"@cy;
+        skos:prefLabel      "Fail"@en;
+        skos:prefLabel      "Methu"@cy;
+        def-bwq:complianceCodeNotation
+                            "F"^^def-bwq:complianceCode;
+        skos:notation       "F"^^def-bwq:complianceCode;
+        skos:notation       "F";
+        dcterms:source      <http://www.legislation.gov.uk/uksi/1991/1597/made>,
+                            <http://www.legislation.gov.uk/uksi/2008/1097/made>;
+        rdfs:seeAlso        <http://www.legislation.gov.uk/uksi/1991/1597/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/1/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/2/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made>,
+                            <http://www.opsi.gov.uk/legislation/european/directive/1976/0160>,
+                            <http://www.opsi.gov.uk/legislation/european/directive/2006/0007>,
+                            <http://www.legislation.gov.uk/uksi/2008/1097/made>,
+                            <http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/3>,
+                            <http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/4>;
+        .
+
+# SKOS Concept used as code-point to classify a bathing water as good.
+:I      a                   def-bwq:Compliance, skos:Concept;
+        rdfs:isDefinedBy    cc12-ttl:;
+        skos:inScheme       def-bwq:compliance;
+        skos:topConceptOf   def-bwq:compliance;
+        skos:definition
+"""Bathing water quality compliance classification for use during transition to the Revised Bathing Water Directive - rBWD (2006/7/EC)
+
+For annual assessments, \"Minimum\" means that at least 95% of the samples meet the mandatory standards of the cBWD Directive (76/0160/EEC).
+
+Sample limits used are:
+
+\"Higher\"    EC: ≤100; IE: ≤100.
+\"Minimum\"   EC: ≤2000
+\"Fail\"      EC: >2000
+
+EC = Escherichia coli, IE = Intestinal enterococci.
+
+All numeric limits are cfu/100ml"""@en;
+
+        rdfs:label          "Minimum"@en;
+        rdfs:label          "Isafswm"@cy;
+        skos:prefLabel      "Minimum"@en;
+        skos:prefLabel      "Isafswm"@cy;
+        def-bwq:complianceCodeNotation
+                            "I"^^def-bwq:complianceCode;
+        skos:notation       "I"^^def-bwq:complianceCode;
+        skos:notation       "I";
+        dcterms:source      <http://www.legislation.gov.uk/uksi/1991/1597/made>,
+                            <http://www.legislation.gov.uk/uksi/2008/1097/made>;
+        rdfs:seeAlso        <http://www.legislation.gov.uk/uksi/1991/1597/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/1/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/2/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made>,
+                            <http://www.opsi.gov.uk/legislation/european/directive/1976/0160>,
+                            <http://www.opsi.gov.uk/legislation/european/directive/2006/0007>,
+                            <http://www.legislation.gov.uk/uksi/2008/1097/made>,
+                            <http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/3>,
+                            <http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/4>;
+        .
+
+# SKOS Concept used as code-point to classify a bathing water as excellent.
+:G      a                   def-bwq:Compliance, skos:Concept;
+        rdfs:isDefinedBy    cc12-ttl:;
+        skos:inScheme       def-bwq:compliance;
+        skos:topConceptOf   def-bwq:compliance;
+        skos:definition
+"""Bathing water quality compliance classification for use during transition to the Revised Bathing Water Directive - rBWD (2006/7/EC)
+
+For annual assessments, \"Higher\" means that the bathing water meets the criteria for the stricter guideline standards of the cBWD Directive (76/0160/EEC).
+
+Sample limits used are:
+
+\"Higher\"    EC: ≤100; IE: ≤100.
+\"Minimum\"   EC: ≤2000
+\"Fail\"      EC: >2000
+
+EC = Escherichia coli, IE = Intestinal enterococci.
+
+All numeric limits are cfu/100ml"""@en;
+
+        rdfs:label          "Higher"@en;
+        rdfs:label          "Uchaf"@cy;
+        skos:prefLabel      "Higher"@en;
+        skos:prefLabel      "Uchaf"@cy;
+        def-bwq:complianceCodeNotation
+                            "G"^^def-bwq:complianceCode;
+        skos:notation       "G"^^def-bwq:complianceCode;
+        skos:notation       "G";
+        dcterms:source      <http://www.legislation.gov.uk/uksi/1991/1597/made>,
+                            <http://www.legislation.gov.uk/uksi/2008/1097/made>;
+        rdfs:seeAlso        <http://www.legislation.gov.uk/uksi/1991/1597/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/1/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/2/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made>,
+                            <http://www.opsi.gov.uk/legislation/european/directive/1976/0160>,
+                            <http://www.opsi.gov.uk/legislation/european/directive/2006/0007>,
+                            <http://www.legislation.gov.uk/uksi/2008/1097/made>,
+                            <http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/3>,
+                            <http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/4>;
+        .
+
+# SKOS Concept used as code-point to classify a bathing water as not classified (sic).
+:N      a                   def-bwq:Compliance, skos:Concept;
+        rdfs:isDefinedBy    cc12-ttl:;
+        skos:inScheme       def-bwq:compliance;
+        skos:topConceptOf   def-bwq:compliance;
+        skos:definition
+"""Bathing water quality compliance classification for use during transition to the Revised Bathing Water Directive - rBWD (2006/7/EC)
+
+Indicates that the bathing water was not classified during the bathing season."""@en;
+        rdfs:label          "Not Classified"@en;
+        rdfs:label          "Heb ei Ddosbarthu"@cy;
+        skos:prefLabel      "Not Classified"@en;
+        skos:prefLabel      "Heb ei Ddosbarthu"@cy;
+        def-bwq:complianceCodeNotation
+                            "N"^^def-bwq:complianceCode;
+        skos:notation       "N"^^def-bwq:complianceCode;
+        skos:notation       "N"^^def-bwq:complianceCode;
+        skos:notation       "N";
+        dcterms:source      <http://www.legislation.gov.uk/uksi/1991/1597/made>,
+                            <http://www.legislation.gov.uk/uksi/2008/1097/made>;
+        rdfs:seeAlso        <http://www.legislation.gov.uk/uksi/1991/1597/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/1/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/2/made>,
+                            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made>,
+                            <http://www.opsi.gov.uk/legislation/european/directive/1976/0160>,
+                            <http://www.opsi.gov.uk/legislation/european/directive/2006/0007>,
+                            <http://www.legislation.gov.uk/uksi/2008/1097/made>,
+                            <http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/3>,
+                            <http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/4>;
+        .
+
+
+#########################################################################
+# Vestigial legislation reference data
+#########################################################################
+<http://www.opsi.gov.uk/legislation/european/directive/1976/0160>
+    rdfs:label  "EC Bathing Water Directive (76/160/EEC)"@en;
+    dcterms:title  """COUNCIL DIRECTIVE
+of 8 December 1975
+concerning the quality of bathing water
+(76/160/EEC)"""@en;
+    .
+
+<http://www.environment-agency.gov.uk/homeandleisure/37841.aspx>
+    rdfs:label "Enviroment Agency on Bathing Water quality"@en
+    .
+
+<http://www.environment-agency.gov.uk/homeandleisure/119855.aspx>
+    rdfs:label "Environment Agency on Abnormal Weather Exceptions"@en
+    .
+
+<http://www.legislation.gov.uk/uksi/1991/1597/made>
+    rdfs:label "The Bathing Waters (Classification) Regulations 1991"@en
+    .
+
+<http://www.legislation.gov.uk/uksi/1991/1597/schedule/1/made>
+    rdfs:label  "CRITERIA FOR CLASSIFICATION BW1"@en;
+        .
+
+<http://www.legislation.gov.uk/uksi/1991/1597/schedule/2/made>
+    rdfs:label  "SAMPLING REQUIREMENTS"@en;
+        .
+
+<http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made>
+    rdfs:label  "QUALITY AND ADDITIONAL SAMPLING REQUIREMENTS"@en;
+        .
+
+<http://www.opsi.gov.uk/legislation/european/directive/2006/0007>
+    rdfs:label  "EC Revised Bathing Water Directive (2006/7/EC)"@en;
+    dcterms:title   """DIRECTIVE 2006/7/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+of 15 February 2006
+concerning the management of bathing water quality and repealing Directive 76/160/EEC"""@en;
+    .
+
+<http://www.legislation.gov.uk/uksi/2008/1097/made>
+    rdfs:label  "The Bathing Water Regulations 2008"@en;
+    .
+
+<http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/1>
+    rdfs:label  "DEFINITIONS FROM THE WATER FRAMEWORK DIRECTIVE"@en;
+    .
+
+<http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/2>
+    rdfs:label  "BATHING WATER PROFILES"@en;
+    .
+
+<http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/3>
+    rdfs:label  "MONITORING ETC"@en;
+    .
+
+<http://www.legislation.gov.uk/uksi/2008/1097/schedule/3/part/1/made>
+    rdfs:label  "INTESTINAL ENTEROCOCCI AND ESCHERICHIA COLI"@en;
+    .
+
+<http://www.legislation.gov.uk/uksi/2008/1097/schedule/3/part/2/made>
+    rdfs:label  "CYANOBACTERIA"@en;
+    .
+
+<http://www.legislation.gov.uk/uksi/2008/1097/schedule/3/part/3/made>
+    rdfs:label  "MACRO-ALGAE AND MARINE PHYTOPLANKTON"@en;
+    .
+
+<http://www.legislation.gov.uk/uksi/2008/1097/schedule/3/part/4/made>
+    rdfs:label  "WASTE"@en;
+    .
+
+<http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/4>
+    rdfs:label  "CLASSIFICATION"@en;
+    .

@@ -1,0 +1,291 @@
+@base                   <http://environment.data.gov.uk/def/bathing-water/> .
+@prefix bw-ttl: 		<http://environment.data.gov.uk/sources/def/bathing-water.ttl> .
+#@prefix bw-rdf:         <http://environment.data.gov.uk/sources/def/bathing-water.rdf> .
+@prefix :        		<http://environment.data.gov.uk/def/bathing-water/> .
+
+# Prefix for Sampling Point Locations under INSPIRE environmental monitoring facilities theme.
+@prefix	loc-sp:		<http://location.data.gov.uk/def/ef/SamplingPoint/> .
+
+# Prefix for Bathing Waters (associated with Monitoring Points) as ref-data under environment.data.gov.uk.
+@prefix	def-bw:			<http://environment.data.gov.uk/def/bathing-water/> .
+
+@prefix rdfs:    		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     		<http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix qb:      		<http://purl.org/linked-data/cube#> .
+@prefix time:	 		<http://www.w3.org/2006/time#> .
+@prefix	interval:       <http://reference.data.gov.uk/def/intervals/> .
+@prefix skos:   	    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix foaf:           <http://xmlns.com/foaf/0.1/> .
+@prefix org:            <http://www.w3.org/ns/org#> .
+
+@prefix geo:			<http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/sdmx-attribute#> .
+
+:
+      a       owl:Ontology ;
+      rdfs:isDefinedBy  bw-ttl:;
+      dcterms:created		"2010-08-28"^^xsd:date;
+    dcterms:modified		"2012-04-10"^^xsd:date;
+    dcterms:contributor	[foaf:mbox "skw@epimorphics.com"; foaf:name "Stuart Williams"@en];
+    # add your names here
+
+    dcterms:license 	<http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+    rdfs:comment      "2012-01-25: Added Coastal, Transitional, Lake and River bathing water subclasses."@en;
+    rdfs:comment      "2012-04-10: Added yearDedesignated to Bathing Water."@en;
+
+
+      owl:versionInfo "0.2"^^xsd:string .
+
+
+:BathingWater
+  a				owl:Class;
+  rdfs:label		"BathingWater"@en;
+  rdfs:comment	"A class of Bathing Waters relevant to the EU Bathing Water Directive, 76/160/EEC, see <http://www.opsi.gov.uk/legislation/european/directive/1976/0160>"@en;
+  rdfs:isDefinedBy	bw-ttl:;
+  rdfs:subClassOf	geo:SpatialThing;
+  rdfs:seeAlso		<http://www.legislation.gov.uk/uksi/1991/1597/made>,
+            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/1/made>,
+            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/2/made>,
+            <http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made>,
+            <http://www.legislation.gov.uk/uksi/2003/1238/made>,
+            <http://eur-lex.europa.eu/LexUriServ/site/en/consleg/1976/L/01976L0160-20030605-en.pdf>,
+            <http://www.opsi.gov.uk/legislation/european/directive/2006/0007>;
+  .
+
+:RiverBathingWater
+    a               owl:Class;
+    rdfs:subClassOf :BathingWater;
+    rdfs:label      "InlandBathingWater"@en;
+    rdfs:comment    "A subclass designated Bathing Waters that are part of a river."@en;
+    rdfs:isDefinedBy    bw-ttl:;
+    .
+
+:LakeBathingWater
+    a               owl:Class;
+    rdfs:subClassOf :BathingWater;
+    rdfs:label      "LakeBathingWater"@en;
+    rdfs:comment    "A subclass of designated Bathing Water that are the whole or a part of a lake."@en;
+    rdfs:isDefinedBy    bw-ttl:;
+    .
+
+:TransitionalBathingWater
+    a               owl:Class;
+    rdfs:subClassOf :BathingWater;
+    rdfs:label      "TransitionalBathingWater"@en;
+    rdfs:comment    "A subclass of designated Bathing Waters that are in transitional waters typically an estuary."@en;
+    rdfs:isDefinedBy    bw-ttl:;
+    .
+
+:CoastalBathingWater
+    a               owl:Class;
+    rdfs:subClassOf :BathingWater;
+    rdfs:label      "CoastalBathingWater"@en;
+    rdfs:comment    "A subclass of designated Bathing Waters that are coastal."@en;
+    rdfs:isDefinedBy    bw-ttl:;
+    .
+
+
+:bathingWater
+  a				owl:ObjectProperty;
+  rdfs:label		"bathingWater"@en;
+  rdfs:comment	"a property for associating a bathing water with some thing."@en;
+  rdfs:isDefinedBy	bw-ttl:;
+  rdfs:range		:BathingWater;
+  .
+
+:eubwid
+  a	rdfs:Datatype;
+  rdfs:label			"eubwid"@en;
+  rdfs:comment		"Datatype for use in typed skos:notations"@en;
+  rdfs:isDefinedBy	bw-ttl:;
+  .
+
+:eubwidNotation
+  a					rdf:Property;
+  rdfs:label			"eubwidNotation"@en;
+  rdfs:isDefinedBy	bw-ttl:;
+  rdfs:subPropertyOf	skos:notation;
+  rdfs:domain			:BathingWater;
+  rdfs:range			:eubwid;
+  rdfs:comment		"A skos:notation sub property for typed notations on bathing waters"@en;
+  .
+
+:yearDesignated
+    a                   owl:ObjectProperty;
+    rdfs:label          "yearDesignated"@en;
+    rdfs:isDefinedBy    bw-ttl:;
+    rdfs:range          interval:CalendarYear;
+    rdfs:domain         :BathingWater;
+    rdfs:comment        "a property to convey the calendar year in which a Bathing Water became designated as such."@en;
+    .
+:yearDedesignated
+    a                   owl:ObjectProperty;
+    rdfs:label          "yearDedesignated"@en;
+    rdfs:isDefinedBy    bw-ttl:;
+    rdfs:range          interval:CalendarYear;
+    rdfs:domain         :BathingWater;
+    rdfs:comment        "a property to convey the calendar year in which a former designated Bathing Water has been de-designated."@en;
+    .
+    
+:waterQualityImpactedByHeavyRain
+    a                   owl:DatatypeProperty;
+    rdfs:label          "waterQualityImpactedByHeavyRain"@en;
+    rdfs:isDefinedBy    bw-ttl:;
+    rdfs:comment        "a boolean valued property set to true for a Bathing Water whose water quality is affected by heavy rainfall within its Zone of Influence."@en;
+    rdfs:domain         :BathingWater;
+    rdfs:range          xsd:boolean;
+    .
+
+#
+# Could be persuaded that we should use the administrative-geography:coverage/coveredBy pair for express this relationship
+#
+:regionalOrganization
+    a                  owl:ObjectProperty;
+    rdfs:isDefinedBy    bw-ttl:;
+    rdfs:label         "regionalOrganization";
+    rdfs:comment       "an open-domain property for relating something (eg. a bathing water) to the local organisation (or organisational unit) responsible for its administration."@en;
+    rdfs:domain        rdfs:Resource;
+    rdfs:range         org:Organization;
+    .
+
+
+:sedimentTypesPresent
+    a                   owl:ObjectProperty;
+    rdfs:isDefinedBy    bw-ttl:;
+    rdfs:label          "sedimentTypesPresent"@en;
+    rdfs:comment        "A multivalued property for indicating the sediment types found to be present at a BathingWater"@en;
+    rdfs:domain         :BathingWater;
+    rdfs:range          :SedimentType;
+    .
+
+#
+# A skos concept scheme for sendiments found at bathing waters.
+#
+
+:sediment-type
+    a                   skos:ConceptScheme;
+    rdfs:isDefinedBy    bw-ttl:;
+    rdfs:label          "sediment-type"@en;
+    rdfs:comment        "A SKOS concept scheme for sediment types found at bathing waters."@en;
+    skos:hasTopConcept  :sand-sediment,:shingle-sediment,:mud-sediment,:marsh-sediment,:rock-sediment,:other-sediment;
+    .
+
+:SedimentType
+    a                   owl:Class;
+    rdfs:subClassOf     skos:Concept;
+    rdfs:isDefinedBy    bw-ttl:;
+    rdfs:label          "Sediment"@en;
+    rdfs:comment        "A class for sediment types found at bathing waters."@en;
+    .
+
+:marsh-sediment
+    a                   skos:Concept,:SedimentType;
+    rdfs:isDefinedBy    bw-ttl:;
+    skos:prefLabel      "marsh"@en;
+    rdfs:label          "marsh"@en;
+    skos:scopeNote      "Used to indicate the presence of a marshy sediment at a bathing-water."@en;
+    rdfs:comment        "Used to indicate the presence of a marshy sediment at a bathing-water."@en;
+    skos:inScheme       :sediment-type;
+    skos:topConceptOf   :sediment-type;
+    .
+
+:mud-sediment
+    a                   skos:Concept,:SedimentType;
+    rdfs:isDefinedBy    bw-ttl:;
+    skos:prefLabel      "mud"@en;
+    rdfs:label          "mud"@en;
+    skos:scopeNote      "Used to indicate the presence of a muddy sediment at a bathing-water."@en;
+    rdfs:comment        "Used to indicate the presence of a muddy sediment at a bathing-water."@en;
+    skos:inScheme       :sediment-type;
+    skos:topConceptOf   :sediment-type;
+    .
+
+:sand-sediment
+    a                   skos:Concept,:SedimentType;
+    rdfs:isDefinedBy    bw-ttl:;
+    skos:prefLabel      "sand"@en;
+    rdfs:label          "sand"@en;
+    skos:scopeNote      "Used to indicate the presence of a sandy sediment at a bathing-water."@en;
+    rdfs:comment        "Used to indicate the presence of a sandy sediment at a bathing-water."@en;
+    skos:inScheme       :sediment-type;
+    skos:topConceptOf   :sediment-type;
+    .
+
+
+:shingle-sediment
+    a                   skos:Concept,:SedimentType;
+    rdfs:isDefinedBy    bw-ttl:;
+    skos:prefLabel      "shingle"@en;
+    rdfs:label          "shingle"@en;
+    skos:scopeNote      "Used to indicate the presence of a shingle sediment at a bathing-water."@en;
+    rdfs:comment        "Used to indicate the presence of a shingle sediment at a bathing-water."@en;
+    skos:inScheme       :sediment-type;
+    skos:topConceptOf   :sediment-type;
+    .
+
+
+:rock-sediment
+    a                   skos:Concept,:SedimentType;
+    rdfs:isDefinedBy    bw-ttl:;
+    skos:prefLabel      "rock"@en;
+    rdfs:label          "rock"@en;
+    skos:scopeNote      "Used to indicate the presence of a rocky sediment at a bathing-water."@en;
+    rdfs:comment        "Used to indicate the presence of a rocky sediment at a bathing-water."@en;
+    skos:inScheme       :sediment-type;
+    skos:topConceptOf   :sediment-type;
+    .
+
+:other-sediment
+    a                   skos:Concept,:SedimentType;
+    rdfs:isDefinedBy    bw-ttl:;
+    skos:prefLabel      "other"@en;
+    rdfs:label          "other"@en;
+    skos:scopeNote      "Used to indicate the presence of a currently categorised sediment at a bathing-water."@en;
+    rdfs:comment        "Used to indicate the presence of a currently categorised sediment at a bathing-water."@en;
+    skos:inScheme       :sediment-type;
+    skos:topConceptOf   :sediment-type;
+    .
+
+
+<http://www.legislation.gov.uk/uksi/1991/1597/schedule/1/made>
+  rdfs:label	"CRITERIA FOR CLASSIFICATION BW1"@en;
+    .
+
+<http://www.legislation.gov.uk/uksi/1991/1597/schedule/2/made>
+  rdfs:label	"SAMPLING REQUIREMENTS"@en;
+    .
+
+<http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made>
+  rdfs:label	"QUALITY AND ADDITIONAL SAMPLING REQUIREMENTS"@en;
+    .
+
+<http://eur-lex.europa.eu/LexUriServ/site/en/consleg/1976/L/01976L0160-20030605-en.pdf>
+    rdfs:label  "EC Bathing Water Directive (76/160/EEC) incorporating 2003 amendments"@en;
+    .
+
+<http://www.legislation.gov.uk/uksi/1991/1597/made>
+  rdfs:label "The Bathing Waters (Classification) Regulations 1991"@en
+  .
+
+<http://www.legislation.gov.uk/uksi/2003/1238/made>
+  rdfs:label "The Bathing Waters (Classification) (England) Regulations 2003"@en
+  .
+
+<http://www.opsi.gov.uk/legislation/european/directive/1976/0160>
+    rdfs:label  "EC Bathing Water Directive (76/160/EEC)"@en;
+    dcterms:title  """COUNCIL DIRECTIVE
+of 8 December 1975
+concerning the quality of bathing water
+(76/160/EEC)"""@en;
+    .
+
+<http://www.opsi.gov.uk/legislation/european/directive/2006/0007>
+    rdfs:label  "EC Revised Bathing Water Directive (2006/7/EC)"@en;
+    dcterms:title   """DIRECTIVE 2006/7/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+of 15 February 2006
+concerning the management of bathing water quality and repealing Directive 76/160/EEC"""@en;
+    .

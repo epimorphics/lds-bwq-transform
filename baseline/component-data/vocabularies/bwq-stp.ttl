@@ -1,0 +1,284 @@
+# baseURI: http://environment.data.gov.uk/def/bwq-stp/
+# imports: http://environment.data.gov.uk/sources/def/bathing-water.ttl
+# imports: http://location.data.gov.uk/sources/def/SamplingPoint.ttl
+# imports: http://purl.org/dc/terms/
+# imports: http://purl.org/linked-data/cube
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix :        <http://environment.data.gov.uk/def/bwq-stp/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix def-bw:  <http://environment.data.gov.uk/def/bathing-water/> .
+@prefix def-sp:  <http://location.data.gov.uk/def/ef/SamplingPoint/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix qb:      <http://purl.org/linked-data/cube#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+## Preamble
+
+:     rdf:type owl:Ontology ;
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      dcterms:contributor
+              [ foaf:name "Stuart Williams"@en
+              ] ;
+      dcterms:created "2013-06-27"^^xsd:date ;
+      dcterms:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+      dcterms:modified "2013-06-27"^^xsd:date ;
+      owl:imports 
+            <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> , 
+            <http://www.w3.org/2004/02/skos/core> , 
+            <http://location.data.gov.uk/sources/def/SamplingPoint.ttl> , 
+            <http://purl.org/linked-data/cube> , 
+            dcterms: , 
+            <http://environment.data.gov.uk/sources/def/bathing-water.ttl> ;
+      owl:versionInfo "0.1" .
+
+##############################################################################
+##
+## Risk prediction as  subclass of a data cube observation, qb:Observation
+##
+##############################################################################
+:RiskPrediction
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type owl:Class ;
+      rdfs:subClassOf qb:Observation ;
+      rdfs:comment "A subclass of qb:Observation whose instances are daily short-term pollution risk predictions, for given day at a given bathing water. Once published a prediction is regarded as applicable at the corresponding bathing water until its expiry time (expiresAt attribute)."@en ;
+      rdfs:label "Short term pollution risk prediction"@en ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :predictedAt
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :predictedOn
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :samplingPoint
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :publishedAt
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :bathingWater
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :riskLevel
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :expiresAt
+              ] .
+
+##############################################################################
+:latestRiskPrediction
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+	  a					owl:ObjectProperty ;
+	  rdfs:label		"latest short term pollution risk prediction"@en ;
+	  rdfs:comment		"Relates (typically) a bathing water and/or its sampling point to its latest short term pollution risk prediction, if any."@en ;
+	  rdfs:range		:RiskPrediction ;
+	  .
+	 
+:riskPredictionsActive
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+	  a					owl:DatatypeProperty ;
+	  rdfs:label		"risk prediction active"@en;
+	  rdfs:comment		"A property that indicates whether risk predictions are being made for the corresponding bathing water or sampling point."@en ;
+	  rdfs:range		xsd:boolean ;
+	  .
+	
+##############################################################################
+## 
+## Dataset class for short term pollution risk datasets
+##
+##############################################################################
+:RiskPredictionDataSet
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type owl:Class ;
+      rdfs:comment "A qb:DataSet of Short term pollution risk predictions."@en ;
+      rdfs:label "Short Term Pollution Risk Prediction Dataset"@en ;
+      rdfs:subClassOf qb:DataSet ;
+      owl:equivalentClass
+              [ rdf:type owl:Restriction ;
+                owl:hasValue :riskDsd ;
+                owl:onProperty qb:structure
+              ] ;
+      skos:prefLabel "Short term pollution risk prediction data set"@en .
+
+##############################################################################
+##
+##   Short Term Pollution Risk Dataset
+##
+##   Dataset Structure Definition
+##
+##############################################################################
+
+:riskDsd
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type qb:DataStructureDefinition ;
+      rdfs:comment "A DSD for reporting daily predictions of the risk of short term pollution at a bathing water."@en ;
+      rdfs:label "riskDsd"@en ;
+      skos:prefLabel "risk Dsd"@en ;
+      qb:component
+      # Dimensions
+              [ qb:dimension :bathingWater  ;  qb:order 1 ] ,
+              [ qb:dimension :predictedOn   ;  qb:order 2 ] ,
+      # Measure(s)
+              [ qb:measure :riskLevel       ;  qb:order 3 ] ,
+      # Attributes
+              [ qb:attribute :predictedAt   ;  qb:order 4 ] ,
+              [ qb:attribute :expiresAt     ;  qb:order 5 ] ,
+              [ qb:attribute :publishedAt   ;  qb:order 6 ] ,
+              [ qb:attribute :samplingPoint ;  qb:order 7 ] .
+
+##############################################################################
+## qb: Dimension Properties
+##############################################################################
+:predictedOn
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type qb:DimensionProperty , owl:DatatypeProperty , owl:FunctionalProperty ;
+      rdfs:comment "Indicates the date for which a prediction applies."@en ;
+      rdfs:label "predicted on"@en ;
+      rdfs:range xsd:date .
+
+:bathingWater
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      a                   qb:DimensionProperty;
+      rdfs:label          "bathingWater"@en;
+      rdfs:comment        "The bathing water from which the sample was taken."@en;
+      rdfs:range          def-bw:BathingWater;
+      .
+
+##############################################################################
+## qb: Measure Properties
+##############################################################################
+:riskLevel
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type owl:ObjectProperty , qb:MeasureProperty , owl:FunctionalProperty ;
+      rdfs:comment "A property that indicates the predicted level of short-term pollution risk: normal, increased or unknown"@en ;
+      rdfs:label "Short term pollution risk level"@en ;
+      rdfs:range :RiskLevel ;
+      skos:prefLabel "Short term pollution risk level"@en .
+
+##############################################################################
+## qb: Attribute Properties
+##############################################################################
+
+:predictedAt
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type qb:AttributeProperty , owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:comment "Indicates the date and time at which a prediction was made."@en ;
+      rdfs:label "predicted at"@en ;
+      rdfs:range xsd:dateTime .
+
+:expiresAt
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type owl:FunctionalProperty , owl:DatatypeProperty , qb:AttributeProperty ;
+      rdfs:comment "Indicates the date and time at which a short-term pollution risk prediction expires."@en ;
+      rdfs:label "expires at"@en ;
+      rdfs:range xsd:dateTime .
+
+:publishedAt
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type owl:FunctionalProperty , owl:DatatypeProperty , qb:AttributeProperty ;
+      rdfs:comment "Indicates the date and time at which a prediction was published"@en ;
+      rdfs:label "published at"@en ;
+      rdfs:range xsd:dateTime .
+
+:samplingPoint
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+    a                   qb:AttributeProperty;
+    rdfs:label          "samplingPoint"@en;
+    rdfs:comment        "The sampling point where the sample was taken."@en;
+    rdfs:range          def-sp:SamplingPoint;
+    .
+##############################################################################
+##
+## Risk level code list (implemented as a skos:ConceptScheme)
+##
+##############################################################################
+
+# skos:Concept sub-class
+:RiskLevel
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type owl:Class ;
+      rdfs:comment "A sub-class of skos:Concept to collect all instances of Short term pollution predicted risk codes (unknown, normal, increased)"@en ;
+      rdfs:label "Short term pollution risk level"@en ;
+      rdfs:subClassOf skos:Concept ;
+      skos:prefLabel "Short term pollution risk level"@en .
+
+# skos:ConceptScheme
+:riskScheme
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type skos:ConceptScheme ;
+      rdfs:label "pollution risk scheme"@en ;
+      skos:hasTopConcept :unknown , :normal , :increased ;
+      skos:prefLabel "pollution risk scheme"@en .
+
+# distinguished skos:notation sub-property
+:riskLevelNotation
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type rdf:Property ;
+      rdfs:comment "A distinguished sub-property of skos:notation for associating risk level code points with their notation."@en ;
+      rdfs:domain :RiskLevel ;
+      rdfs:label "short term pollution risk level notation"@en ;
+      rdfs:range :riskLevelCode ;
+      rdfs:subPropertyOf skos:notation ;
+      skos:prefLabel "short term pollution risk level notation"@en .
+
+# distinguished data-type for typed notation values.
+:riskLevelCode
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type rdfs:Datatype ;
+      rdfs:comment "A distinguished datatype for the notation associated with a short-term pollution risk level code."@en ;
+      rdfs:label "short term pollution risk level code"@en ;
+      skos:prefLabel "short term pollution risk level code"@en .
+
+##############################################################################
+# Code-points
+##############################################################################
+
+:unknown
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type :RiskLevel ;
+      rdfs:comment """A risk level code-point that indicate an unknown level of risk. 
+
+This arises in the case of a bathing-water for which short-term pollution risk predictions are normally made and published, but where it has not been possible to predict a normal or an increased short-term pollution risk level for technical reasons. Further explanation of the (none) prediction may be available in an associated comment."""@en ;
+      rdfs:label "unknown"@en ;
+      :riskNotation "0"^^:riskLevelCode ;
+      skos:notation "0" , "0"^^:riskLevelCode ;
+      skos:prefLabel "no-prediction"@en ;
+      skos:topConceptOf :riskScheme .
+
+:normal
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type :RiskLevel ;
+      rdfs:comment "A risk level code-point that indicates a normal level of risk."@en ;
+      rdfs:label "normal"@en ;
+      :riskNotation "1"^^:riskLevelCode ;
+      skos:notation "1" , "1"^^:riskLevelCode ;
+      skos:prefLabel "normal"@en ;
+      skos:topConceptOf :riskScheme .
+
+:increased
+      rdfs:isDefinedBy <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> ;
+      rdf:type :RiskLevel ;
+      rdfs:comment "A risk level code-point that indicates a level of risk that is above normal. Further explanation of the prediction may be available in an associated comment."@en ;
+      rdfs:label "increased"@en ;
+      :riskNotation "2"^^:riskLevelCode ;
+      skos:notation "2"^^:riskLevelCode , "2" ;
+      skos:prefLabel "increased"@en ;
+      skos:topConceptOf :riskScheme .      

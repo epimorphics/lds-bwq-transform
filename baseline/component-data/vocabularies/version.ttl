@@ -1,0 +1,38 @@
+#############################################################
+#
+# A simple vocabulary to support versioning of resources.
+#
+#############################################################
+
+@prefix :        <http://environment.data.gov.uk/def/version/> .
+@base            <http://environment.data.gov.uk/def/version/> .
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:    <http://www.w3.org/2006/time#> .
+@prefix source:  <http://environment.data.gov.uk/sources/def/version.ttl> .
+
+
+:interval
+    a                rdf:Property ;
+    rdfs:label       "interval"@en ;
+    rdfs:comment     """interval relates a versioned resource to an interval during which the version applies."""@en ;
+    rdfs:range       time:Interval ;
+    rdfs:isDefinedBy source:
+    .
+
+:versionString
+    a                rdf:Property ;
+    rdfs:label       "version string"@en ;
+    rdfs:comment     """relates a versioned resource to a version string that identifies the version of the resource."""@en ;
+    rdfs:range       rdfs:Literal ;
+    rdfs:isDefinedBy source:
+    .
+
+:currentVersion
+    a                rdf:Property ;
+    rdfs:label       "current version"@en ;
+    rdfs:comment     """currentVersion relates an enduring resource to its current version"""@en ;
+    rdfs:isDefinedBy source:
+    .
+

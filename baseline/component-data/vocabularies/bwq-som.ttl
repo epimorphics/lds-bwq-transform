@@ -1,0 +1,276 @@
+@prefix som-ttl:        <http://environment.data.gov.uk/sources/def/bwq-som.ttl> .
+@prefix :               <http://environment.data.gov.uk/def/bwq-som/> .
+
+# Prefix for Monitoring Point Locations under INSPIRE environmental monitoring facilities theme.
+@prefix def-ef-sp:      <http://location.data.gov.uk/def/ef/SamplingPoint/> .
+
+# Prefix for Bathing Waters (associated with Monitoring Points) as ref-data under environment.data.gov.uk.
+@prefix def-bw:     <http://environment.data.gov.uk/def/bathing-water/> .
+
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix time:           <http://www.w3.org/2006/time#> .
+@prefix interval:       <http://reference.data.gov.uk/def/intervals/> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix foaf:           <http://xmlns.com/foaf/0.1/> .
+@prefix bwq:            <http://environment.data.gov.uk/def/bathing-water-quality/>  .
+
+
+:      a                    owl:Ontology ;
+      rdfs:isDefinedBy      som-ttl:;
+      dcterms:created       "2012-09-24"^^xsd:date;
+      dcterms:modified      "2013-05-13"^^xsd:date;
+      dcterms:description   "A small vocabulary to support the publication of Bathing Water Quality Suspensions of Monitoring arisng from abnormal situations."@en;
+      dcterms:contributor   [foaf:mbox "skw@epimorphics.com"; foaf:name "Stuart Williams"@en];
+      # add your names here
+
+      dcterms:license   <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+      
+      owl:imports def-ef-sp:, def-bw:,
+                  <http://www.w3.org/2006/time>,
+                  <http://www.w3.org/2004/02/skos/core>,
+                  <http://reference.data.gov.uk/def/intervals>;
+      
+      owl:versionInfo "0.4"^^xsd:string .
+
+###############################################################
+#
+# SuspensionOfMonitoring (record thereof actually)
+#
+###############################################################
+#
+# expect instances to carry one or more "situation descriptions" as dcterms:description.
+# expect instances to carry "additional comments" as rdfs:comment.
+#
+:SuspensionOfMonitoring 
+        a                       owl:Class;
+        rdfs:isDefinedBy        som-ttl:;
+        skos:prefLabel          "SuspensionOfMonitoring"@en;
+        rdfs:label              "SuspensionOfMonitoring"@en;
+        rdfs:comment            "Planned routine monitoring of a bathing water will be suspended when an abnormal situation occurs. Abnormal situations arise when bathing waters are seriously polluted due to something out of the ordinary, such as a burst pipe or an accidental spill caused by a traffic accident. Monitoring is suspended while the pollution is dealt with."@en;
+        rdfs:comment            "Atelir arolygu dŵr ymdrochi cynlluniedig, arferol pan fo sefyllfa annormal. Cyfyd sefyllfaoedd annormal pan lygrir dyfroedd ymdrochi yn ddifrifol gan rywbeth anarferol, megis hollti pibell neu ollyngiad damweiniol a achosir gan ddamwain ffordd. Atelir arolygu hyd nes yr ydys wedi delio efo'r llygredd."@cy;
+#
+# link in expected open domain properties.
+#
+        rdfs:subClassOf         [ a                     owl:Restriction;
+                                  owl:onProperty        def-bw:bathingWater ;
+                                  owl:cardinality       1;
+                                ],
+                                [ a                     owl:Restriction;
+                                  owl:onProperty        def-ef-sp:samplingPoint ;
+                                  owl:cardinality       1;
+                                ],
+                                [ a                     owl:Restriction;
+                                  owl:onProperty        bwq:sampleYear ;
+                                  owl:cardinality       1;
+                                ],
+                                [ a                     owl:Restriction;
+                                  owl:onProperty        :recordDateTime ;
+                                  owl:cardinality       1;
+                                ];
+        .
+
+:startOfSuspension
+        a                       owl:DatatypeProperty;
+        rdfs:isDefinedBy        som-ttl:;
+        rdfs:label              "startOfSuspension"@en;
+        skos:preflabel          "startOfSuspension"@en;
+        rdfs:comment            "The date and time when a suspension of monitoring came into force."@en;
+        rdfs:comment            "Y dyddiad a'r amser pan ddaeth ataliad arolygu i rym."@cy;
+        
+        rdfs:domain             :SuspensionOfMonitoring;
+        rdfs:range              xsd:dateTime;
+        .
+        
+:endOfSuspension
+        a                       owl:DatatypeProperty;
+        rdfs:isDefinedBy        som-ttl:;
+        rdfs:label              "endOfSuspension"@en;
+        skos:preflabel          "endOfSuspension"@en;
+        rdfs:comment            "The date and time when a suspension of monitoring ended."@en;
+        rdfs:comment            "Y dyddiad a'r amser pan ddaeth ataliad ar arolygu i ben."@cy;
+        rdfs:domain             :SuspensionOfMonitoring;
+        rdfs:range              xsd:dateTime;
+        .
+        
+:expectedEndOfSuspension                            
+        a                       owl:DatatypeProperty;
+        rdfs:isDefinedBy        som-ttl:;
+        rdfs:label              "expectedEndOfSuspension"@en;
+        skos:preflabel          "expectedEndOfSuspension"@en;
+        rdfs:comment            "The date when a suspension of monitoring is expected to end."@en;
+        rdfs:comment            "Y dyddiad a'r amser pan ddisgwylir y daw ataliad ar arolygu i ben."@cy;
+        rdfs:domain             :SuspensionOfMonitoring;
+        rdfs:range              xsd:date;
+        .
+        
+:notation
+        a                       owl:DatatypeProperty;
+        rdfs:isDefinedBy        som-ttl:;
+        rdfs:label              "notation"@en;
+        skos:prefLabel          "notation"@en;
+        rdfs:comment            "Reference identifier for a given suspension of monitoring."@en;
+        rdfs:comment            "Dynodwr cyfeiriol ar gyfer unrhyw ataliad arolygu neilltuol."@cy;
+        rdfs:domain             :SuspensionOfMonitoring;
+        rdfs:range              :somID;
+        rdfs:subPropertyOf      skos:notation;
+        .
+
+:somID  a                       rdfs:Datatype;
+        rdfs:isDefinedBy        som-ttl:;
+        rdfs:label              "somID"@en;
+        skos:prefLabel          "somID"@en;
+        rdfs:comment            "A datatype for suspension of monitoring identifiers."@en;
+        rdfs:comment            "Math data ar gyfer atal dynodwyr arolygol."@cy;
+        .
+        
+:relatedAssessment
+        a                   owl:ObjectProperty;
+        rdfs:isDefinedBy    som-ttl:;
+        rdfs:label          "relatedAssessment"@en;
+        skos:prefLabel      "relatedAssessment"@en;
+        rdfs:comment        "A relation between a suspension of monitoring and any immediately following or previous in-season sample assessment."@en;
+        rdfs:comment        "Perthynas rhwng atal arolygu ac unrhyw asesiad sampl mewn-tymor yn union wedyn neu’n flaenorol."@cy;
+        rdfs:domain         :SuspensionOfMonitoring;
+        rdfs:range          bwq:SampleAssessment;
+        owl:inverseOf       :relatedSuspension;
+        .
+
+:followingAssessment
+        a                   owl:ObjectProperty;
+        rdfs:isDefinedBy    som-ttl:;
+        rdfs:label          "followingAssessment"@en;
+        skos:prefLabel      "followingAssessment"@en;
+        rdfs:comment        "A relation between a suspension of monitoring and any immediately following in-season sample assessment"@en;
+        rdfs:comment        "Perthynas rhwng ataliad ar arolygu ac unrhyw asesiad sampl mewn-tymor sy'n dilyn yn union wedi hynny."@cy;
+        rdfs:subPropertyOf  :relatedAssessment;
+        rdfs:domain         :SuspensionOfMonitoring;
+        rdfs:range          bwq:SampleAssessment;
+        owl:inverseOf       :priorSuspension;
+        .
+:priorAssessment
+        a                   owl:ObjectProperty;
+        rdfs:isDefinedBy    som-ttl:;
+        rdfs:label          "priorAssessment"@en;
+        skos:prefLabel      "priorAssessment"@en;
+        rdfs:comment        "A relation between a suspension of monitoring and any immediately prior in-season sample assessment."@en;
+        rdfs:comment        "Perthynas rhwng ataliad arolygu ac unrhyw asesiad sampl mewn-tymor yn union cyn hynny."@cy;
+        rdfs:subPropertyOf  :relatedAssessment;
+        rdfs:domain         :SuspensionOfMonitoring;
+        rdfs:range          bwq:SampleAssessment;
+        owl:inverseOf       :followingSuspension;
+        .
+        
+:relatedSuspension
+        a                   owl:ObjectProperty;
+        rdfs:isDefinedBy    som-ttl:;
+        rdfs:label          "relatedSuspension"@en;
+        skos:prefLabel      "relatedSuspension"@en;
+        rdfs:comment        "A relation between a sample assessment and any immediately following or prior suspension of monitoring."@en;
+        rdfs:comment        "Perthynas rhwng asesiad sampl ac unrhyw atal arolygu yn union wedyn neu’n flaenorol."@cy;
+        rdfs:domain          bwq:SampleAssessment;
+        rdfs:range          :SuspensionOfMonitoring;
+        owl:inverseOf       :relatedAssessment;
+        .
+
+:followingSuspension
+        a                   owl:ObjectProperty;
+        rdfs:isDefinedBy    som-ttl:;
+        rdfs:label          "followingSuspension"@en;
+        skos:prefLabel      "followingSuspension"@en;
+        rdfs:comment        "A relation between a sample assessment and any immediately following suspension of monitoring."@en;
+        rdfs:comment        "Perthynas rhwng asesiad sampl ac unrhyw ataliad arolygu sy'n dilyn yn union wedi hynny."@cy;        
+        rdfs:subPropertyOf  :relatedSuspension;
+        owl:inverseOf       :priorAssessment;
+        rdfs:domain          bwq:SampleAssessment;
+        rdfs:range          :SuspensionOfMonitoring;
+        .
+
+:priorSuspension
+        a                   owl:ObjectProperty;
+        rdfs:isDefinedBy    som-ttl:;
+        rdfs:label          "priorSuspension"@en;
+        skos:prefLabel      "priorSuspension"@en;
+        rdfs:comment        "A relation between a sample assessment and any immediately prior suspension of monitoring."@en;
+        rdfs:comment        "Perthynas rhwng asesiad sampl ac unrhyw ataliad arolygu sy'n dilyn yn union cyn hynny."@cy;
+        rdfs:subPropertyOf  :relatedSuspension;
+        owl:inverseOf       :followingAssessment;
+        rdfs:domain          bwq:SampleAssessment;
+        rdfs:range          :SuspensionOfMonitoring;
+        .
+
+:recordDateTime
+        a                       owl:DatatypeProperty;
+        rdfs:isDefinedBy        som-ttl:;
+        rdfs:label              "recordDateTime"@en;
+        skos:prefLabel          "recordDateTime"@en;
+        rdfs:comment            "Date and time associated with a record."@en;
+        rdfs:comment            "Dyddiad ac amser cysylltiedig â chofnod."@cy;
+        rdfs:range              xsd:dateTime;
+        .
+
+################################################################
+# Removed machinery of record status - not used or required.
+################################################################
+#
+#:recordStatus
+#        a                   owl:ObjectProperty;
+#        rdfs:isDefinedBy    som-ttl:;
+#        rdfs:comment        "Suspension of Monitoring status."@en;
+#        rdfs:label          "recordStatus"@en;
+#        skos:prefLabel      "recordStatus"@en;
+#        rdfs:range          :RecordStatus;
+#        .
+################################################################
+#
+# SuspensionOfMonitoring record status code points.
+#
+###############################################################
+#:RecordStatus
+#        a                   owl:Class;
+#        rdfs:isDefinedBy    som-ttl:;
+#        rdfs:subClassOf skos:Concept;
+#        rdfs:label          "RecordStatus"@en;
+#        skos:prefLabel      "RecordStatus"@en;
+#        rdfs:comment        "A distinguished subclass of skos:Concept for SuspensionOfMonitoring record status codes"@en;
+#        .
+#        
+#:record-status  
+#        a                   skos:ConceptScheme;
+#        rdfs:isDefinedBy    som-ttl:;
+#        rdfs:label          "record-status"@en;
+#        skos:prefLabel      "record-status"@en;
+#        rdfs:comment        "A skos concept scheme to collect SuspensionOfMonitoring record status codes"@en;
+#        skos:hasTopConcept
+#                            :new, :update, :closed;
+#        .
+#        
+#:open
+#        a                   :RecordStatus,skos:Concept;
+#        rdfs:isDefinedBy    som-ttl:;
+#        skos:prefLabel      "open"@en;
+#        rdfs:label          "open"@en;
+#        rdfs:comment        "A :SomRecordStatus code point indicating a new SuspensionOfMonitoring record"@en;
+#        skos:inScheme       :record-status;
+#        .
+#
+#:update
+#        a                   :RecordStatus,skos:Concept;
+#        rdfs:isDefinedBy    som-ttl:;
+#        skos:prefLabel      "update"@en;
+#        rdfs:label          "update"@en;
+#        rdfs:comment        "A :SomRecordStatus code point indicating an updated SuspensionOfMonitoring record"@en;
+#        skos:inScheme       :record-status;
+#        .
+#
+#:closed
+#        a                   :RecordStatus,skos:Concept;
+#        rdfs:isDefinedBy    som-ttl:;
+#        skos:prefLabel      "closed"@en;
+#        rdfs:label          "closed"@en;
+#        rdfs:comment        "A :SomRecordStatus code point indicating the closure of a SuspensionOfMonitoring record with an actual end date/time."@en;
+#        skos:inScheme       :record-status;
+#        .

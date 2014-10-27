@@ -1,0 +1,139 @@
+@base					<http://location.data.gov.uk/def/common/Geometry/> .
+@prefix :               <http://location.data.gov.uk/def/common/Geometry/> .
+
+#@prefix geo-rdf:        <http://location.data.gov.uk/sources/def/common/Geometry.rdf> .
+@prefix geo-ttl:        <http://location.data.gov.uk/sources/def/Location-Geometry.ttl> .
+
+@prefix rdfs:    		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     		<http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:   	    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix foaf:           <http://xmlns.com/foaf/0.1/> .
+
+
+@prefix geo:			<http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geometry:		<http://data.ordnancesurvey.co.uk/ontology/geometry/> .
+
+:
+      a       owl:Ontology ;
+      dcterms:title         "A Simple Geometry Vocabulary"@en;
+      rdfs:isDefinedBy      geo-ttl: ;
+      dcterms:created		"2012-01-30"^^xsd:date;
+    dcterms:modified		"2012-01-30"^^xsd:date;
+    owl:imports			geometry:, geo:;
+    dcterms:contributor	[foaf:mbox "skw@epimorphics.com"; foaf:name "Stuart Williams"@en];
+    # add your names here
+
+    dcterms:license 	<http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+
+      owl:versionInfo "0.1"^^xsd:string .
+
+
+###############################################################################
+#
+# Top level class and properties.
+#
+###############################################################################
+:Geometry
+        a               owl:Class;
+        rdfs:isDefinedBy  geo-ttl:;
+        rdfs:subClassOf geometry:AbstractGeometry;
+        rdfs:label      "Geometry";
+        rdfs:comment    "A top level-geometry sub-class for Spatial-Object Geometries."@en;
+        .
+
+:srs
+        a               owl:ObjectProperty,owl:FunctionalProperty;
+        rdfs:isDefinedBy  geo-ttl: ;
+        rdfs:label      "srs";
+        rdfs:comment      "A property for associating a spatial reference system with a Geometry"@en;
+        rdfs:domain     :Geometry;
+        .
+
+:dimensions
+        a               owl:DatatypeProperty,owl:FunctionalProperty;
+        rdfs:isDefinedBy  geo-ttl: ;
+        rdfs:label      "dimensions";
+        rdfs:comment    "A property for associating a number (typically 1-3) of coordinate dimensions with a Geometry"@en;
+        rdfs:domain     :Geometry;
+        rdfs:range      xsd:decimal;
+        .
+
+###############################################################################
+#
+# Point (inspired by GML)
+#
+###############################################################################
+:Point
+        a               owl:Class;
+        rdfs:isDefinedBy  geo-ttl: ;
+        rdfs:subClassOf :Geometry;
+        rdfs:label      "Point";
+        rdfs:comment    "A class for Point geometries."@en;
+        .
+
+:x
+        a               owl:DatatypeProperty;
+        rdfs:isDefinedBy  geo-ttl: ;
+        rdfs:label      "x";
+        rdfs:comment    "A property for conveying the x coordinate of a Point"@en;
+        rdfs:domain      :Point;
+        rdfs:range       xsd:decimal;
+        .
+
+:y
+        a               owl:DatatypeProperty;
+        rdfs:isDefinedBy  geo-ttl: ;
+        rdfs:label      "y";
+        rdfs:comment    "A property for conveying the y coordinate of a Point"@en;
+        rdfs:domain      :Point;
+        rdfs:range       xsd:decimal;
+        .
+:z
+        a               owl:DatatypeProperty;
+        rdfs:isDefinedBy  geo-ttl: ;
+        rdfs:label      "x";
+        rdfs:comment    "A property for conveying the z coordinate of a Point"@en;
+        rdfs:domain      :Point;
+        rdfs:range       xsd:decimal;
+        .
+###############################################################################
+#
+# Envelope (inspire by GML)
+#
+###############################################################################
+:Envelope
+        a               owl:Class;
+        rdfs:isDefinedBy  geo-ttl: ;
+        rdfs:subClassOf :Geometry;
+        rdfs:label      "Envelope";
+        rdfs:comment    "A Geometry sub-class for Envelopes (bounding rectangles)."@en;
+        .
+
+:lowerCorner
+        a               owl:ObjectProperty;
+        rdfs:isDefinedBy  geo-ttl: ;
+        rdfs:label      "lowerCorner";
+        rdfs:comment    "The lower corner of an envelope (min x,y and, optionally, z)"@en;
+        rdfs:range      :Point;
+        rdfs:domain     :Envelope;
+        .
+
+:upperCorner
+        a               owl:ObjectProperty;
+        rdfs:isDefinedBy  geo-ttl: ;
+        rdfs:label      "upperCorner";
+        rdfs:comment    "The upper corner of an envelope (max x,y and, optionally, z)"@en;
+        rdfs:range      :Point;
+        rdfs:domain     :Envelope;
+        .
+
+:envelope
+        a               owl:ObjectProperty;
+        rdfs:isDefinedBy  geo-ttl: ;
+        rdfs:label      "envelope"@en;
+        rdfs:comment    "An open domain property for associating some-thing with an Envelope."@en;
+        rdfs:range      :Envelope;
+        .

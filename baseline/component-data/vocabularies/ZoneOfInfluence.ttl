@@ -1,0 +1,71 @@
+@base					<http://location.data.gov.uk/def/ef/ZoneOfInfluence/> .
+@prefix :               <http://location.data.gov.uk/def/ef/ZoneOfInfluence/> .
+
+# @prefix zoi-rdf:        <http://location.data.gov.uk/sources/def/ef/ZoneOfInfluence.rdf> .
+@prefix zoi-ttl:        <http://location.data.gov.uk/sources/def/ZoneOfInfluence.ttl> .
+
+# Prefix for Zone of Influence extents under INSPIRE environmental monitoring facilities theme.
+
+@prefix	loc-zoi:		<http://location.data.gov.uk/def/ef/ZoneOfInfluence/> .
+
+@prefix rdfs:    		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     		<http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix qb:      		<http://purl.org/linked-data/cube#> .
+@prefix time:	 		<http://www.w3.org/2006/time#> .
+@prefix	interval:       <http://reference.data.gov.uk/def/intervals/> .
+@prefix skos:   	    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix foaf:           <http://xmlns.com/foaf/0.1/> .
+
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/sdmx-attribute#> .
+
+@prefix geo:			<http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geometry:		<http://data.ordnancesurvey.co.uk/ontology/geometry/> .
+
+:
+      a       owl:Ontology ;
+      rdfs:isDefinedBy  zoi-ttl: ;
+      dcterms:created		"2011-08-19"^^xsd:date;
+    dcterms:modified		"2011-08-23"^^xsd:date;
+    owl:imports			geometry: ;
+    dcterms:contributor	[foaf:mbox "skw@epimorphics.com"; foaf:name "Stuart Williams"@en];
+    # add your names here
+
+    dcterms:license 	<http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+
+      owl:versionInfo "0.1"^^xsd:string .
+
+
+:ZoneOfInfluence
+  a				owl:Class;
+  rdfs:label		"ZoneOfInfluence";
+  rdfs:comment	"A zone of influence is the approximate topographic area which may have an impact of the water quality at a bathing water due to surface run-off from rivers or streams particularly after heavy rainfall."@en;
+  rdfs:isDefinedBy	zoi-ttl: ;
+  .
+
+:zoneOfInfluence
+  a				owl:ObjectProperty;
+  rdfs:label		"zoneOfInfluence"@en;
+  rdfs:comment	"""A reusable property of associating some thing, typically a bathing water, with a zone of influence spatial object."""@en;
+  rdfs:isDefinedBy	zoi-ttl: ;
+  rdfs:range		:ZoneOfInfluence;
+  .
+
+:zoiCode
+  a	rdfs:Datatype;
+  rdfs:comment		"Datatype for use in typed skos:notations"@en;
+  rdfs:label			"zoiCode"@en;
+  rdfs:isDefinedBy	zoi-ttl: ;
+  .
+
+:zoiNotation
+  a					rdf:Property;
+  rdfs:isDefinedBy	zoi-ttl: ;
+  rdfs:subPropertyOf	skos:notation;
+  rdfs:domain			:ZoneOfInfluence;
+  rdfs:range			:zoiCode;
+  rdfs:label			"zoiNotation"@en;
+  rdfs:comment		"A skos:notation sub property carrying datatyped notations that code zone of influence spatial-objects"@en;
+  .

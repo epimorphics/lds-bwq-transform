@@ -1,0 +1,252 @@
+#########################################################################################
+#
+#  Bathing Water Profile Ontology
+#
+#########################################################################################
+
+@base                   <http://environment.data.gov.uk/def/bathing-water-profile/> .
+@prefix :               <http://environment.data.gov.uk/def/bathing-water-profile/> .
+@prefix def-bwp:        <http://environment.data.gov.uk/def/bathing-water-profile/> .
+
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix foaf:           <http://xmlns.com/foaf/0.1/> .
+@prefix geo:            <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix def-bw:         <http://environment.data.gov.uk/def/bathing-water/> .
+@prefix interval:       <http://reference.data.gov.uk/def/intervals/> .
+@prefix source:         <http://environment.data.gov.uk/sources/def/def-bwp.ttl> .
+
+<>
+      a       owl:Ontology ;
+      dcterms:created       "2011-09-16"^^xsd:date;
+      dcterms:modified      "2010-09-16"^^xsd:date;
+      dcterms:contributor   [foaf:name "Brian McBride"@en];
+      # add your names here
+
+      dcterms:license   <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+      owl:versionInfo "0.1"^^xsd:string .
+
+
+:BathingWaterProfile
+    a               owl:Class;
+    rdfs:label      "Bathing Water Profile"@en;
+    rdfs:comment    "BathingWaterProfile is a class of bathing water profiles.  An Instance of this class is a specific version of an instance of an EnduringBathingWaterProfile."@en;
+    rdfs:isDefinedBy    source:
+    .
+
+:EnduringBathingWaterProfile
+    a               owl:Class;
+    rdfs:label      "Enduring Bathing Water Profile"@en;
+    rdfs:comment    "EnduringBathingWaterProfile is a class of enduring bathing water profiles.  An instance of BathingWaterProfile is a version of an instance of EnduringBathingWaterProfile."@en;
+    rdfs:isDefinedBy    source:
+    .
+
+:StandardLanguageCollection
+    a                owl:Class ;
+    rdfs:label       "Bathing Water Profile Standard Language Collection"@en ;
+    rdfs:comment     "StandardLanguageCollection is a class of collections of boiler plate or standard text that is included in bathing water profile."@en ;
+    rdfs:isDefinedBy source:
+    .
+
+#
+# profile properties
+#
+
+:standardLanguageCollection
+    a                rdf:Property ;
+    rdfs:label       "standard langauge"@en ;
+    rdfs:comment     """standardLanguageCollection relates a bathing water profile to a collection of standard or boilerplate language included in the profile."""@en ;
+    rdfs:domain      :BathingWaterProfile ;
+    rdfs:range       :StandardLanguageCollection;
+    rdfs:isDefinedBy source:
+    .
+
+:countyName
+    a                rdf:Property ;
+    rdfs:label       "region"@en ;
+    rdfs:comment     """countyName relates a resource to an informal name for the county in which it is located, e.g. Devon.  It is used to associate a bathing water profile with a common name for the county containing the bathing water.  This name may differ slightly from the names published by reference authorities such as the Ordnance Survey."""@en ;
+    rdfs:isDefinedBy source:
+    .
+
+:bathingWaterDescription
+    a                rdf:Property ;
+    rdfs:label       "bathing water description"@en ;
+    rdfs:comment     """bathingWaterDescription relates a resource to a physical description of a bathing water."""@en ;
+    rdfs:isDefinedBy source:
+    .
+
+:applicableYear
+    a                rdf:Property ;
+    rdfs:label       "year" ;
+    rdfs:comment     """applicableYear relates a bathing water profile to the year to the year to which it applies, which typically is the year of publication."""@en ;
+    rdfs:domain      :BathingWaterProfile ;
+    rdfs:range       interval:Year ;
+    rdfs:isDefinedBy source:
+    .
+
+:zoiDescription
+    a                 rdf:Property ;
+    rdfs:label        "zone of influence description"@en ;
+    rdfs:comment      """zoiDescription is used to relate a bathing water profile to a physical description of the surrounding catchment impacting on the bathing water."""@en ;
+    rdfs:isDefinedBy  source:
+    .
+
+:streamsRiversStatement
+    a                 rdf:Property ;
+    rdfs:label        "streams and rivers statement"@en ;
+    rdfs:comment      """streamsRiversStatement is used to relate a bathing water profile to a statement about details of streams and rivers that impact water quality at a bathing water."""@en ;
+    rdfs:isDefinedBy  source:
+    .
+
+:eaInvestigationsStatement
+    a                 rdf:Property ;
+    rdfs:label        "EA investigations statement"@en ;
+    rdfs:comment      """eaInvestigationsStatement is used to relate a bathing water profile to a statement about details of any Environment Agency investigations into water quality which have impacted on a bathing water."""@en ;
+    rdfs:isDefinedBy source:
+    .
+
+:historyStatement
+    a                 rdf:Property ;
+    rdfs:label        "history statement"@en ;
+    rdfs:comment      """historyStatement is used to relate a bathing water profile to a statement about details of the history of any water company assets which impact a bathing water."""@en ;
+    rdfs:isDefinedBy  source:
+    .
+
+:stwOutfallsStatement
+    a                 rdf:Property ;
+    rdfs:label        "sewage treatment works outfalls statement"@en ;
+    rdfs:comment      """stwOutfallsStatement is used to relate a bathing water profile to a statement about details of any sewage treatment outfalls which may impact on a bathing water."""@en ;
+    rdfs:isDefinedBy  source:
+    .
+
+:esoOutfallsStatement
+    a                 rdf:Property ;
+    rdfs:label        "emergency and storm overflow outfalls statement"@en ;
+    rdfs:comment      """esoOutfallsStatement is used to relate a bathing water profile to a statement about details of any emergency outfalls and storm overflow outfalls, which may impact on a bathing water."""@en ;
+    rdfs:isDefinedBy source:
+    .
+
+:localAuthorityStatement
+    a                 rdf:Property ;
+    rdfs:label        "working with local authority statement"@en ;
+    rdfs:comment      """localAuthorityStatement is used to relate a bathing water profile to a statement about details of any work or improvements to water quality undertaken with the local authority which may impact on a bathing water."""@en ;
+    rdfs:isDefinedBy  source:
+    .
+
+:misconnectionsStatement
+    a                  rdf:Property ;
+    rdfs:label         "misconnections statement"@en ;
+    rdfs:comment       """misconnectionsStatement is used to relate a bathing water profile to a brief statement about misconnections and any details specific to a bathing water."""@en ;
+    rdfs:isDefinedBy   source:
+    .
+
+:workingWithFarmersStatement
+    a                  rdf:Property ;
+    rdfs:label         "working with farmers statement" ;
+    rdfs:comment       """workingWithFarmersStatement is used to relate a bathing water profile to a statement about details of any work or improvements to water quality undertaken with local farmers which may impact on a bathing water."""@en ;
+    rdfs:isDefinedBy   source:
+    .
+
+:workingWithIndustryStatement
+    a                  rdf:Property ;
+    rdfs:label         "working with industry statement" ;
+    rdfs:comment       """workingWithIndustryStatement is used to relate a bathing water profile to a statement about details of any work or improvements to water quality undertaken with local industry which may impact on a bathing water."""@en ;
+    rdfs:isDefinedBy source:
+    .
+
+:workingWithPrivateOwnersStatement
+    a                  rdf:Property ;
+    rdfs:label         "working with private owners statement" ;
+    rdfs:comment       """workingWithPrivateOwnersStatement is used to relate a bathing water profile to a statement about details of any work or improvements to water quality undertaken with private owners which may impact on a bathing water."""@en ;
+    rdfs:isDefinedBy source:
+    .
+
+:macroAlgaeStatement
+    a                  rdf:Property ;
+    rdfs:label         "seaweed statement" ;
+    rdfs:comment       """macroAlgaeStatement is used to relate a bathing water profile to a brief statement about Macroalgae (seaweed) at a bathing water."""@en ;
+    rdfs:isDefinedBy source:
+    .
+
+:phytoplanktonStatement
+    a                  rdf:Property ;
+    rdfs:label         "phytoplankton statement" ;
+    rdfs:comment       """phytoplanktonStatement is used to relate a bathing water profile to a brief statement about Phytoplankton at a bathing water."""@en ;
+    rdfs:isDefinedBy source:
+    .
+
+:webResImage
+    a                  rdf:Property ;
+    rdfs:label         "web resolution image" ;
+    rdfs:comment       """webResImage relates a bathing water profile to an image of the bathing water at a resolution suitable for displaying on a web page."""@en ;
+    rdfs:domain        def-bwp:BathingWaterProfile ;
+    rdfs:isDefinedBy source:
+    .
+
+:printResImage
+    a                  rdf:Property ;
+    rdfs:label         "print resolution image" ;
+    rdfs:comment       """printResImage relates a bathing water profile to an image of the bathing water at a resolution suitable for printing."""@en ;
+    rdfs:domain        def-bwp:BathingWaterProfile ;
+    rdfs:isDefinedBy source:
+    .
+
+
+
+ #
+ # standard language properties
+ #
+
+:pollutionManagementGeneralStatement
+     a               rdf:Property ;
+     rdfs:label      "pollution management statement" ;
+     rdfs:comment    """pollutionManagementGeneralStatement is used to relate a standard language collection to a brief statement of how the Environment Agency manages pollution at bathing waters."""@en ;
+     rdfs:isDefinedBy source:
+     .
+
+:stwOutfallsGeneralStatement
+    a                rdf:Property ;
+    rdfs:label       "sewage treament works outfalls general statement" ;
+    rdfs:comment     """stwOutfallsGeneralStatement is used to relate a standard language collection to a brief general statement of the improvements to sewage treatment outfalls."""@en ;
+    rdfs:isDefinedBy source:
+    .
+
+:esoOutfallsGeneralStatement
+    a                rdf:Property ;
+    rdfs:label       "emergency and storm overflow outfalls general statement"@en ;
+    rdfs:comment     """esoOutfallsGeneralStatement is used to relate a standard language collection to a brief statement about Emergency outfalls and Storm overflow outfalls."""@en ;
+    rdfs:isDefinedBy source:
+    .
+
+:localAuthorityGeneralStatement
+    a                rdf:Property ;
+    rdfs:label       "run-off general statement"@en ;
+    rdfs:comment     """localAuthorityGeneralStatement is used to relate a standard language collection to a brief statement about precipitation run-off from roads and pavements."""@en ;
+    rdfs:isDefinedBy source:
+    .
+
+:algaeGeneralStatement
+    a                rdf:Property ;
+    rdfs:label       "algae general statement"@en ;
+    rdfs:comment     """algaeGeneralStatement is used to relate a standard language collection to a brief statement about Algae in general at bathing waters."""@en ;
+    rdfs:isDefinedBy source:
+    .
+
+################################################
+#
+#  Other Properties
+#
+################################################
+
+:latestBathingWaterProfile
+    a                rdf:Property ;
+    rdfs:label       "latest profile"@en ;
+    rdfs:comment     """latestBathingWaterProfile is used to relate a bathing water to its latest bathing water profile."""@en ;
+    rdfs:range       def-bwp:BathingWaterProfile ;
+    rdfs:isDefinedBy source:
+    .
+

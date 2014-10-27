@@ -1,0 +1,93 @@
+#########################################################################################
+#
+#  Bathing Water Profile Feature Ontology
+#
+#########################################################################################
+
+@base                   <http://location.data.gov.uk/def/ef/BathingWaterProfileFeature/> .
+@prefix :               <http://location.data.gov.uk/def/ef/BathingWaterProfileFeature/> .
+
+@prefix def-bwp:        <http://environment.data.gov.uk/def/bathing-water-profile/> .
+
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix foaf:           <http://xmlns.com/foaf/0.1/> .
+@prefix geo:            <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix def-bw:         <http://environment.data.gov.uk/def/bathing-water/> .
+@prefix def-bwsp:       <http://location.data.gov.uk/def/ef/SamplingPoint/> .
+@prefix source:         <http://environment.data.gov.uk/sources/def/def-feature.ttl> .
+
+<>
+      a       owl:Ontology ;
+      dcterms:created       "2012-01-26"^^xsd:date;
+      dcterms:modified      "2012-01-26"^^xsd:date;
+      dcterms:contributor   [foaf:name "Brian McBride"@en];
+      # add your names here
+
+      dcterms:license   <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+      owl:versionInfo "0.1"^^xsd:string .
+
+
+#############################################################
+#
+#  Feature classes (except sampling point which is defined elsewhere
+#
+#############################################################
+
+:Feature
+    a                owl:Class ;
+    rdfs:label       "Feature"@en ;
+    rdfs:comment     """Feature is a class of spatial objects representing features that are relevant to a bathing water profile.  An instance of Feature is a version of an instance of EnduringFeature."""@en ;
+    rdfs:isDefinedBy  source:
+    .
+
+:EnduringFeature
+    a                owl:Class ;
+    rdfs:label       "Enduring Feature"@en ;
+    rdfs:comment     """EnduringFeature is a class whose instances represent enduring features over time.  Instances of Feature are versions of an instance of EnduringFeature."""@en ;
+    .
+
+:DO
+    a                owl:Class;
+    rdfs:label       "Disused Outfall"@en;
+    rdfs:comment     """DO is a class of feature whose instances represent the location of disused outfalls."""@en;
+    rdfs:subClassOf geo:Point, :Feature ;
+    rdfs:isDefinedBy  source:
+    .
+
+:ESO
+    a                owl:Class;
+    rdfs:label       "Emergency or Storm Overflow"@en;
+    rdfs:comment     """ESO is a class of feature whose instances represent the location of emergency or storm overflows."""@en;
+    rdfs:subClassOf geo:Point, :Feature ;
+    rdfs:isDefinedBy  source:
+    .
+
+:RSI
+    a                owl:Class;
+    rdfs:label       "River or Stream Intersection"@en;
+    rdfs:comment     """RSI is a class  of features whose instances represent the location where a river or stream intersects a spatial feature of interest."""@en;
+    rdfs:subClassOf     geo:Point, :Feature ;
+    rdfs:isDefinedBy  source:
+    .
+
+:SWO
+    a                 owl:Class;
+    rdfs:label        "Surface Water Outfall"@en;
+    rdfs:comment      """SWO is a class of feature whose instances represent the location of a surface water outfall."""@en;
+    rdfs:subClassOf   geo:Point, :Feature ;
+    rdfs:isDefinedBy  source:
+    .
+
+:TSO
+    a                 owl:Class;
+    rdfs:label        "Treated Sewage Works Outfall"@en;
+    rdfs:comment      """TTSI is a class of feature whose instances represent the location of a treated sewage works outfall."""@en;
+    rdfs:subClassOf   geo:Point, :Feature ;
+    rdfs:isDefinedBy  source:
+    .
+
