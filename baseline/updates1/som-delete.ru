@@ -6,12 +6,13 @@ PREFIX time:    <http://www.w3.org/2006/time#>
 PREFIX qb:      <http://purl.org/linked-data/cube#>
 PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 PREFIX dct:     <http://purl.org/dc/terms/>
+
 #
 # Delete all dct:replaces/dct:/isReplacedBy links between SoM records 
 #
-DELETE {
+DELETE { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
     ?update      dct:replaces     ?predecessor .
-    ?predecessor dct:isReplacedBy ?update . }
+    ?predecessor dct:isReplacedBy ?update . } }
 WHERE {
    ?update a                         def-som:SuspensionOfMonitoring .
    ?predecessor
@@ -22,7 +23,7 @@ WHERE {
 # Delete all links between suspensions and neighbouring sample assessments.
 # (Use CONSTRUCT or SELECT instead of DELETE to debug WHERE body.)
 #
-DELETE {
+DELETE { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
     ?suspension def-som:priorAssessment ?priorAssessment;
               def-som:followingAssessment ?followingAssessment;
               def-som:relatedAssessment ?priorAssessment, ?followingAssessment;
@@ -35,7 +36,7 @@ DELETE {
   ?followingAssessment
               def-som:priorSuspension ?suspension;
               def-som:relatedSuspension ?suspension ;
-} 
+} }
 WHERE {
   { ?suspension def-som:followingAssessment ?followingAssessment }
   UNION

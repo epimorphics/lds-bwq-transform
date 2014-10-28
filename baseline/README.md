@@ -1,44 +1,33 @@
 Utilities and data for preparing a baseline LDS image.
 
-## Actions
+## Goals
 
-general
-   * clean remove bnode duplication
-   * rewrite incorrect usage of ukf14
+Move a triple store dump from the existing service into a quad store form.
 
-vocabularies
-   * remove existing vocabularies
-
-reference
-   * remove reference data
-
-in-season
-   * remove dct:replaces/dct:replacedBy
-   * remove latestSampleAssessment
-   * remove latestComplianceAssessment
-   * remove suspension links
-   * regenerate with new graph names
-
-suspensions of monitoring
-   * remove dct:replaces/dct:replacedBy
-   * remove suspension links
-   * regenerate with new graph names
-
-profiles:
-   * remove lastestBathingWaterProfile
-   * regenerate with new graph names
-
-STP:
-   * remove latestRiskPrediction
-   * regenerate with new graph names
+   * move data into a baseline graph `http://localhost/dms/metadata/bwq/graph/baseline`
+   * 0 -fixup data problems ukf14
+   * 1 - remove dynamically created latest/replaced links from baseline graph
+   * 2 - recreated latest/replaced links in update graphs
+   * 3 - remove single/multi datasets so they can be republished to correct graphs
+      * reference data
+      * vocabularies
+   * 4 - remove residual blank nodes
 
 ## Usage
 
+Prepare data by moving to quads, brute force:
+
+    gunzip bwq*.nq.gz
+    sed -i -e 's|\.$|<http://localhost/dms/metadata/bwq/graph/baseline> .|' bwq*.nq
+    gzip bwq*.nq
+    tdbloader2 --loc DB bwq*.nq.gz
+
 Set up fuseki server over the desired image snapshot (tdbloader on the dump)
 
-    tdbloader2 --loc DB bwq_2014-10-02_10-18-16.nq.gz
-    fuseki-server --loc DB --update /ds
+    fuseki-server --desc db.ttl --mgtPort 3131 --update /ds
 
-@@TODO run script
+Then from this directory:
 
-publish reference and vocabulary data to graphs
+    scripts/update.sh
+
+Deploy to life system and don't forget to republish vocabulary and reference data

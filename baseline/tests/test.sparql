@@ -8,9 +8,12 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX version: <http://environment.data.gov.uk/def/version/>
 PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX ugraph:  <http://environment.data.gov.uk/bwq/graph/updates/>
 
-# delete existing latest profile links
-DELETE { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline>  
-   { ?bw def-bwp:latestBathingWaterProfile ?bwp } } 
+SELECT * 
 WHERE
-   { ?bw def-bwp:latestBathingWaterProfile ?bwp } ;
+    {
+    ?latest_bwp a def-bwp:BathingWaterProfile ;
+                def-bw:bathingWater ?bw ;
+                version:interval/time:hasBeginning ?latest_dt.
+}
