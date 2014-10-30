@@ -11,9 +11,8 @@ updateBatch() {
 }
 
 # write out the phase explicitly so we can comment individual ones out
-#updateBatch updates0  # Fixup ukf14
-#updateBatch updates1  # Delete latest/replaced from baseline
+updateBatch updates1  # Delete latest/replaced from baseline
 updateBatch updates2  # Recreate latest/replaced in target graphs
-#updateBatch updates3  # Strip vocabularies and reference
-#updateBatch updates4  # Strip bnodes
-
+updateBatch updates3  # Strip vocabularies and reference
+updateBatch updates4  # Strip bnodes
+updateBatch updates5  # Fixup ukf14
