@@ -7,7 +7,7 @@ Move a triple store dump from the existing service into a quad store form.
    * move data into a baseline graph `http://localhost/dms/metadata/bwq/graph/baseline`
    * 0 -fixup data problems ukf14
    * 1 - remove dynamically created latest/replaced links from baseline graph
-   * 2 - recreated latest/replaced links in update graphs
+   * 2 - recreate latest/replaced links in update graphs
    * 3 - remove single/multi datasets so they can be republished to correct graphs
       * reference data
       * vocabularies
@@ -30,4 +30,13 @@ Then from this directory:
 
     scripts/update.sh
 
-Deploy to life system and don't forget to republish vocabulary and reference data
+To create final deployable verisons first run a backup:
+
+    curl -X POST 'http://localhost:3131/mgt?cmd=backup&dataset=ds'
+
+Then when complete terminate fuseki and do:
+   
+    tar zcvf final/baseline-2014-10-02.DB.tgz DB
+    mv backups/*.nq.gz final/baseline-2014-10-02.nq.gz
+
+Deploy to live system and don't forget to republish vocabulary and reference data
