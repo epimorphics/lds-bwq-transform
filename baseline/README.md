@@ -17,10 +17,10 @@ Move a triple store dump from the existing service into a quad store form.
 
 Prepare data by moving to quads, brute force:
 
-    gunzip bwq*.nq.gz
-    sed -i -e 's|\.$|<http://localhost/dms/metadata/bwq/graph/baseline> .|' bwq*.nq
+    gunzip bwq.nq.gz
+    sed -i -e 's|\.$|<http://localhost/dms/metadata/bwq/graph/baseline> .|' bwq.nq
     gzip bwq*.nq
-    tdbloader2 --loc DB bwq*.nq.gz
+    tdbloader2 --loc DB bwq.nq.gz
 
 Set up fuseki server over the desired image snapshot (tdbloader on the dump)
 
@@ -36,7 +36,8 @@ To create final deployable verisons first run a backup:
 
 Then when complete terminate fuseki and do:
    
-    tar zcvf final/baseline-2014-10-02.DB.tgz DB
-    mv backups/*.nq.gz final/baseline-2014-10-02.nq.gz
+    mv DB DB-DS
+    tar zcvf final/baseline-X.DB.tgz DB-DS
+    mv backups/*.nq.gz final/baseline-X.nq.gz
 
 Deploy to live system and don't forget to republish vocabulary and reference data
