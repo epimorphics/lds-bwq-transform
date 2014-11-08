@@ -131,7 +131,8 @@
          "<rdf:type>"             : "<{$def_stp}/RiskPrediction>",
          "<def-stp:publishedAt>"  : "{$pubDateTime}",
          "<def-stp:predictedAt>"  : "{$predictionDateTime}",
-         "<def-stp:predictedOn>"  : "{$predictedOnDateTime.format('yyyy-MM-dd').asDate('yyyy-MM-dd','xsd:date')}",
+#         "<def-stp:predictedOn>"  : "{$predictedOnDateTime.format('yyyy-MM-dd').asDate('yyyy-MM-dd','xsd:date')}",
+         "<def-stp:predictedOn>"  : "{$predictionDateTime.format('yyyy-MM-dd').asDate('yyyy-MM-dd','xsd:date')}",
          "<def-stp:expiresAt>"    : "{$expiresDateTime}",
          "<def-stp:riskLevel>"    : "<{prediction.value == 0 ? $def_stp.append('/unknown') :
                                        prediction.value == 1 ? $def_stp.append('/normal')  :
