@@ -1,4 +1,4 @@
-DELETE DATA {
+DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://location.data.gov.uk/def/ef/ZoneOfInfluence/ZoneOfInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://location.data.gov.uk/def/ef/ZoneOfInfluence/ZoneOfInfluence> <http://www.w3.org/2000/01/rdf-schema#label> "ZoneOfInfluence" .
 <http://location.data.gov.uk/def/ef/ZoneOfInfluence/ZoneOfInfluence> <http://www.w3.org/2000/01/rdf-schema#comment> "A zone of influence is the approximate topographic area which may have an impact of the water quality at a bathing water due to surface run-off from rivers or streams particularly after heavy rainfall."@en .
@@ -26,4 +26,4 @@ DELETE DATA {
 <http://location.data.gov.uk/def/ef/ZoneOfInfluence/zoiCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Datatype for use in typed skos:notations"@en .
 <http://location.data.gov.uk/def/ef/ZoneOfInfluence/zoiCode> <http://www.w3.org/2000/01/rdf-schema#label> "zoiCode"@en .
 <http://location.data.gov.uk/def/ef/ZoneOfInfluence/zoiCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://location.data.gov.uk/sources/def/ZoneOfInfluence.ttl> .
-}
+} }

@@ -1,4 +1,4 @@
-DELETE DATA {
+DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://environment.data.gov.uk/def/bwq-cc-2012/C> <http://www.w3.org/2000/01/rdf-schema#label> "Ar gau"@cy .
 <http://environment.data.gov.uk/def/bwq-cc-2012/C> <http://www.w3.org/2004/02/skos/core#definition> "Dosbarthiad cydymffurfiaeth ansawdd dŵr ymdrochi i'w ddefnuddio yn ystod y traws-symudiad at ddefnyddio'r Gyfarwyddeb Dŵr Ymdrochi Newidiedig (CDYN) (2006/7/EC). Yn mynegi bod y dŵr ymdrochi ar gau yn ystod y tymor ymdrochi."@cy .
 <http://environment.data.gov.uk/def/bwq-cc-2012/C> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ar gau"@cy .
@@ -360,4 +360,4 @@ DELETE DATA {
 <http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made> <http://www.w3.org/2000/01/rdf-schema#label> "GOFYNION ANSAWDD A SAMPLO YCHWANEGOL"@cy .
 <http://environment.data.gov.uk/def/bathing-water/LakeBathingWater> <http://www.w3.org/2000/01/rdf-schema#comment> "Is-ddosbarth o Ddyfroedd Ymdrochi dynodedig sy'n lyn cyfan neu'n rhan ohono."@cy .
 <http://environment.data.gov.uk/def/bathing-water/LakeBathingWater> <http://www.w3.org/2000/01/rdf-schema#label> "LlynDdŵrYmdrochi"@cy .
-}
+} }

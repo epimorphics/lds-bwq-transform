@@ -1,4 +1,4 @@
-DELETE DATA {
+DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://environment.data.gov.uk/def/bwq-som/priorAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://environment.data.gov.uk/def/bwq-som/priorAssessment> <http://www.w3.org/2002/07/owl#inverseOf> <http://environment.data.gov.uk/def/bwq-som/followingSuspension> .
 <http://environment.data.gov.uk/def/bwq-som/priorAssessment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://environment.data.gov.uk/def/bwq-som/relatedAssessment> .
@@ -121,4 +121,4 @@ DELETE DATA {
 <http://environment.data.gov.uk/def/bwq-som/recordDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Date and time associated with a record."@en .
 <http://environment.data.gov.uk/def/bwq-som/recordDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Dyddiad ac amser cysylltiedig â chofnod."@cy .
 <http://environment.data.gov.uk/def/bwq-som/recordDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-}
+} }

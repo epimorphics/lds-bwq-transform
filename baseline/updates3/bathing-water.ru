@@ -1,4 +1,4 @@
-DELETE DATA {
+DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://environment.data.gov.uk/def/bathing-water/waterQualityImpactedByHeavyRain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://environment.data.gov.uk/def/bathing-water/waterQualityImpactedByHeavyRain> <http://www.w3.org/2000/01/rdf-schema#label> "waterQualityImpactedByHeavyRain"@en .
 <http://environment.data.gov.uk/def/bathing-water/waterQualityImpactedByHeavyRain> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water.ttl> .
@@ -164,4 +164,4 @@ DELETE DATA {
 <http://environment.data.gov.uk/def/bathing-water/other-sediment> <http://www.w3.org/2004/02/skos/core#inScheme> <http://environment.data.gov.uk/def/bathing-water/sediment-type> .
 <http://environment.data.gov.uk/def/bathing-water/other-sediment> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://environment.data.gov.uk/def/bathing-water/sediment-type> .
 <http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made> <http://www.w3.org/2000/01/rdf-schema#label> "QUALITY AND ADDITIONAL SAMPLING REQUIREMENTS"@en .
-}
+} }

@@ -1,4 +1,4 @@
-DELETE DATA {
+DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://environment.data.gov.uk/def/bathing-water-profile/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://environment.data.gov.uk/def/bathing-water-profile/> <http://purl.org/dc/terms/created> "2011-09-16"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://environment.data.gov.uk/def/bathing-water-profile/> <http://purl.org/dc/terms/modified> "2010-09-16"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -123,4 +123,4 @@ DELETE DATA {
 <http://environment.data.gov.uk/def/bathing-water-profile/StandardLanguageCollection> <http://www.w3.org/2000/01/rdf-schema#label> "Bathing Water Profile Standard Language Collection"@en .
 <http://environment.data.gov.uk/def/bathing-water-profile/StandardLanguageCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "StandardLanguageCollection is a class of collections of boiler plate or standard text that is included in bathing water profile."@en .
 <http://environment.data.gov.uk/def/bathing-water-profile/StandardLanguageCollection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/def-bwp.ttl> .
-}
+} }

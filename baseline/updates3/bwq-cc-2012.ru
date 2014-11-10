@@ -1,4 +1,4 @@
-DELETE DATA {
+DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://www.legislation.gov.uk/id/uksi/2008/1097/schedule/3> <http://www.w3.org/2000/01/rdf-schema#label> "MONITORING ETC"@en .
 <http://environment.data.gov.uk/def/bwq-cc-2012/F> <http://purl.org/dc/terms/source> <http://www.legislation.gov.uk/uksi/2008/1097/made> .
 <http://environment.data.gov.uk/def/bwq-cc-2012/F> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.opsi.gov.uk/legislation/european/directive/1976/0160> .
@@ -153,4 +153,4 @@ DELETE DATA {
 <http://environment.data.gov.uk/def/bwq-cc-2012/G> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-cc-2012.ttl> .
 <http://environment.data.gov.uk/def/bwq-cc-2012/G> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.legislation.gov.uk/uksi/1991/1597/schedule/2/made> .
 <http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made> <http://www.w3.org/2000/01/rdf-schema#label> "QUALITY AND ADDITIONAL SAMPLING REQUIREMENTS"@en .
-}
+} }

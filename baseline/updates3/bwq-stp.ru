@@ -1,4 +1,4 @@
-DELETE DATA {
+DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://environment.data.gov.uk/def/bwq-stp/expiresAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> .
 <http://environment.data.gov.uk/def/bwq-stp/expiresAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://environment.data.gov.uk/def/bwq-stp/expiresAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -40,6 +40,11 @@ DELETE DATA {
 <http://environment.data.gov.uk/def/bwq-stp/normal> <http://www.w3.org/2004/02/skos/core#notation> "1"^^<http://environment.data.gov.uk/def/bwq-stp/riskLevelCode> .
 <http://environment.data.gov.uk/def/bwq-stp/normal> <http://www.w3.org/2004/02/skos/core#prefLabel> "normal"@en .
 <http://environment.data.gov.uk/def/bwq-stp/normal> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://environment.data.gov.uk/def/bwq-stp/riskScheme> .
+<http://environment.data.gov.uk/def/bwq-stp/riskLevelCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> .
+<http://environment.data.gov.uk/def/bwq-stp/riskLevelCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://environment.data.gov.uk/def/bwq-stp/riskLevelCode> <http://www.w3.org/2000/01/rdf-schema#comment> "A distinguished datatype for the notation associated with a short-term pollution risk level code."@en .
+<http://environment.data.gov.uk/def/bwq-stp/riskLevelCode> <http://www.w3.org/2000/01/rdf-schema#label> "short term pollution risk level code"@en .
+<http://environment.data.gov.uk/def/bwq-stp/riskLevelCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "short term pollution risk level code"@en .
 <http://environment.data.gov.uk/def/bwq-stp/publishedAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> .
 <http://environment.data.gov.uk/def/bwq-stp/publishedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://environment.data.gov.uk/def/bwq-stp/publishedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -47,11 +52,6 @@ DELETE DATA {
 <http://environment.data.gov.uk/def/bwq-stp/publishedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the date and time at which a prediction was published"@en .
 <http://environment.data.gov.uk/def/bwq-stp/publishedAt> <http://www.w3.org/2000/01/rdf-schema#label> "published at"@en .
 <http://environment.data.gov.uk/def/bwq-stp/publishedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://environment.data.gov.uk/def/bwq-stp/riskLevelCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> .
-<http://environment.data.gov.uk/def/bwq-stp/riskLevelCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-<http://environment.data.gov.uk/def/bwq-stp/riskLevelCode> <http://www.w3.org/2000/01/rdf-schema#comment> "A distinguished datatype for the notation associated with a short-term pollution risk level code."@en .
-<http://environment.data.gov.uk/def/bwq-stp/riskLevelCode> <http://www.w3.org/2000/01/rdf-schema#label> "short term pollution risk level code"@en .
-<http://environment.data.gov.uk/def/bwq-stp/riskLevelCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "short term pollution risk level code"@en .
 <http://environment.data.gov.uk/def/bwq-stp/predictedAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> .
 <http://environment.data.gov.uk/def/bwq-stp/predictedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#AttributeProperty> .
 <http://environment.data.gov.uk/def/bwq-stp/predictedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
@@ -98,11 +98,6 @@ DELETE DATA {
 <http://environment.data.gov.uk/def/bwq-stp/riskDsd> <http://www.w3.org/2000/01/rdf-schema#label> "riskDsd"@en .
 <http://environment.data.gov.uk/def/bwq-stp/riskDsd> <http://www.w3.org/2004/02/skos/core#prefLabel> "risk Dsd"@en .
 <http://environment.data.gov.uk/def/bwq-stp/riskDsd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DataStructureDefinition> .
-<http://environment.data.gov.uk/def/bwq-stp/latestRiskPrediction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> .
-<http://environment.data.gov.uk/def/bwq-stp/latestRiskPrediction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://environment.data.gov.uk/def/bwq-stp/latestRiskPrediction> <http://www.w3.org/2000/01/rdf-schema#label> "latest short term pollution risk prediction"@en .
-<http://environment.data.gov.uk/def/bwq-stp/latestRiskPrediction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates (typically) a bathing water and/or its sampling point to its latest short term pollution risk prediction, if any."@en .
-<http://environment.data.gov.uk/def/bwq-stp/latestRiskPrediction> <http://www.w3.org/2000/01/rdf-schema#range> <http://environment.data.gov.uk/def/bwq-stp/RiskPrediction> .
 <http://environment.data.gov.uk/def/bwq-stp/riskLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> .
 <http://environment.data.gov.uk/def/bwq-stp/riskLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://environment.data.gov.uk/def/bwq-stp/riskLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
@@ -111,6 +106,11 @@ DELETE DATA {
 <http://environment.data.gov.uk/def/bwq-stp/riskLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Short term pollution risk level"@en .
 <http://environment.data.gov.uk/def/bwq-stp/riskLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://environment.data.gov.uk/def/bwq-stp/RiskLevel> .
 <http://environment.data.gov.uk/def/bwq-stp/riskLevel> <http://www.w3.org/2004/02/skos/core#prefLabel> "Short term pollution risk level"@en .
+<http://environment.data.gov.uk/def/bwq-stp/latestRiskPrediction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> .
+<http://environment.data.gov.uk/def/bwq-stp/latestRiskPrediction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://environment.data.gov.uk/def/bwq-stp/latestRiskPrediction> <http://www.w3.org/2000/01/rdf-schema#label> "latest short term pollution risk prediction"@en .
+<http://environment.data.gov.uk/def/bwq-stp/latestRiskPrediction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates (typically) a bathing water and/or its sampling point to its latest short term pollution risk prediction, if any."@en .
+<http://environment.data.gov.uk/def/bwq-stp/latestRiskPrediction> <http://www.w3.org/2000/01/rdf-schema#range> <http://environment.data.gov.uk/def/bwq-stp/RiskPrediction> .
 <http://environment.data.gov.uk/def/bwq-stp/bathingWater> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> .
 <http://environment.data.gov.uk/def/bwq-stp/bathingWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
 <http://environment.data.gov.uk/def/bwq-stp/bathingWater> <http://www.w3.org/2000/01/rdf-schema#label> "bathingWater"@en .
@@ -136,4 +136,4 @@ DELETE DATA {
 <http://environment.data.gov.uk/def/bwq-stp/predictedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the date for which a prediction applies."@en .
 <http://environment.data.gov.uk/def/bwq-stp/predictedOn> <http://www.w3.org/2000/01/rdf-schema#label> "predicted on"@en .
 <http://environment.data.gov.uk/def/bwq-stp/predictedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
-}
+} }

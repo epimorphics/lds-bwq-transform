@@ -1,4 +1,4 @@
-DELETE DATA {
+DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://location.data.gov.uk/def/common/Geometry/Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://location.data.gov.uk/def/common/Geometry/Point> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://location.data.gov.uk/sources/def/Location-Geometry.ttl> .
 <http://location.data.gov.uk/def/common/Geometry/Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://location.data.gov.uk/def/common/Geometry/Geometry> .
@@ -71,4 +71,4 @@ DELETE DATA {
 <http://location.data.gov.uk/def/common/Geometry/lowerCorner> <http://www.w3.org/2000/01/rdf-schema#comment> "The lower corner of an envelope (min x,y and, optionally, z)"@en .
 <http://location.data.gov.uk/def/common/Geometry/lowerCorner> <http://www.w3.org/2000/01/rdf-schema#range> <http://location.data.gov.uk/def/common/Geometry/Point> .
 <http://location.data.gov.uk/def/common/Geometry/lowerCorner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://location.data.gov.uk/def/common/Geometry/Envelope> .
-}
+} }

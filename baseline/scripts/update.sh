@@ -3,7 +3,7 @@
 
 updateBatch() {
     local dir="$1"
-    for file in $dir/*
+    for file in $dir/*.ru
     do
         echo "Applying $file"
         s-update --service http://localhost:3030/ds/update --update $file

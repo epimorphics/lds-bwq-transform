@@ -40,4 +40,12 @@ Then when complete terminate fuseki and do:
     tar zcvf final/baseline-X.DB.tgz DB-DS
     mv backups/*.nq.gz final/baseline-X.nq.gz
 
-Deploy to live system and don't forget to republish vocabulary and reference data
+Deploy to live system and don't forget to republish:
+
+   * vocabulary/*
+   * reference data (fi) and reference data
+   * profile + nrw_profile
+   * features
+   * final 2 inseason assessments
+   * 2014 annual assessment
+   

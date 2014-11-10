@@ -1,4 +1,4 @@
-DELETE DATA {
+DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://environment.data.gov.uk/def/version/currentVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 <http://environment.data.gov.uk/def/version/currentVersion> <http://www.w3.org/2000/01/rdf-schema#label> "current version"@en .
 <http://environment.data.gov.uk/def/version/currentVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "currentVersion relates an enduring resource to its current version"@en .
@@ -13,4 +13,4 @@ DELETE DATA {
 <http://environment.data.gov.uk/def/version/interval> <http://www.w3.org/2000/01/rdf-schema#comment> "interval relates a versioned resource to an interval during which the version applies."@en .
 <http://environment.data.gov.uk/def/version/interval> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Interval> .
 <http://environment.data.gov.uk/def/version/interval> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/version.ttl> .
-}
+} }

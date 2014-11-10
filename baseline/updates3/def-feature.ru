@@ -1,4 +1,4 @@
-DELETE DATA {
+DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://location.data.gov.uk/def/ef/BathingWaterProfileFeature/TSO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://location.data.gov.uk/def/ef/BathingWaterProfileFeature/TSO> <http://www.w3.org/2000/01/rdf-schema#label> "Treated Sewage Works Outfall"@en .
 <http://location.data.gov.uk/def/ef/BathingWaterProfileFeature/TSO> <http://www.w3.org/2000/01/rdf-schema#comment> "TTSI is a class of feature whose instances represent the location of a treated sewage works outfall."@en .
@@ -41,4 +41,4 @@ DELETE DATA {
 <http://location.data.gov.uk/def/ef/BathingWaterProfileFeature/Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature"@en .
 <http://location.data.gov.uk/def/ef/BathingWaterProfileFeature/Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "Feature is a class of spatial objects representing features that are relevant to a bathing water profile.  An instance of Feature is a version of an instance of EnduringFeature."@en .
 <http://location.data.gov.uk/def/ef/BathingWaterProfileFeature/Feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/def-feature.ttl> .
-}
+} }

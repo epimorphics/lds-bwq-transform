@@ -1,4 +1,4 @@
-DELETE DATA {
+DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://www.legislation.gov.uk/uksi/1991/1597/schedule/2/made> <http://www.w3.org/2000/01/rdf-schema#label> "SAMPLING REQUIREMENTS"@en .
 <http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made> <http://www.w3.org/2000/01/rdf-schema#label> "QUALITY AND ADDITIONAL SAMPLING REQUIREMENTS"@en .
 <http://location.data.gov.uk/def/ef/SamplingPoint/samplePointNotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
@@ -38,4 +38,4 @@ DELETE DATA {
 <http://location.data.gov.uk/def/ef/SamplingPoint/samplePointCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Datatype for use in typed skos:notations"@en .
 <http://location.data.gov.uk/def/ef/SamplingPoint/samplePointCode> <http://www.w3.org/2000/01/rdf-schema#label> "samplePointCode"@en .
 <http://location.data.gov.uk/def/ef/SamplingPoint/samplePointCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://location.data.gov.uk/sources/def/SamplingPoint.ttl> .
-}
+} }

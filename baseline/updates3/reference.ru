@@ -1,4 +1,4 @@
-DELETE DATA {
+DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://reference.data.gov.uk/def/reference/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://reference.data.gov.uk/def/reference/> <http://www.w3.org/2002/07/owl#imports> <http://rdfs.org/ns/void> .
 <http://reference.data.gov.uk/def/status/final> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://reference.data.gov.uk/def/reference/Status> .
@@ -39,4 +39,4 @@ DELETE DATA {
 <http://reference.data.gov.uk/def/reference/URIset> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of resources that are all the same kind of thing."@en .
 <http://reference.data.gov.uk/def/reference/URIset> <http://www.w3.org/2000/01/rdf-schema#label> "URI Set"@en .
 <http://reference.data.gov.uk/def/reference/URIset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/ns/void#Dataset> .
-}
+} }
