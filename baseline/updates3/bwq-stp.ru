@@ -87,17 +87,17 @@ DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://environment.data.gov.uk/def/bwq-stp/riskScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://environment.data.gov.uk/def/bwq-stp/normal> .
 <http://environment.data.gov.uk/def/bwq-stp/riskScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://environment.data.gov.uk/def/bwq-stp/increased> .
 <http://environment.data.gov.uk/def/bwq-stp/riskScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "pollution risk scheme"@en .
+<http://environment.data.gov.uk/def/bwq-stp/riskDsd> <http://www.w3.org/2000/01/rdf-schema#comment> "A DSD for reporting daily predictions of the risk of short term pollution at a bathing water."@en .
+<http://environment.data.gov.uk/def/bwq-stp/riskDsd> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> .
+<http://environment.data.gov.uk/def/bwq-stp/riskDsd> <http://www.w3.org/2000/01/rdf-schema#label> "riskDsd"@en .
+<http://environment.data.gov.uk/def/bwq-stp/riskDsd> <http://www.w3.org/2004/02/skos/core#prefLabel> "risk Dsd"@en .
+<http://environment.data.gov.uk/def/bwq-stp/riskDsd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DataStructureDefinition> .
 <http://environment.data.gov.uk/def/bwq-stp/RiskPredictionDataSet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> .
 <http://environment.data.gov.uk/def/bwq-stp/RiskPredictionDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://environment.data.gov.uk/def/bwq-stp/RiskPredictionDataSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A qb:DataSet of Short term pollution risk predictions."@en .
 <http://environment.data.gov.uk/def/bwq-stp/RiskPredictionDataSet> <http://www.w3.org/2000/01/rdf-schema#label> "Short Term Pollution Risk Prediction Dataset"@en .
 <http://environment.data.gov.uk/def/bwq-stp/RiskPredictionDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#DataSet> .
 <http://environment.data.gov.uk/def/bwq-stp/RiskPredictionDataSet> <http://www.w3.org/2004/02/skos/core#prefLabel> "Short term pollution risk prediction data set"@en .
-<http://environment.data.gov.uk/def/bwq-stp/riskDsd> <http://www.w3.org/2000/01/rdf-schema#comment> "A DSD for reporting daily predictions of the risk of short term pollution at a bathing water."@en .
-<http://environment.data.gov.uk/def/bwq-stp/riskDsd> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> .
-<http://environment.data.gov.uk/def/bwq-stp/riskDsd> <http://www.w3.org/2000/01/rdf-schema#label> "riskDsd"@en .
-<http://environment.data.gov.uk/def/bwq-stp/riskDsd> <http://www.w3.org/2004/02/skos/core#prefLabel> "risk Dsd"@en .
-<http://environment.data.gov.uk/def/bwq-stp/riskDsd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DataStructureDefinition> .
 <http://environment.data.gov.uk/def/bwq-stp/riskLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bwq-stp.ttl> .
 <http://environment.data.gov.uk/def/bwq-stp/riskLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://environment.data.gov.uk/def/bwq-stp/riskLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
