@@ -9,7 +9,7 @@ make_update() {
     local output="$2"
 
     echo "DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {" > $output
-    rdfcat -out N-TRIPLE $input | grep -v _: >> $output
+    rdfcat -out N-TRIPLE $input | grep -v _: | grep -v "http://reference.data.gov.uk/id/" >> $output
     echo "} }" >> $output
 }
 
@@ -21,3 +21,6 @@ do
         make_update $file $output
     fi
 done
+
+# These shouldn't be in raw base anyway
+rm updates3/in-season* updates3/annual*

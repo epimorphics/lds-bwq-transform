@@ -11,6 +11,8 @@ Move a triple store dump from the existing service into a quad store form.
    * 3 - remove single/multi datasets so they can be republished to correct graphs
       * reference data
       * vocabularies
+      * profiles
+      * features
    * 4 - remove residual blank nodes
 
 ## Usage
@@ -36,9 +38,11 @@ To create final deployable verisons first run a backup:
 
 Then when complete terminate fuseki and do:
    
-    mv DB DB-DS
-    tar zcvf final/baseline-X.DB.tgz DB-DS
-    mv backups/*.nq.gz final/baseline-X.nq.gz
+    mv DB DS-DB
+#    export X=2014-08-01-noprofile
+    export X=2014-10-02-noprofile
+    tar zcvf final/baseline-$X.DB.tgz DS-DB
+    mv backups/*.nq.gz final/baseline-$X.nq.gz
 
 Deploy to live system and don't forget to republish:
 

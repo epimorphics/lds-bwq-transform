@@ -119,9 +119,9 @@ DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://environment.data.gov.uk/def/bathing-water-quality/countQualifier> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://environment.data.gov.uk/def/bathing-water-quality/actual> .
 <http://environment.data.gov.uk/def/bathing-water-quality/sampleDsd> <http://purl.org/linked-data/cube#sliceKey> <http://environment.data.gov.uk/def/bathing-water-quality/bySamplingPointKey> .
 <http://environment.data.gov.uk/def/bathing-water-quality/sampleDsd> <http://purl.org/linked-data/cube#sliceKey> <http://environment.data.gov.uk/def/bathing-water-quality/byYearKey> .
-<http://environment.data.gov.uk/def/bathing-water-quality/sampleDsd> <http://www.w3.org/2000/01/rdf-schema#comment> "A DSD for reporting Bathing Water Quality in-season samples."@en .
-<http://environment.data.gov.uk/def/bathing-water-quality/sampleDsd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DataStructureDefinition> .
 <http://environment.data.gov.uk/def/bathing-water-quality/sampleDsd> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
+<http://environment.data.gov.uk/def/bathing-water-quality/sampleDsd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DataStructureDefinition> .
+<http://environment.data.gov.uk/def/bathing-water-quality/sampleDsd> <http://www.w3.org/2000/01/rdf-schema#comment> "A DSD for reporting Bathing Water Quality in-season samples."@en .
 <http://environment.data.gov.uk/def/bathing-water-quality/sampleDsd> <http://purl.org/linked-data/cube#sliceKey> <http://environment.data.gov.uk/def/bathing-water-quality/bySamplingPointYearKey> .
 <http://environment.data.gov.uk/def/bathing-water-quality/sampleDsd> <http://purl.org/linked-data/cube#sliceKey> <http://environment.data.gov.uk/def/bathing-water-quality/byWeekKey> .
 <http://environment.data.gov.uk/def/bathing-water-quality/sampleDsd> <http://www.w3.org/2000/01/rdf-schema#label> "sampleAssessmentDsd"@en .
@@ -168,16 +168,6 @@ DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://environment.data.gov.uk/def/bathing-water-quality/entrovirusQualifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
 <http://environment.data.gov.uk/def/bathing-water-quality/entrovirusQualifier> <http://purl.org/linked-data/cube#codeList> <http://environment.data.gov.uk/def/bathing-water-quality/countQualifier> .
 <http://environment.data.gov.uk/def/bathing-water-quality/entrovirusQualifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://environment.data.gov.uk/def/bathing-water-quality/CountQualifier> .
-<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.legislation.gov.uk/uksi/1991/1597/schedule/2/made> .
-<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.opsi.gov.uk/legislation/european/directive/1976/0160> .
-<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made> .
-<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#label> "faecalStreptococciCount"@en .
-<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.legislation.gov.uk/uksi/1991/1597/made> .
-<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
-<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.legislation.gov.uk/uksi/1991/1597/schedule/1/made> .
-<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of colonies of faecal streptococci per 100ml water sample."@en .
-<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
 <http://environment.data.gov.uk/def/bathing-water-quality/> <http://purl.org/dc/terms/created> "2010-08-16"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://environment.data.gov.uk/def/bathing-water-quality/> <http://www.w3.org/2002/07/owl#imports> <http://environment.data.gov.uk/def/bwq-cc-2012/> .
 <http://environment.data.gov.uk/def/bathing-water-quality/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
@@ -196,14 +186,29 @@ DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://environment.data.gov.uk/def/bathing-water-quality/escherichiaColiQualifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
 <http://environment.data.gov.uk/def/bathing-water-quality/escherichiaColiQualifier> <http://purl.org/linked-data/cube#codeList> <http://environment.data.gov.uk/def/bathing-water-quality/countQualifier> .
 <http://environment.data.gov.uk/def/bathing-water-quality/escherichiaColiQualifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://environment.data.gov.uk/def/bathing-water-quality/CountQualifier> .
-<http://environment.data.gov.uk/def/bathing-water-quality/countQualifierCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-<http://environment.data.gov.uk/def/bathing-water-quality/countQualifierCode> <http://www.w3.org/2000/01/rdf-schema#label> "count qualifier code notation datatype"@en .
-<http://environment.data.gov.uk/def/bathing-water-quality/countQualifierCode> <http://www.w3.org/2000/01/rdf-schema#comment> "A datatype for count qualifier notation literal values."@en .
-<http://environment.data.gov.uk/def/bathing-water-quality/countQualifierCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
+<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.legislation.gov.uk/uksi/1991/1597/schedule/2/made> .
+<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.opsi.gov.uk/legislation/european/directive/1976/0160> .
+<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.legislation.gov.uk/uksi/1991/1597/schedule/3/made> .
+<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#label> "faecalStreptococciCount"@en .
+<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.legislation.gov.uk/uksi/1991/1597/made> .
+<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
+<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.legislation.gov.uk/uksi/1991/1597/schedule/1/made> .
+<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of colonies of faecal streptococci per 100ml water sample."@en .
+<http://environment.data.gov.uk/def/bathing-water-quality/faecalStreptococciCount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
 <http://environment.data.gov.uk/def/bathing-water-quality/complianceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <http://environment.data.gov.uk/def/bathing-water-quality/complianceCode> <http://www.w3.org/2000/01/rdf-schema#label> "compliance classification code datatype"@en .
 <http://environment.data.gov.uk/def/bathing-water-quality/complianceCode> <http://www.w3.org/2000/01/rdf-schema#comment> "A datatype for typing bwq compliance code skos:notations."@en .
 <http://environment.data.gov.uk/def/bathing-water-quality/complianceCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
+<http://environment.data.gov.uk/def/bathing-water-quality/countQualifierCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://environment.data.gov.uk/def/bathing-water-quality/countQualifierCode> <http://www.w3.org/2000/01/rdf-schema#label> "count qualifier code notation datatype"@en .
+<http://environment.data.gov.uk/def/bathing-water-quality/countQualifierCode> <http://www.w3.org/2000/01/rdf-schema#comment> "A datatype for count qualifier notation literal values."@en .
+<http://environment.data.gov.uk/def/bathing-water-quality/countQualifierCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
+<http://environment.data.gov.uk/def/bathing-water-quality/byWeekKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#SliceKey> .
+<http://environment.data.gov.uk/def/bathing-water-quality/byWeekKey> <http://www.w3.org/2000/01/rdf-schema#label> "byWeekKey"@en .
+<http://environment.data.gov.uk/def/bathing-water-quality/byWeekKey> <http://www.w3.org/2000/01/rdf-schema#comment> "A Slice Key for grouping samples by sample week"@en .
+<http://environment.data.gov.uk/def/bathing-water-quality/byWeekKey> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
+<http://environment.data.gov.uk/def/bathing-water-quality/byWeekKey> <http://purl.org/linked-data/cube#componentProperty> <http://environment.data.gov.uk/def/bathing-water-quality/sampleWeek> .
 <http://environment.data.gov.uk/def/bathing-water-quality/escherichiaColiCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
 <http://environment.data.gov.uk/def/bathing-water-quality/escherichiaColiCount> <http://www.w3.org/2000/01/rdf-schema#label> "escherichiaColiCount"@en .
 <http://environment.data.gov.uk/def/bathing-water-quality/escherichiaColiCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of colonies of escherichia coli per 100ml water sample."@en .
@@ -213,11 +218,6 @@ DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://environment.data.gov.uk/def/bathing-water-quality/escherichiaColiCount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.legislation.gov.uk/uksi/2008/1097/made> .
 <http://environment.data.gov.uk/def/bathing-water-quality/escherichiaColiCount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.legislation.gov.uk/uksi/2008/1097/schedule/3/made> .
 <http://environment.data.gov.uk/def/bathing-water-quality/escherichiaColiCount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.legislation.gov.uk/uksi/2008/1097/schedule/3/part/1/made> .
-<http://environment.data.gov.uk/def/bathing-water-quality/byWeekKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#SliceKey> .
-<http://environment.data.gov.uk/def/bathing-water-quality/byWeekKey> <http://www.w3.org/2000/01/rdf-schema#label> "byWeekKey"@en .
-<http://environment.data.gov.uk/def/bathing-water-quality/byWeekKey> <http://www.w3.org/2000/01/rdf-schema#comment> "A Slice Key for grouping samples by sample week"@en .
-<http://environment.data.gov.uk/def/bathing-water-quality/byWeekKey> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
-<http://environment.data.gov.uk/def/bathing-water-quality/byWeekKey> <http://purl.org/linked-data/cube#componentProperty> <http://environment.data.gov.uk/def/bathing-water-quality/sampleWeek> .
 <http://environment.data.gov.uk/def/bathing-water-quality/not-present> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
 <http://environment.data.gov.uk/def/bathing-water-quality/not-present> <http://environment.data.gov.uk/def/bathing-water-quality/presenceNotation> "N"^^<http://environment.data.gov.uk/def/bathing-water-quality/presenceCode> .
 <http://environment.data.gov.uk/def/bathing-water-quality/not-present> <http://www.w3.org/2004/02/skos/core#prefLabel> "not-present"@en .
@@ -470,6 +470,11 @@ DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://environment.data.gov.uk/def/bathing-water-quality/faecalColiformQualifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
 <http://environment.data.gov.uk/def/bathing-water-quality/faecalColiformQualifier> <http://purl.org/linked-data/cube#codeList> <http://environment.data.gov.uk/def/bathing-water-quality/countQualifier> .
 <http://environment.data.gov.uk/def/bathing-water-quality/faecalColiformQualifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://environment.data.gov.uk/def/bathing-water-quality/CountQualifier> .
+<http://environment.data.gov.uk/def/bathing-water-quality/sampleDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#AttributeProperty> .
+<http://environment.data.gov.uk/def/bathing-water-quality/sampleDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "sampleDateTime"@en .
+<http://environment.data.gov.uk/def/bathing-water-quality/sampleDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The date/time at which a sample was taken"@en .
+<http://environment.data.gov.uk/def/bathing-water-quality/sampleDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> .
+<http://environment.data.gov.uk/def/bathing-water-quality/sampleDateTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
 <http://environment.data.gov.uk/def/bathing-water-quality/totalColiformQualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#AttributeProperty> .
 <http://environment.data.gov.uk/def/bathing-water-quality/totalColiformQualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#CodedProperty> .
 <http://environment.data.gov.uk/def/bathing-water-quality/totalColiformQualifier> <http://www.w3.org/2000/01/rdf-schema#label> "totalColiformQualifier"@en .
@@ -497,11 +502,6 @@ DELETE DATA { GRAPH <http://localhost/dms/metadata/bwq/graph/baseline> {
 <http://environment.data.gov.uk/def/bathing-water-quality/actual> <http://www.w3.org/2004/02/skos/core#inScheme> <http://environment.data.gov.uk/def/bathing-water-quality/countQualifier> .
 <http://environment.data.gov.uk/def/bathing-water-quality/actual> <http://www.w3.org/2004/02/skos/core#prefLabel> "actual"@en .
 <http://environment.data.gov.uk/def/bathing-water-quality/actual> <http://www.w3.org/2000/01/rdf-schema#label> "actual"@en .
-<http://environment.data.gov.uk/def/bathing-water-quality/sampleDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#AttributeProperty> .
-<http://environment.data.gov.uk/def/bathing-water-quality/sampleDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "sampleDateTime"@en .
-<http://environment.data.gov.uk/def/bathing-water-quality/sampleDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The date/time at which a sample was taken"@en .
-<http://environment.data.gov.uk/def/bathing-water-quality/sampleDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> .
-<http://environment.data.gov.uk/def/bathing-water-quality/sampleDateTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
 <http://environment.data.gov.uk/def/bathing-water-quality/record-status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <http://environment.data.gov.uk/def/bathing-water-quality/record-status> <http://www.w3.org/2000/01/rdf-schema#label> "record-status concept scheme"@en .
 <http://environment.data.gov.uk/def/bathing-water-quality/record-status> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://environment.data.gov.uk/sources/def/bathing-water-quality.ttl> .
