@@ -14,5 +14,5 @@ updateBatch() {
 updateBatch updates1  # Delete latest/replaced from baseline
 updateBatch updates2  # Recreate latest/replaced in target graphs
 updateBatch updates3  # Strip vocabularies and reference
-updateBatch updates4  # Strip bnodes
+updateBatch updates4  # Strip bnodes and dangling lat/longs
 updateBatch updates5  # Fixup ukf14
