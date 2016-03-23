@@ -276,7 +276,7 @@
             "makeURI"    : "true"
         }
     ],
-    "templates" : [ "bathing-water", "water-company", "alt-bathing-water", "envelope", "envelope-lower", "envelope-upper", "zone-of-influence",
+    "templates" : [ "bathing-water", "water-company", "water-company-profile", "alt-bathing-water", "envelope", "envelope-lower", "envelope-upper", "zone-of-influence",
                     "sampling-point",  "os-district", "ons-district" ],
     "referenced" : [
     #############################################################################################################################
@@ -337,7 +337,15 @@
           "<skos:prefLabel>"          : "{watercompany}@en",
           "<chterms:companyProfile>"  : "<{r_water_company_profile}>",
 #          "<reg:registration>"        : "<{r_water_company_regitem}>",
-          "^<def-bw:bathing-water>"   : "<{$id_bw}/{$eubwid}>"
+          "<def-bw:bathing-water>"   : "<{$id_bw}/{$eubwid}>"
+        },
+     
+    #############################################################################################################################
+    # Add labelling for referenced Water company CH company profile
+    #############################################################################################################################
+        { "name"                      : "water-company-profile",
+          "@id"                       : "<{r_water_company_profile}>",
+          "<rdfs:label>"              : "Companies House profile for {watercompany}@en"
         },
     #############################################################################################################################
     # Bathing-water zone of influence
