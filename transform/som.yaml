@@ -1,4 +1,4 @@
-{ "name" : "suspension-of-monitoring",
+{ "name" : "bwq-suspension-of-monitoring",
   "type" : "Composite",
   "required" : [
       "as_id",
@@ -72,8 +72,8 @@
             "$s_endDate"             : "{empty(end_date)   ? null : $extractDate.apply(end_date)}",
             "$s_endTime"             : "{empty(end_time)   ? null : $extractTime.apply(end_time)}",   #Correct time extraction
 #            "$s_endTime"             : "{empty(end_date)   ? null : $extractTime.apply(end_date)}",  #Broken time extraction to mimic modal for triple diff tests
-            "$bw"                    : "<{$bwspid.map('sp-to-bw')}>",
-            "$bwLabel"               : "{$bwspid.map('sp-to-bw','label',true)}",
+            "$bw"                    : "<{$bwspid.map('bwq-sp-to-bw')}>",
+            "$bwLabel"               : "{$bwspid.map('bwq-sp-to-bw','label',true)}",
             "$somDataset"            : "<{$data_base}/suspension>",
             "$bodySomDataset"        : "<{$data_base}/{$body_slug}/suspension>",
             "$incrementalSomDataset" : "<{$data_base}/{$body_slug}/suspension/dataset-increment/{$filebasename}>",
@@ -98,7 +98,7 @@
        ###############################################################################
        # Source for testing only, replace in live service
        ###############################################################################
-       { "name"        : "sp-to-bw", 
+       { "name"        : "bwq-sp-to-bw", 
          "sourceType"  : "RDFSparql", 
          "source"      : "sites.ttl",
          "query"       : 
@@ -120,7 +120,7 @@
                }"
        },
        {
-            "name"       : "region",
+            "name"       : "ea-region",
             "sourceType" : "CSV",
             "source"     : "transform/ea-region.csv",
             "key"        : "code",
@@ -129,20 +129,20 @@
     ],
    
    "templates" : [ 
-        "som"
+        "bwq-som"
    ],
    "oneOffs"    : [
 ############################################################################################################
 # Link SOM Dataset to top level BWQ dataset
 ############################################################################################################
-       { "name"                             : "bathing-water-quality-dataset",
+       { "name"                             : "bwq-som-bathing-water-quality-dataset",
          "@id"                              : "<{$data_base}>",
          "<void:subset>"                    : "<{$somDataset}>"
        },
 ############################################################################################################
 # Link per body suspension dataset as subset of top level suspensions dataset
 ############################################################################################################
-       { "name"                             : "suspensions-dataset",
+       { "name"                             : "bwq-som-suspensions-dataset",
          "@id"                              : "<{$somDataset}>",
          "<rdf:type> "                      : "<void:Dataset>",
          "<rdfs:label>"                     : "Bathing Water Quality Suspension Of Monitoring Dataset@en",
@@ -162,7 +162,7 @@
 ############################################################################################################
 # Link incremental suspension dataset to per body suspension dataset
 ############################################################################################################
-       { "name"                             : "body-suspensions-dataset",
+       { "name"                             : "bwq-som-body-suspensions-dataset",
          "@id"                              : "<{$bodySomDataset}>",
          "<rdf:type> "                      : "<void:Dataset>",
          "<rdfs:label>"                     : "Bathing Water Quality Suspension Of Monitoring Dataset - ({$body_slug})@en",
@@ -184,7 +184,7 @@
 ############################################################################################################
 # Incremental suspension dataset details
 ############################################################################################################
-       { "name"                             : "incremental-suspensions-dataset",
+       { "name"                             : "bwq-som-incremental-suspensions-dataset",
          "@id"                              : "<{$incrementalSomDataset}>" ,
          "<rdf:type>"                       : "<void:Dataset>",
          "<rdfs:label>"                     : "Bathing Water Quality - suspension of monitoring dataset {$exectime.toWholeSeconds()}@en",
@@ -210,7 +210,7 @@
 # Process each Suspension of Monitoring record.
 ############################################################################################################
    "referenced" : [
-      { "name"                               :  "som",
+      { "name"                               :  "bwq-som",
          "@id"                               :  "<{$som}>",
          "<rdf:type>"                        :  "<def-som:SuspensionOfMonitoring>",
          "<rdfs:label>"                      : "{as_id} - {$bwLabel}@en",
@@ -220,7 +220,7 @@
          "<def-bw:bathingWater>"             : "<{$bw}>",
          "<def-sp:samplingPoint>"            : "<{$so_sp}/{$bwspid}>",
          "<def-bwq:sampleYear>"              : "<{bw_season.asDate('xsd:gYear').referenceTime()}>",
-         "<def-bw:regionalOrganization>"     : "<{region.map('region')}>",
+         "<def-bw:regionalOrganization>"     : "<{region.map('ea-region')}>",
          "<dgu:uriSet>"                      : "<{$incrementalSomDataset}>",
  # Date/Time fields
          "<def-som:startOfSuspension>"       : "{$l_startDateTime}",
@@ -230,7 +230,7 @@
 # Narrative fields
          "<dct:description>"                 : "{situation_description}@en",
          "<rdfs:comment>"                    : "{additional_comments}@en",
-         
+         "<def-som:nirsRef>      "           : "{empty(nirs_ref) ? null : nirs_ref.asString()}"       
       } 
    ]
 }

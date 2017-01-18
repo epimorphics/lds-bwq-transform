@@ -1,0 +1,9 @@
+NIRS ref,Situation Description,INCIDENT_START DATE,INCIDENT_START TIME,INCIDENT_END DATE,INCIDENT_END TIME,INC_ID,AS_ID,date_time_stamp,BW season,Start Date,Start Time,Expected End Date,End Date,End Time,Region,Bathing Water,BW_ref,Additional Comments
+1463922,Contamination from sewage,2016-08-22,10:00,,,1463922-22082016-100000,41900-22082016-100000,2016-08-22 14:13,2016,2016-08-22,10:00:00,2016-08-24,,,North West,St Annes,41800,Issue at local sewage works. Monitoring suspended.
+1463922,Contamination from sewage,2016-08-22,10:00,,,1463922-22082016-100000,41800-22082016-100000,2016-08-22 14:13,2016,2016-08-22,10:00:00,2016-08-24,,,North West,St Annes North,41900,Issue at local sewage works. Monitoring suspended.
+1463922,Contamination from sewage,2016-08-22,10:00,,,1463922-22082016-100000,,2016-08-22 14:13,2016,,,,,,North West,Blackpool South,42100,Issue at local sewage works.
+1463922,Contamination from sewage,2016-08-22,10:00,,,1463922-22082016-100000,,2016-08-22 14:13,2016,,,,,,North West,Blackpool Central,42300,Issue at local sewage works.
+1463922,Contamination from sewage,2016-08-22,10:00,,,1463922-22082016-100000,,2016-08-22 14:13,2016,,,,,,North West,Blackpool North,42500,Issue at local sewage works.
+1463922,Contamination from sewage,2016-08-22,10:00,,,1463922-22082016-100000,,2016-08-22 14:13,2016,,,,,,North West,Bispham,42600,Issue at local sewage works.
+1463922,Contamination from sewage,2016-08-22,10:00,,,1463922-22082016-100000,,2016-08-22 14:13,2016,,,,,,North West,Cleveleys,42800,Issue at local sewage works.
+1463922,Contamination from sewage,2016-08-22,10:00,,,1463922-22082016-100000,,2016-08-22 14:13,2016,,,,,,North West,Fleetwood,43000,Issue at local sewage works.
