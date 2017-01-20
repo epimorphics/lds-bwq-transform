@@ -37,3 +37,5 @@
 
 @prefix so-sp:   <http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/> .
 @prefix def-feat:    <http://location.data.gov.uk/def/ef/BathingWaterProfileFeature/> .
+
+@prefix def-incident-type: <http://environment.data.gov.uk/def/incident-type/> .

@@ -1,0 +1,148 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix def-geom: <http://location.data.gov.uk/def/common/Geometry/> .
+@prefix def-sp: <http://location.data.gov.uk/def/ef/SamplingPoint/> .
+@prefix def-cc12: <http://environment.data.gov.uk/def/bwq-cc-2012/> .
+@prefix def-bwp: <http://environment.data.gov.uk/def/bathing-water-profile/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix spatialrelations: <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix def-bwq: <http://environment.data.gov.uk/def/bathing-water-quality/> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix chterms: <http://business.data.gov.uk/companies/def/terms/> .
+@prefix qb:    <http://purl.org/linked-data/cube#> .
+@prefix dgu:   <http://reference.data.gov.uk/def/reference/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix reg:   <http://purl.org/linked-data/registry#> .
+@prefix def-incident-type: <http://environment.data.gov.uk/def/incident-type/> .
+@prefix def-stp: <http://environment.data.gov.uk/def/bwq-stp/> .
+@prefix admingeo: <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix onsadmingeo: <http://statistics.data.gov.uk/def/administrative-geography/> .
+@prefix org:   <http://www.w3.org/ns/org#> .
+@prefix def-ver: <http://environment.data.gov.uk/def/version/> .
+@prefix so-sp: <http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/> .
+@prefix def-zoi: <http://location.data.gov.uk/def/ef/ZoneOfInfluence/> .
+@prefix id-bw: <http://environment.data.gov.uk/id/bathing-water/> .
+@prefix intervals: <http://reference.data.gov.uk/def/intervals/> .
+@prefix def-som: <http://environment.data.gov.uk/def/bwq-som/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix def-feat: <http://location.data.gov.uk/def/ef/BathingWaterProfileFeature/> .
+@prefix geometry: <http://data.ordnancesurvey.co.uk/ontology/geometry/> .
+@prefix geowgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix status: <http://reference.data.gov.uk/def/status/> .
+@prefix def-bw: <http://environment.data.gov.uk/def/bathing-water/> .
+
+<http://reference.data.gov.uk/id/year/2016>
+        a                            intervals:Year , intervals:CalendarYear ;
+        rdfs:comment                 "The British calendar year of 2016"@en ;
+        rdfs:label                   "British Year:2016"@en ;
+        intervals:hasXsdDurationDescription
+                "P1Y"^^xsd:duration ;
+        intervals:ordinalYear        2016 ;
+        skos:prefLabel               "British Year:2016"@en ;
+        time:hasBeginning            <http://reference.data.gov.uk/id/gregorian-instant/2016-01-01T00:00:00> ;
+        time:hasDurationDescription  intervals:one-year ;
+        time:hasEnd                  <http://reference.data.gov.uk/id/gregorian-instant/2017-01-01T00:00:00> .
+
+<http://environment.data.gov.uk/data/bathing-water-quality/suspension/point/41900/date/20160822/time/100000/recordDateTime/201608221413>
+        a                            def-som:SuspensionOfMonitoring ;
+        rdfs:comment                 "Issue at local sewage works. Monitoring suspended."@en ;
+        rdfs:label                   "41800-22082016-100000 - St Annes North"@en ;
+        def-bwq:sampleYear           <http://reference.data.gov.uk/id/year/2016> ;
+        def-bw:bathingWater          id-bw:ukd4303-41900 ;
+        def-bw:regionalOrganization  <http://reference.data.gov.uk/id/public-body/environment-agency/unit/north-west-north-west-office> ;
+        def-som:expectedEndOfSuspension
+                "2016-08-24"^^xsd:date ;
+        def-som:nirsRef              "1463922" ;
+        def-som:notation             "41800-22082016-100000"^^def-som:somID ;
+        def-som:pollutionIncident    <http://environment.data.gov.uk/data/bathing-water-quality/pollution-incident/1463922-22082016-100000/recordDateTime/201608221413> ;
+        def-som:recordDateTime       "2016-08-22T14:13:00"^^xsd:dateTime ;
+        def-som:startOfSuspension    "2016-08-22T10:00:00"^^xsd:dateTime ;
+        def-sp:samplingPoint         so-sp:41900 ;
+        dct:description              "Contamination from sewage"@en ;
+        dct:source                   <http://environment.data.gov.uk/sources/bwq/eaew/input/escalate-some-bw.csv#row=000003> ;
+        dgu:uriSet                   <http://environment.data.gov.uk/data/bathing-water-quality/eaew/suspension/dataset-increment/escalate-some-bw> ;
+        skos:notation                "41800-22082016-100000" , "41800-22082016-100000"^^def-som:somID .
+
+<http://environment.data.gov.uk/data/bathing-water-quality/pollution-incident/1463922-22082016-100000/recordDateTime/201608221413>
+        a                               def-som:PollutionIncident ;
+        rdfs:label                      "Pollution Incident - 1463922-22082016-100000" ;
+        def-bwq:sampleYear              <http://reference.data.gov.uk/id/year/2016> ;
+        def-bw:bathingWater             id-bw:ukd4200-42100 , id-bw:ukd4200-42300 , id-bw:ukd4303-41800 , id-bw:ukd4312-42800 , id-bw:ukd4312-43000 , id-bw:ukd4200-42600 , id-bw:ukd4303-41900 , id-bw:ukd4200-42500 ;
+        def-som:incidentType            def-incident-type:005 ;
+        def-som:notation                "1463922-22082016-100000"^^def-som:piID ;
+        def-som:recordDateTime          "2016-08-22T14:13:00"^^xsd:dateTime ;
+        def-som:startOfIncident         "2016-08-22T10:00:00"^^xsd:dateTime ;
+        def-som:suspensionOfMonitoring  <http://environment.data.gov.uk/data/bathing-water-quality/suspension/point/41900/date/20160822/time/100000/recordDateTime/201608221413> , <http://environment.data.gov.uk/data/bathing-water-quality/suspension/point/41800/date/20160822/time/100000/recordDateTime/201608221413> ;
+        def-sp:samplingPoint            so-sp:42100 , so-sp:42800 , so-sp:43000 , so-sp:41800 , so-sp:41900 , so-sp:42300 , so-sp:42500 , so-sp:42600 ;
+        dct:source                      <http://environment.data.gov.uk/sources/bwq/eaew/input/escalate-some-bw.csv#row=000003> , <http://environment.data.gov.uk/sources/bwq/eaew/input/escalate-some-bw.csv#row=000004> , <http://environment.data.gov.uk/sources/bwq/eaew/input/escalate-some-bw.csv#row=000002> , <http://environment.data.gov.uk/sources/bwq/eaew/input/escalate-some-bw.csv#row=000009> , <http://environment.data.gov.uk/sources/bwq/eaew/input/escalate-some-bw.csv#row=000007> , <http://environment.data.gov.uk/sources/bwq/eaew/input/escalate-some-bw.csv#row=000008> , <http://environment.data.gov.uk/sources/bwq/eaew/input/escalate-some-bw.csv#row=000006> , <http://environment.data.gov.uk/sources/bwq/eaew/input/escalate-some-bw.csv#row=000005> ;
+        skos:notation                   "1463922-22082016-100000" , "1463922-22082016-100000"^^def-som:piID .
+
+<http://reference.data.gov.uk/id/gregorian-instant/2016-01-01T00:00:00>
+        a                               time:Instant ;
+        rdfs:comment                    "The instant at start of the 1st second of 1st minute of 1st hour of Friday the 1st January of the British calendar year 2016"@en ;
+        rdfs:label                      "British Instant:2016-01-01T00:00:00"@en ;
+        intervals:dayOfWeek             time:Friday ;
+        intervals:monthOfYear           intervals:January ;
+        intervals:ordinalDayOfMonth     1 ;
+        intervals:ordinalDayOfWeek      5 ;
+        intervals:ordinalDayOfYear      1 ;
+        intervals:ordinalHalfOfYear     1 ;
+        intervals:ordinalHourOfDay      0 ;
+        intervals:ordinalMinuteOfHour   0 ;
+        intervals:ordinalMonthOfYear    1 ;
+        intervals:ordinalQuarterOfYear  1 ;
+        intervals:ordinalSecondOfMinute
+                0 ;
+        intervals:ordinalWeekOfYear     53 ;
+        intervals:ordinalWeekOfYearYear
+                2015 ;
+        intervals:ordinalYear           2016 ;
+        skos:prefLabel                  "British Instant:2016-01-01T00:00:00"@en ;
+        time:inXSDDateTime              "2016-01-01T00:00:00"^^xsd:dateTime .
+
+<http://reference.data.gov.uk/id/gregorian-instant/2017-01-01T00:00:00>
+        a                               time:Instant ;
+        rdfs:comment                    "The instant at start of the 1st second of 1st minute of 1st hour of Sunday the 1st January of the British calendar year 2017"@en ;
+        rdfs:label                      "British Instant:2017-01-01T00:00:00"@en ;
+        intervals:dayOfWeek             time:Sunday ;
+        intervals:monthOfYear           intervals:January ;
+        intervals:ordinalDayOfMonth     1 ;
+        intervals:ordinalDayOfWeek      7 ;
+        intervals:ordinalDayOfYear      1 ;
+        intervals:ordinalHalfOfYear     1 ;
+        intervals:ordinalHourOfDay      0 ;
+        intervals:ordinalMinuteOfHour   0 ;
+        intervals:ordinalMonthOfYear    1 ;
+        intervals:ordinalQuarterOfYear  1 ;
+        intervals:ordinalSecondOfMinute
+                0 ;
+        intervals:ordinalWeekOfYear     52 ;
+        intervals:ordinalWeekOfYearYear
+                2016 ;
+        intervals:ordinalYear           2017 ;
+        skos:prefLabel                  "British Instant:2017-01-01T00:00:00"@en ;
+        time:inXSDDateTime              "2017-01-01T00:00:00"^^xsd:dateTime .
+
+<http://environment.data.gov.uk/data/bathing-water-quality/suspension/point/41800/date/20160822/time/100000/recordDateTime/201608221413>
+        a                            def-som:SuspensionOfMonitoring ;
+        rdfs:comment                 "Issue at local sewage works. Monitoring suspended."@en ;
+        rdfs:label                   "41900-22082016-100000 - St Annes"@en ;
+        def-bwq:sampleYear           <http://reference.data.gov.uk/id/year/2016> ;
+        def-bw:bathingWater          id-bw:ukd4303-41800 ;
+        def-bw:regionalOrganization  <http://reference.data.gov.uk/id/public-body/environment-agency/unit/north-west-north-west-office> ;
+        def-som:expectedEndOfSuspension
+                "2016-08-24"^^xsd:date ;
+        def-som:nirsRef              "1463922" ;
+        def-som:notation             "41900-22082016-100000"^^def-som:somID ;
+        def-som:pollutionIncident    <http://environment.data.gov.uk/data/bathing-water-quality/pollution-incident/1463922-22082016-100000/recordDateTime/201608221413> ;
+        def-som:recordDateTime       "2016-08-22T14:13:00"^^xsd:dateTime ;
+        def-som:startOfSuspension    "2016-08-22T10:00:00"^^xsd:dateTime ;
+        def-sp:samplingPoint         so-sp:41800 ;
+        dct:description              "Contamination from sewage"@en ;
+        dct:source                   <http://environment.data.gov.uk/sources/bwq/eaew/input/escalate-some-bw.csv#row=000002> ;
+        dgu:uriSet                   <http://environment.data.gov.uk/data/bathing-water-quality/eaew/suspension/dataset-increment/escalate-some-bw> ;
+        skos:notation                "41900-22082016-100000" , "41900-22082016-100000"^^def-som:somID .

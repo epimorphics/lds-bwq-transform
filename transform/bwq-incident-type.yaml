@@ -1,0 +1,32 @@
+name: bwq-incident-type.yaml
+type: Composite
+required : 
+  - id
+  - description
+  
+bind:
+  - base : "http://environment.data.gov.uk/def/incident-type"
+    incidentNotation : "{id.asNumber().format('%03d')}"
+    
+  - r_scheme         : "def-incident-type:scheme"
+    r_incidentType   : "def-incident-type:{incidentNotation}"
+    
+oneOffs :
+  - name              :  bwq-incident-type-scheme
+    "@id"             : "<{r_scheme}>"
+    "<rdf:type>"      : "<skos:ConceptScheme>"
+    "<rdfs:comment>"  : "A concept scheme for types of Pollution Incident types.@en"
+    
+templates :
+  - name                    : bwq-incident-type
+    "@id"                   : "<{r_incidentType}>"
+    "<rdfs:type>" :
+      - "<skos:Concept>"
+      - "<def-som:TypeOfIncident>"
+    "<rdfs:label>"          : "{description}@en"
+    "<skos:prefLabel>"      : "{description}@en"
+    "<skos:notation>"       : "{incidentNotation}"
+    "<skos:inScheme>"       : "<{r_scheme}>"
+    "<skos:topConceptOf>"   : "<{r_scheme}>"
+    "^<skos:hasTopConcept>" : "<{r_scheme}>"
+    
