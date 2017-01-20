@@ -109,9 +109,9 @@
         rdfs:label                      "Pollution Incident - 1463922-22082016-100000" ;
         def-bwq:sampleYear              <http://reference.data.gov.uk/id/year/2016> ;
         def-bw:bathingWater             id-bw:ukd4200-42300 , id-bw:ukd4303-41900 , id-bw:ukd4200-42100 , id-bw:ukd4303-41800 , id-bw:ukd4200-42600 , id-bw:ukd4312-43000 , id-bw:ukd4200-42500 , id-bw:ukd4312-42800 ;
+        def-som:incidentNotation        "1463922-22082016-100000"^^def-som:piID ;
         def-som:incidentType            def-incident-type:005 ;
         def-som:nirsRef                 "1463922" ;
-        def-som:notation                "1463922-22082016-100000"^^def-som:piID ;
         def-som:recordDateTime          "2016-08-24T08:13:00"^^xsd:dateTime ;
         def-som:startOfIncident         "2016-08-22T10:00:00"^^xsd:dateTime ;
         def-som:suspensionOfMonitoring  <http://environment.data.gov.uk/data/bathing-water-quality/suspension/point/42800/date/20160822/time/100000/recordDateTime/201608240813> , <http://environment.data.gov.uk/data/bathing-water-quality/suspension/point/42600/date/20160822/time/100000/recordDateTime/201608240813> , <http://environment.data.gov.uk/data/bathing-water-quality/suspension/point/42100/date/20160822/time/100000/recordDateTime/201608240813> , <http://environment.data.gov.uk/data/bathing-water-quality/suspension/point/42300/date/20160822/time/100000/recordDateTime/201608240813> , <http://environment.data.gov.uk/data/bathing-water-quality/suspension/point/41800/date/20160822/time/100000/recordDateTime/201608240813> , <http://environment.data.gov.uk/data/bathing-water-quality/suspension/point/43000/date/20160822/time/100000/recordDateTime/201608240813> , <http://environment.data.gov.uk/data/bathing-water-quality/suspension/point/41900/date/20160822/time/100000/recordDateTime/201608240813> , <http://environment.data.gov.uk/data/bathing-water-quality/suspension/point/42500/date/20160822/time/100000/recordDateTime/201608240813> ;

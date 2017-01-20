@@ -48,16 +48,16 @@
         time:hasEnd                  <http://reference.data.gov.uk/id/gregorian-instant/2017-01-01T00:00:00> .
 
 <http://environment.data.gov.uk/data/bathing-water-quality/pollution-incident/1463922-22082016-100000/recordDateTime/201608221001>
-        a                        def-som:PollutionIncident ;
-        rdfs:label               "Pollution Incident - 1463922-22082016-100000" ;
-        def-bwq:sampleYear       <http://reference.data.gov.uk/id/year/2016> ;
-        def-som:incidentType     def-incident-type:005 ;
-        def-som:nirsRef          "1463922" ;
-        def-som:notation         "1463922-22082016-100000"^^def-som:piID ;
-        def-som:recordDateTime   "2016-08-22T10:01:00"^^xsd:dateTime ;
-        def-som:startOfIncident  "2016-08-22T10:00:00"^^xsd:dateTime ;
-        dct:source               <http://environment.data.gov.uk/sources/bwq/eaew/input/initial-incident.csv#row=000002> ;
-        skos:notation            "1463922-22082016-100000"^^def-som:piID , "1463922-22082016-100000" .
+        a                         def-som:PollutionIncident ;
+        rdfs:label                "Pollution Incident - 1463922-22082016-100000" ;
+        def-bwq:sampleYear        <http://reference.data.gov.uk/id/year/2016> ;
+        def-som:incidentNotation  "1463922-22082016-100000"^^def-som:piID ;
+        def-som:incidentType      def-incident-type:005 ;
+        def-som:nirsRef           "1463922" ;
+        def-som:recordDateTime    "2016-08-22T10:01:00"^^xsd:dateTime ;
+        def-som:startOfIncident   "2016-08-22T10:00:00"^^xsd:dateTime ;
+        dct:source                <http://environment.data.gov.uk/sources/bwq/eaew/input/initial-incident.csv#row=000002> ;
+        skos:notation             "1463922-22082016-100000"^^def-som:piID , "1463922-22082016-100000" .
 
 <http://reference.data.gov.uk/id/gregorian-instant/2017-01-01T00:00:00>
         a                               time:Instant ;
