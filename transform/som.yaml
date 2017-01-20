@@ -291,5 +291,6 @@ referenced :
      "<def-som:notation>"                : "{inc_id.datatype('def-som:piID')}"
      "<skos:notation>"                 : [ "{inc_id.datatype('def-som:piID')}","{inc_id}" ]
      "<def-som:recordDateTime>"          : "{l_recordDateTime}"
+     "<def-som:nirsRef>      "           : "{empty(nirs_ref) ? null : nirs_ref.asString()}"     
      "<def-som:incidentType>"            : "{r_incidentType}"
      
