@@ -20,7 +20,7 @@ oneOffs :
 templates :
   - name                    : bwq-incident-type
     "@id"                   : "<{r_incidentType}>"
-    "<rdfs:type>" :
+    "<rdf:type>" :
       - "<skos:Concept>"
       - "<def-som:TypeOfIncident>"
     "<rdfs:label>"          : "{description}@en"
