@@ -3,11 +3,11 @@
 requiredColumns : 
    - nirs_ref
    - situation_description
-   - incident_start_date
-   - incident_start_time
-   - incident_end_date
-   - incident_end_time
-   - inc_id
+#   - incident_start_date
+#   - incident_start_time
+#   - incident_end_date
+#   - incident_end_time
+#   - inc_id
    - as_id
    - date_time_stamp
    - bw_season
@@ -42,7 +42,7 @@ required:
 #   - bw_ref
 #   - additional_comments
 
-"bind" : 
+"bind" :
 #####################################################################################################################
 # URI and slugs
 #####################################################################################################################
@@ -91,44 +91,44 @@ required:
 #####################################################################################################################
      "extractDate"           : "{= empty($$) ? null : $$.asDate('dd/MM/yyyy|dd-MM-yyyy|yyyy-MM-dd|yyyy/MM/dd|dd/MM/yyyy HH:mm:ss|dd-MM-yyyy HH:mm:ss|yyyy-MM-dd HH:mm:ss|yyyy/MM/dd HH:mm:ss|dd/MM/yyyy HH:mm|dd-MM-yyyy HH:mm|yyyy-MM-dd HH:mm|yyyy/MM/dd HH:mm','xsd:dateTime').format('yyyy-MM-dd')}"
      "extractTime"           : "{= empty($$) ? null : $$.asDate('HH:mm:ss|dd/MM/yyyy HH:mm:ss|dd-MM-yyyy HH:mm:ss|yyyy-MM-dd HH:mm:ss|yyyy/MM/dd HH:mm:ss|HH:mm|dd/MM/yyyy HH:mm|dd-MM-yyyy HH:mm|yyyy-MM-dd HH:mm|yyyy/MM/dd HH:mm','xsd:dateTime').format('HH:mm:ss')}"
-   
+
    # Extract and check suspension and incident start/end dates/times.  
    - "s_startDate"           : "{extractDate.apply(start_date)}"
-     "s_startTime"           : "{extractTime.apply(start_time)}"                         
+     "s_startTime"           : "{extractTime.apply(start_time)}"
      "s_endDate"             : "{extractDate.apply(end_date)}"
      "s_endTime"             : "{extractTime.apply(end_time)}"
 
      "s_incStartDate"        : "{extractDate.apply(incident_start_date)}"
-     "s_incStartTime"        : "{extractTime.apply(incident_start_time)}"                             
+     "s_incStartTime"        : "{extractTime.apply(incident_start_time)}"
      "s_incEndDate"          : "{extractDate.apply(incident_end_date)}"
      "s_incEndTime"          : "{extractTime.apply(incident_end_time)}"
 
      "pubDateTimeSlug"       : "{pubDateTime.format('yyyyMMdd-HHmmss')}"
-   
+
    # Make RDF literals (lexical forms) for start/end dateTimes.
    - "l_startDateTime"       : "{empty(s_startDate)    || empty(s_startTime)    ? null : s_startDate.append('T').append(s_startTime).asDate('xsd:dateTime')}"
      "l_endDateTime"         : "{empty(s_endDate)      || empty(s_endTime)      ? null : s_endDate.append('T').append(s_endTime).asDate('xsd:dateTime')}"
      "l_incStartDateTime"    : "{empty(s_incStartDate) || empty(s_incStartTime) ? null : s_incStartDate.append('T').append(s_incStartTime).asDate('xsd:dateTime')}"
      "l_incEndDateTime"      : "{empty(s_incEndDate)   || empty(s_incEndTime)   ? null : s_incEndDate.append('T').append(s_incEndTime).asDate('xsd:dateTime')}"
-     
+
    - r_som                   : "{data_base}/suspension/point/{bwspid}/date/{empty(l_startDateTime)? null : l_startDateTime.format('yyyyMMdd')}/time/{l_startDateTime.format('HHmmss')}/recordDateTime/{l_recordDateTime.format('yyyyMMddHHmm')}"
      r_incident              : "{data_base}/pollution-incident/{empty(inc_id) ? null : inc_id.toCleanSegment()}/recordDateTime/{l_recordDateTime.format('yyyyMMddHHmm')}"
-     
+
    - r_incidentType          : "{empty(situation_description) ? null : situation_description.map('bwq-incident-type')}"
-   
+
 ############################################################################################################
 # Temporary Map source for mapping sampling-point codes to bathing water URI
 ############################################################################################################
 # @@TODO 5: Possibly replace with some LDS-BWQ infrastructure map (several transforms will need it).
- 
-"sources" : 
+
+"sources" :
  ###############################################################################
  # Source for testing only, replace in live service
  ###############################################################################
-   - "name"        : "bwq-sp-to-bw" 
+   - "name"        : "bwq-sp-to-bw"
      "sourceType"  : "RDFSparql"
      "source"      : "data/output/sites.ttl"
-     "query"       : 
+     "query"       :
           "SELECT ?key ?value ?eubwid ?label ?district ?gss
            WHERE
            {
@@ -145,8 +145,8 @@ required:
              BIND(str(?eubwidT) AS ?eubwid)
              FILTER( lang(?label) = 'en' )
            }"
-           
-           
+
+
    - name         : ea-region
      sourceType   : CSV
      source       : transform/ea-region.csv
@@ -163,13 +163,13 @@ required:
              { ?value skos:notation ?key }
           }
          "
-     
+
 ############################################################################################################
 templates :  
    - bwq-som
    - bwq-incident
-   
-disabled_oneOffs :
+
+oneOffs :
 ############################################################################################################
 # Link SOM Dataset to top level BWQ dataset
 ############################################################################################################
@@ -187,7 +187,7 @@ disabled_oneOffs :
      "<dct:license>"                    : "<http://reference.data.gov.uk/id/open-government-licence>"
      "<void:uriRegexPattern>"           : "http://environment.data.gov.uk/data/bathing-water-quality/suspension/(.*)"
      "<void:subset>"                    : "<{bodySomDataset}>"
-     "<void:vocabulary>" : 
+     "<void:vocabulary>" :
         - "<def-bwq:>"
         - "<def-bw:>"
         - "<def-som:>"
