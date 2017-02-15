@@ -1,0 +1,64 @@
+name : bwq-wims-sp.yaml
+type : Composite
+requiredColumns :
+  - wims_sp_ref
+  - bw_ref  
+  - from_date 
+  - to_date 
+  - first_season  
+  - final_season
+required :
+  - wims_sp_ref
+  - bw_ref  
+  - from_date 
+#  - to_date 
+  - first_season  
+#  - final_season
+  
+bind :
+  - r_bw      : "{bw_ref.asNumber().format('%05d').map('bwq-sp-to-bw')}"
+    r_sp      : "<so-sp:{bw_ref.asNumber().format('%05d')}>"
+
+# Check that the referenced wims-sp exists in the WIMS data (probe and gather its rdfs:label)   
+    r_wims_sp : "<{{  var prefix = value('http://environment.data.gov.uk/water-quality/id/sampling-point/');
+                      var res = prefix.append(wims_sp_ref).fetch('rdfs:label','skos:notation');
+                      if (empty(res.asRDFNode().getPropertyValue('skos:notation'))) {
+                        print(value('ERROR : WIMS Sampling Point <').append(res).append('> not in live WIMS data')); 
+                        res = null;
+                      } 
+                      return(res);
+                  }}>"
+templates  :
+  - name  : bwq-wims-sp-mapping
+    "@id" : "<{r_wims_sp}>"
+    "<rdf:type>"                : "<wqa-sp:SamplingPoint>"
+    "<def-bw:bathingWater>"     : "<{r_bw}>"
+    "<def-sp:samplingPoint>"    : "<{r_sp}>"
+    "<def-bwq:firstSeason>"     : "{first_season}^^xsd:gYear"
+    "<def-bwq:finalSeason>"     : "{final_season}^^xsd:gYear"
+   
+sources : 
+ ###############################################################################
+ # Source for testing only, replace in live service
+ ###############################################################################
+   - "name"        : "bwq-sp-to-bw" 
+     "sourceType"  : "RDFSparql"
+     "source"      : "data/output/sites.ttl"
+     "query"       : 
+          "SELECT ?key ?value ?eubwid ?label ?district ?gss
+           WHERE
+           {
+             []      a                   def-sp:SamplingPoint; 
+                     skos:notation       ?key;
+                     def-bw:bathingWater ?value .
+                 
+             ?value  skos:notation       ?eubwidT ;
+                     skos:prefLabel      ?label ;
+                     onsadmingeo:district ?district .
+                     
+             ?district 
+                     admingeo:gssCode ?gss .
+             BIND(str(?eubwidT) AS ?eubwid)
+             FILTER( lang(?label) = 'en' )
+           }"
+ 

@@ -39,3 +39,4 @@
 @prefix def-feat:    <http://location.data.gov.uk/def/ef/BathingWaterProfileFeature/> .
 
 @prefix def-incident-type: <http://environment.data.gov.uk/def/incident-type/> .
+@prefix wqa-sp:  <http://environment.data.gov.uk/water-quality/def/sampling-point/> .

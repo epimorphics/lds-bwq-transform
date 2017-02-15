@@ -22,7 +22,7 @@ templates :
     "@id"                   : "<{r_incidentType}>"
     "<rdf:type>" :
       - "<skos:Concept>"
-      - "<def-som:TypeOfIncident>"
+      - "<def-som:IncidentType>"
     "<rdfs:label>"          : "{description}@en"
     "<skos:prefLabel>"      : "{description}@en"
     "<skos:notation>"       : "{incidentNotation}"
