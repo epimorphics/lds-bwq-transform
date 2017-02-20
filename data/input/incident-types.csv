@@ -1,6 +1,17 @@
-id,description
-01,Bacterial contamination
-02,Potential contamination from sewage
-03,Non-bacterial contamination
-04,Localised Flooding
-05,Contamination from sewage
+id,description,deprecated
+1,Bacterial contamination,y
+2,Potential contamination from sewage,y
+3,Non-bacterial contamination,y
+4,Localised Flooding,y
+5,Contamination from sewage,y
+10,sewage,
+11,agricultural waste,
+12,animal waste,
+13,decaying marine life on beach,
+14,harmful algae,
+15,oil/fuel,
+16,chemicals,
+17,dredging/construction work,
+18,landslip,
+19,drain/road runoff,
+20,other,

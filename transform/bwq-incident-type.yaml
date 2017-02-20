@@ -1,8 +1,15 @@
 name: bwq-incident-type.yaml
 type: Composite
+
+requiredColumns : 
+  - id
+  - description
+  - deprecated
+
 required : 
   - id
   - description
+#  - deprecated
   
 bind:
   - base : "http://environment.data.gov.uk/def/incident-type"
@@ -29,4 +36,6 @@ templates :
     "<skos:inScheme>"       : "<{r_scheme}>"
     "<skos:topConceptOf>"   : "<{r_scheme}>"
     "^<skos:hasTopConcept>" : "<{r_scheme}>"
+    "<owl:deprecated>"      : "{empty(deprecated) ? null : 
+                                deprecated.trim().toLowerCase() == 'y' ? true : null}"
     
