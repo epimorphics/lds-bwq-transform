@@ -1,0 +1,41 @@
+name : bwq-resolve-controllers.yaml
+type : Composite
+
+required : 
+- bathing_water_controller
+
+bind :
+- la_lookup : "{= { if(empty($$)) return null ;
+   
+                     var la_name = $$.toLowerCase();  
+                     var res    = la_name.map('bwq-dclg-la-lookup');
+                     
+                     if(res == null) res = la_name.replaceAll('city of','').map('bwq-dclg-la-lookup');
+                     if(res == null) res = la_name.replaceAll('city and county of the','').map('bwq-dclg-la-lookup');
+
+                     if(res == null) res = value('city of ').append(la_name.replaceAll('city (of)?','')).map('bwq-dclg-la-lookup');         
+                     if(res == null) res = la_name.replaceAll('city (of)?','').append(', city of').map('bwq-dclg-la-lookup');         
+                        
+                     return res
+                   } }"
+             
+- r_la : "{la_lookup.apply(bathing_water_controller)}"
+
+- check_la :
+      "{ empty(r_la) ? print( value('Failed to resolve URI for : ').append(bathing_water_controller) ) : null }"
+      
+templates :
+- name : bwq-resolve-controller
+  "@id" : "<{r_la}>"
+  "<rdfs:label>" : "{bathing_water_controller}@en"
+  
+sources : 
+- name       : bwq-dclg-la-lookup
+  sourceType : RDF
+  source     : transform/transform/bwq-dclg-la-parishes.ttl
+  key        : "rdfs:label"
+  enrich     :
+  - "def-dclg:governs"
+  - "def-dclg:governsGSS"
+  - "rdf:type"
+  

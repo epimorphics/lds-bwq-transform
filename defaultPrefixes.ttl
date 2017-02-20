@@ -40,3 +40,4 @@
 
 @prefix def-incident-type: <http://environment.data.gov.uk/def/incident-type/> .
 @prefix wqa-sp:  <http://environment.data.gov.uk/water-quality/def/sampling-point/> .
+@prefix def-dclg: <http://opendatacommunities.org/def/local-government/> .

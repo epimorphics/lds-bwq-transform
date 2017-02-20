@@ -1,0 +1,20 @@
+name : bwq-parishes.yaml
+type : Composite
+
+requiredColumns :
+- name
+- os
+- ons
+
+requiredColumns :
+- name
+- os
+# - ons
+
+templates :
+- name : bwq-parish
+  "@id" : "<{os}>"
+  "<rdf:type>"            : "<admingeo:CivilParish>"
+  "<rdfs:label>"          : "{name}@en"
+  "<def-dclg:governs>"    : "<{os}>"
+  "<def-dclg:governsGSS>" : "<{ons}>"
