@@ -1,0 +1,3529 @@
+@prefix def-dclg: <http://opendatacommunities.org/def/local-government/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix def-geom: <http://location.data.gov.uk/def/common/Geometry/> .
+@prefix def-sp: <http://location.data.gov.uk/def/ef/SamplingPoint/> .
+@prefix def-cc12: <http://environment.data.gov.uk/def/bwq-cc-2012/> .
+@prefix def-bwp: <http://environment.data.gov.uk/def/bathing-water-profile/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix spatialrelations: <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix def-bwq: <http://environment.data.gov.uk/def/bathing-water-quality/> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix chterms: <http://business.data.gov.uk/companies/def/terms/> .
+@prefix qb:    <http://purl.org/linked-data/cube#> .
+@prefix dgu:   <http://reference.data.gov.uk/def/reference/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix reg:   <http://purl.org/linked-data/registry#> .
+@prefix wqa-sp: <http://environment.data.gov.uk/water-quality/def/sampling-point/> .
+@prefix def-incident-type: <http://environment.data.gov.uk/def/incident-type/> .
+@prefix def-stp: <http://environment.data.gov.uk/def/bwq-stp/> .
+@prefix admingeo: <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix onsadmingeo: <http://statistics.data.gov.uk/def/administrative-geography/> .
+@prefix org:   <http://www.w3.org/ns/org#> .
+@prefix def-ver: <http://environment.data.gov.uk/def/version/> .
+@prefix so-sp: <http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/> .
+@prefix def-zoi: <http://location.data.gov.uk/def/ef/ZoneOfInfluence/> .
+@prefix id-bw: <http://environment.data.gov.uk/id/bathing-water/> .
+@prefix intervals: <http://reference.data.gov.uk/def/intervals/> .
+@prefix def-som: <http://environment.data.gov.uk/def/bwq-som/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix def-feat: <http://location.data.gov.uk/def/ef/BathingWaterProfileFeature/> .
+@prefix geometry: <http://data.ordnancesurvey.co.uk/ontology/geometry/> .
+@prefix geowgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix status: <http://reference.data.gov.uk/def/status/> .
+@prefix def-bw: <http://environment.data.gov.uk/def/bathing-water/> .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82515008>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTH BEACH    NEWQUAY"@en ;
+        def-bwq:firstSeason   "1996"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-32340 ;
+        def-sp:samplingPoint  so-sp:32340 ;
+        skos:notation         "SW-82515008" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50704479>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WEST BAY WEST"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2205-21000 ;
+        def-sp:samplingPoint  so-sp:21000 ;
+        skos:notation         "SW-50704479" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-45600064>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "REDCAR COATHAM (06300)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc1202-06300 ;
+        def-sp:samplingPoint  so-sp:06300 ;
+        skos:notation         "NE-45600064" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009866>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HAVERIGG AT HAVERIGG"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1103-44800 ;
+        def-sp:samplingPoint  so-sp:44800 ;
+        skos:notation         "NW-88009866" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614904>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BROADSANDS BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-24300 ;
+        def-sp:samplingPoint  so-sp:24300 ;
+        skos:notation         "SW-70614904" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004293>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WHITECLIFF BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-18300 ;
+        def-sp:samplingPoint  so-sp:18300 ;
+        skos:notation         "SO-Y0004293" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82215005>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SENNEN BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-30700 ;
+        def-sp:samplingPoint  so-sp:30700 ;
+        skos:notation         "SW-82215005" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0017448>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BOGNOR REGIS - EAST"@en ;
+        def-bwq:firstSeason   "1999"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2402-15680 ;
+        def-sp:samplingPoint  so-sp:15680 ;
+        skos:notation         "SO-F0017448" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-66M23>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "THE WASH MAIN BEACH HUNSTANTON"@en ;
+        def-bwq:firstSeason   "1996"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1304-09850 ;
+        def-sp:samplingPoint  so-sp:09850 ;
+        skos:notation         "AN-66M23" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-E8900500>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BERROW N OF UNITY FM"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2302-35500 ;
+        def-sp:samplingPoint  so-sp:35500 ;
+        skos:notation         "SW-E8900500" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82315083>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTHTOWAN BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3102-31600 ;
+        def-sp:samplingPoint  so-sp:31600 ;
+        skos:notation         "SW-82315083" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0017029>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SOUTHSEA EAST EC SITE"@en ;
+        def-bwq:firstSeason   "2014"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3100-16600 ;
+        def-sp:samplingPoint  so-sp:16600 ;
+        skos:notation         "SO-G0017029" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-BE0235>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WEST MERSEA BEACH OPPOSITE FAIRHAVEN AVE"@en ;
+        def-bwq:firstSeason   "1991"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3306-11750 ;
+        def-sp:samplingPoint  so-sp:11750 ;
+        skos:notation         "AN-BE0235" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82515105>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTHCOTHAN BEACH (WEST)"@en ;
+        def-bwq:firstSeason   "1992"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-32550 ;
+        def-sp:samplingPoint  so-sp:32550 ;
+        skos:notation         "SW-82515105" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50950300>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "POOLE HARBOUR ROCKLEY SANDS"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2102-19450 ;
+        def-sp:samplingPoint  so-sp:19450 ;
+        skos:notation         "SW-50950300" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-C2710000>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HIGHCLIFFE CASTLE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2201-18700 ;
+        def-sp:samplingPoint  so-sp:18700 ;
+        skos:notation         "SW-C2710000" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70814974>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BIGBURY-ON-SEA (NORTH) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-25900 ;
+        def-sp:samplingPoint  so-sp:25900 ;
+        skos:notation         "SW-70814974" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70816005>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BANTHAM BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-25700 ;
+        def-sp:samplingPoint  so-sp:25700 ;
+        skos:notation         "SW-70816005" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-INGSN001>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "INGOLDMELLS SOUTH BEACH:TRANSECT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukf3102-09600 ;
+        def-sp:samplingPoint  so-sp:09600 ;
+        skos:notation         "AN-INGSN001" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0017367>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BEACHLANDS CENTRAL"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3307-16350 ;
+        def-sp:samplingPoint  so-sp:16350 ;
+        skos:notation         "SO-G0017367" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-73015012>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SAUNTON SANDS"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4304-34100 ;
+        def-sp:samplingPoint  so-sp:34100 ;
+        skos:notation         "SW-73015012" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009848>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SOUTHPORT AT SOUTHPORT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd5300-41500 ;
+        def-sp:samplingPoint  so-sp:41500 ;
+        skos:notation         "NW-88009848" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81714921>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTHPEAN BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-27800 ;
+        def-sp:samplingPoint  so-sp:27800 ;
+        skos:notation         "SW-81714921" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-43500315>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MARSDEN (05400)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2204-05400 ;
+        def-sp:samplingPoint  so-sp:05400 ;
+        skos:notation         "NE-43500315" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-73215136>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LYNMOUTH BEACH"@en ;
+        def-bwq:firstSeason   "2014"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4304-34800 ;
+        def-sp:samplingPoint  so-sp:34800 ;
+        skos:notation         "SW-73215136" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82615254>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BUDE (SANDY MOUTH) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-33700 ;
+        def-sp:samplingPoint  so-sp:33700 ;
+        skos:notation         "SW-82615254" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004456>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BEMBRIDGE (NEW)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-18200 ;
+        def-sp:samplingPoint  so-sp:18200 ;
+        skos:notation         "SO-Y0004456" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50034485>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SWANAGE CENTRAL"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2204-19800 ;
+        def-sp:samplingPoint  so-sp:19800 ;
+        skos:notation         "SW-50034485" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000148>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FRAISTHORPE (08300)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke1200-08300 ;
+        def-sp:samplingPoint  so-sp:08300 ;
+        skos:notation         "NE-49000148" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PTTB0001>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BATHING WATER EEC - SHOEBURYNESS"@en ;
+        def-bwq:firstSeason   "2001"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3100-11780 ;
+        def-sp:samplingPoint  so-sp:11780 ;
+        skos:notation         "TH-PTTB0001" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004300>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SHANKLIN"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-18500 ;
+        def-sp:samplingPoint  so-sp:18500 ;
+        skos:notation         "SO-Y0004300" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88023519>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ST ANNES NORTH AT STARR HILLS"@en ;
+        def-bwq:firstSeason   "2014"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd4303-41900 ;
+        def-sp:samplingPoint  so-sp:41900 ;
+        skos:notation         "NW-88023519" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-45600058>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MARSKE SANDS (06650)"@en ;
+        def-bwq:firstSeason   "1992"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc1202-06650 ;
+        def-sp:samplingPoint  so-sp:06650 ;
+        skos:notation         "NE-45600058" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-E0900560>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DUNSTER NORTHWEST"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2305-35100 ;
+        def-sp:samplingPoint  so-sp:35100 ;
+        skos:notation         "SW-E0900560" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000275>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WHITBY (07100)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke2206-07100 ;
+        def-sp:samplingPoint  so-sp:07100 ;
+        skos:notation         "NE-49000275" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000101>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ST MARY'S BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4208-13700 ;
+        def-sp:samplingPoint  so-sp:13700 ;
+        skos:notation         "SO-E0000101" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70314528>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SIDMOUTH (TOWN) BEACH"@en ;
+        def-bwq:finalSeason   "2015"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4301-21800 ;
+        def-sp:samplingPoint  so-sp:21800 ;
+        skos:notation         "SW-70314528" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614874>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PAIGNTON (PAIGNTON SANDS)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-24100 ;
+        def-sp:samplingPoint  so-sp:24100 ;
+        skos:notation         "SW-70614874" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001870>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SALTDEAN"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2100-14800 ;
+        def-sp:samplingPoint  so-sp:14800 ;
+        skos:notation         "SO-F0001870" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000064>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CAYTON BAY (07500)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke2206-07500 ;
+        def-sp:samplingPoint  so-sp:07500 ;
+        skos:notation         "NE-49000064" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0002786>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HOVE FIRST AVENUE BATHING"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2100-15000 ;
+        def-sp:samplingPoint  so-sp:15000 ;
+        skos:notation         "SO-F0002786" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82114893>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MOUNTS BAY MARAZION"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-30200 ;
+        def-sp:samplingPoint  so-sp:30200 ;
+        skos:notation         "SW-82114893" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004257>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TOTLAND BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-17500 ;
+        def-sp:samplingPoint  so-sp:17500 ;
+        skos:notation         "SO-Y0004257" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-WR186432>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WEST RUNTON BEACH"@en ;
+        def-bwq:firstSeason   "2016"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1305-10125 ;
+        def-sp:samplingPoint  so-sp:10125 ;
+        skos:notation         "AN-WR186432" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82615236>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BUDE (CROOKLETS) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-33600 ;
+        def-sp:samplingPoint  so-sp:33600 ;
+        skos:notation         "SW-82615236" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614633>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TEIGNMOUTH (TOWN) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4306-22800 ;
+        def-sp:samplingPoint  so-sp:22800 ;
+        skos:notation         "SW-70614633" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001936>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WEST WITTERING EC BW"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2403-16100 ;
+        def-sp:samplingPoint  so-sp:16100 ;
+        skos:notation         "SO-F0001936" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-73015036>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PUTSBOROUGH BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4304-34300 ;
+        def-sp:samplingPoint  so-sp:34300 ;
+        skos:notation         "SW-73015036" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0003604>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MILFORD ON SEA-*CLOSED*"@en ;
+        def-bwq:finalSeason   "2010"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3308-17100 ;
+        def-sp:samplingPoint  so-sp:17100 ;
+        skos:notation         "SO-G0003604" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50950270>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "POOLE HARBOUR LAKE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2102-19400 ;
+        def-sp:samplingPoint  so-sp:19400 ;
+        skos:notation         "SW-50950270" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000028>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WESTBROOK BAY"@en ;
+        def-bwq:firstSeason   "1997"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4210-12450 ;
+        def-sp:samplingPoint  so-sp:12450 ;
+        skos:notation         "SO-E0000028" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50024575>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SANDBANKS PENINSULAR"@en ;
+        def-bwq:firstSeason   "1997"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2102-19350 ;
+        def-sp:samplingPoint  so-sp:19350 ;
+        skos:notation         "SW-50024575" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004269>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "GURNARD BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-17700 ;
+        def-sp:samplingPoint  so-sp:17700 ;
+        skos:notation         "SO-Y0004269" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PTTB0025>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BATHING WATER EEC - JUBILEE"@en ;
+        def-bwq:firstSeason   "2003"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3100-11830 ;
+        def-sp:samplingPoint  so-sp:11830 ;
+        skos:notation         "TH-PTTB0025" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009873>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ALLONBY AT WEST WINDS"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1101-46100 ;
+        def-sp:samplingPoint  so-sp:46100 ;
+        skos:notation         "NW-88009873" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50024545>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CANFORD CLIFFS CHINE"@en ;
+        def-bwq:firstSeason   "2004"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2102-19190 ;
+        def-sp:samplingPoint  so-sp:19190 ;
+        skos:notation         "SW-50024545" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82615122>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CRACKINGTON HAVEN BEACH"@en ;
+        def-bwq:firstSeason   "2002"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-33360 ;
+        def-sp:samplingPoint  so-sp:33360 ;
+        skos:notation         "SW-82615122" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82114960>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MARAZION AND MOUNTS BAY (PENZANCE)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-30400 ;
+        def-sp:samplingPoint  so-sp:30400 ;
+        skos:notation         "SW-82114960" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001822>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "NORMANS BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2205-14300 ;
+        def-sp:samplingPoint  so-sp:14300 ;
+        skos:notation         "SO-F0001822" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50024515>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ALUM CHINE"@en ;
+        def-bwq:firstSeason   "2000"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2101-19160 ;
+        def-sp:samplingPoint  so-sp:19160 ;
+        skos:notation         "SW-50024515" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009843>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MEOLS AT DOVE POINT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd5400-40800 ;
+        def-sp:samplingPoint  so-sp:40800 ;
+        skos:notation         "NW-88009843" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50704511>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "EYPEMOUTH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2205-21100 ;
+        def-sp:samplingPoint  so-sp:21100 ;
+        skos:notation         "SW-50704511" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004270>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "COWES"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-17800 ;
+        def-sp:samplingPoint  so-sp:17800 ;
+        skos:notation         "SO-Y0004270" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-42100095>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BEADNELL (03900)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2102-03900 ;
+        def-sp:samplingPoint  so-sp:03900 ;
+        skos:notation         "NE-42100095" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70414533>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BUDLEIGH SALTERTON BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4301-22100 ;
+        def-sp:samplingPoint  so-sp:22100 ;
+        skos:notation         "SW-70414533" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-FE297337>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FELIXSTOWE SOUTH BEACH OPP RUSSELL ROAD"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1406-11000 ;
+        def-sp:samplingPoint  so-sp:11000 ;
+        skos:notation         "AN-FE297337" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82514997>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TOLCARNE BEACH  (NEWQUAY)"@en ;
+        def-bwq:firstSeason   "1996"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-32320 ;
+        def-sp:samplingPoint  so-sp:32320 ;
+        skos:notation         "SW-82514997" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000071>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ST MARGARETS BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4204-13200 ;
+        def-sp:samplingPoint  so-sp:13200 ;
+        skos:notation         "SO-E0000071" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-43500297>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TYNEMOUTH CULLERCOATS (04900)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2203-04900 ;
+        def-sp:samplingPoint  so-sp:04900 ;
+        skos:notation         "NE-43500297" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-GY533064>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "GT.YARMOUTH BEACH OPP NELSON GARDENS"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1303-10600 ;
+        def-sp:samplingPoint  so-sp:10600 ;
+        skos:notation         "AN-GY533064" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-43500689>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WHITLEY BAY (04800)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2203-04800 ;
+        def-sp:samplingPoint  so-sp:04800 ;
+        skos:notation         "NE-43500689" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82114972>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MARAZION AND MOUNTS BAY (WHERRYTOWN BOLI"@en ;
+        def-bwq:firstSeason   "2011"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-30500 ;
+        def-sp:samplingPoint  so-sp:30500 ;
+        skos:notation         "SW-82114972" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81914925>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTHOUSTOCK BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3103-29000 ;
+        def-sp:samplingPoint  so-sp:29000 ;
+        skos:notation         "SW-81914925" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81714873>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CRINNIS BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-27500 ;
+        def-sp:samplingPoint  so-sp:27500 ;
+        skos:notation         "SW-81714873" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50024527>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BRANKSOME CHINE"@en ;
+        def-bwq:firstSeason   "2000"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2102-19170 ;
+        def-sp:samplingPoint  so-sp:19170 ;
+        skos:notation         "SW-50024527" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009855>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CLEVELEYS AT CLEVELEYS"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd4312-42800 ;
+        def-sp:samplingPoint  so-sp:42800 ;
+        skos:notation         "NW-88009855" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50034420>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "STUDLAND KNOLL HOUSE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2204-19700 ;
+        def-sp:samplingPoint  so-sp:19700 ;
+        skos:notation         "SW-50034420" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-SUTTN001>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SUTTON ON SEA BEACH TRANSECT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukf3102-09200 ;
+        def-sp:samplingPoint  so-sp:09200 ;
+        skos:notation         "AN-SUTTN001" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000011>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LEYSDOWN"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4209-12000 ;
+        def-sp:samplingPoint  so-sp:12000 ;
+        skos:notation         "SO-E0000011" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-45400489>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEATON CAREW CENTRE (06100)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc1101-06100 ;
+        def-sp:samplingPoint  so-sp:06100 ;
+        skos:notation         "NE-45400489" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000240>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SANDSEND (07000)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke2206-07000 ;
+        def-sp:samplingPoint  so-sp:07000 ;
+        skos:notation         "NE-49000240" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70814625>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BLACKPOOL SANDS"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-24800 ;
+        def-sp:samplingPoint  so-sp:24800 ;
+        skos:notation         "SW-70814625" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81814835>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "POLSTREATH BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-28000 ;
+        def-sp:samplingPoint  so-sp:28000 ;
+        skos:notation         "SW-81814835" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PGWB0004>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BATHING WATER - THE SERPENTINE"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uki1106-11940 ;
+        def-sp:samplingPoint  so-sp:11940 ;
+        skos:notation         "TH-PGWB0004" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81414810>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MILLENDREATH BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3101-26900 ;
+        def-sp:samplingPoint  so-sp:26900 ;
+        skos:notation         "SW-81414810" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000125>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FILEY (07600)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke2206-07600 ;
+        def-sp:samplingPoint  so-sp:07600 ;
+        skos:notation         "NE-49000125" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-45400490>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEATON CAREW NORTH (06000)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc1101-06000 ;
+        def-sp:samplingPoint  so-sp:06000 ;
+        skos:notation         "NE-45400490" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50034643>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DURDLE DOOR WEST"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2204-20200 ;
+        def-sp:samplingPoint  so-sp:20200 ;
+        skos:notation         "SW-50034643" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000053>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "RAMSGATE SANDS"@en ;
+        def-bwq:firstSeason   "1997"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4210-12850 ;
+        def-sp:samplingPoint  so-sp:12850 ;
+        skos:notation         "SO-E0000053" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70814963>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BIGBURY-ON-SEA (SOUTH) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-25800 ;
+        def-sp:samplingPoint  so-sp:25800 ;
+        skos:notation         "SW-70814963" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009867>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ROANHEAD AT ROANHEAD"@en ;
+        def-bwq:finalSeason   "2014"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1102-44500 ;
+        def-sp:samplingPoint  so-sp:44500 ;
+        skos:notation         "NW-88009867" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0003490>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "EASTNEY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3100-16500 ;
+        def-sp:samplingPoint  so-sp:16500 ;
+        skos:notation         "SO-G0003490" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82514949>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CRANTOCK BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-32100 ;
+        def-sp:samplingPoint  so-sp:32100 ;
+        skos:notation         "SW-82514949" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000252>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SCARBOROUGH NORTH BAY (07300)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke2206-07300 ;
+        def-sp:samplingPoint  so-sp:07300 ;
+        skos:notation         "NE-49000252" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88020957>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BLACKPOOL SOUTH AT PLEASURE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd4200-42100 ;
+        def-sp:samplingPoint  so-sp:42100 ;
+        skos:notation         "NW-88020957" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0003460>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "EASTOKE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3307-16300 ;
+        def-sp:samplingPoint  so-sp:16300 ;
+        skos:notation         "SO-G0003460" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-42600260>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BLYTH SOUTH (04600)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2103-04600 ;
+        def-sp:samplingPoint  so-sp:04600 ;
+        skos:notation         "NE-42600260" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81210102>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "KINGSAND BEACH"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3101-26520 ;
+        def-sp:samplingPoint  so-sp:26520 ;
+        skos:notation         "SW-81210102" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81714867>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SHORTHORN BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-27400 ;
+        def-sp:samplingPoint  so-sp:27400 ;
+        skos:notation         "SW-81714867" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001828>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PEVENSEY BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2201-14400 ;
+        def-sp:samplingPoint  so-sp:14400 ;
+        skos:notation         "SO-F0001828" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70814679>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SLAPTON SANDS (TORCROSS)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-25000 ;
+        def-sp:samplingPoint  so-sp:25000 ;
+        skos:notation         "SW-70814679" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009849>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ST.ANNES AT ST.ANNES PIER"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd4303-41800 ;
+        def-sp:samplingPoint  so-sp:41800 ;
+        skos:notation         "NW-88009849" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-73115115>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ILFRACOMBE   (TUNNELS BEACH)"@en ;
+        def-bwq:firstSeason   "1990"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4304-34450 ;
+        def-sp:samplingPoint  so-sp:34450 ;
+        skos:notation         "SW-73115115" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-SH155436>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SHERINGHAM BEACH AT WEST PROMENADE"@en ;
+        def-bwq:firstSeason   "2011"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1305-10100 ;
+        def-sp:samplingPoint  so-sp:10100 ;
+        skos:notation         "AN-SH155436" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-CLEEN001>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CLEETHORPES BEACH TRANSECT:"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke1301-09000 ;
+        def-sp:samplingPoint  so-sp:09000 ;
+        skos:notation         "AN-CLEEN001" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000264>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TUNSTALL (08800)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke1200-08800 ;
+        def-sp:samplingPoint  so-sp:08800 ;
+        skos:notation         "NE-49000264" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-43500316>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SOUTH SHIELDS (05300)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2204-05300 ;
+        def-sp:samplingPoint  so-sp:05300 ;
+        skos:notation         "NE-43500316" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-CW1520>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CLACTON BEACH OPP CONNAUGHT GARDENS EAST"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3311-11500 ;
+        def-sp:samplingPoint  so-sp:11500 ;
+        skos:notation         "AN-CW1520" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70814915>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "THURLESTONE (NORTH) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-25600 ;
+        def-sp:samplingPoint  so-sp:25600 ;
+        skos:notation         "SW-70814915" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PTTB0002>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BATHING WATER EEC - THORPE BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3100-11800 ;
+        def-sp:samplingPoint  so-sp:11800 ;
+        skos:notation         "TH-PTTB0002" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-E0900700>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BLUE ANCHOR WEST"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2305-35200 ;
+        def-sp:samplingPoint  so-sp:35200 ;
+        skos:notation         "SW-E0900700" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009850>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ST.ANNES NORTH AT CONVALESCENT HOME"@en ;
+        def-bwq:finalSeason   "2013"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd4303-41900 ;
+        def-sp:samplingPoint  so-sp:41900 ;
+        skos:notation         "NW-88009850" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82215326>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTHMINSTER BEACH ST.IVES"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-31000 ;
+        def-sp:samplingPoint  so-sp:31000 ;
+        skos:notation         "SW-82215326" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81214752>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WHITSAND BAY (SHARROW) BEACH"@en ;
+        def-bwq:firstSeason   "2012"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3101-26570 ;
+        def-sp:samplingPoint  so-sp:26570 ;
+        skos:notation         "SW-81214752" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0004744>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TANKERTON EC BATHING"@en ;
+        def-bwq:firstSeason   "2007"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4202-12120 ;
+        def-sp:samplingPoint  so-sp:12120 ;
+        skos:notation         "SO-E0004744" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001925>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BOGNOR REGIS - ALDWICK"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2402-15700 ;
+        def-sp:samplingPoint  so-sp:15700 ;
+        skos:notation         "SO-F0001925" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81915022>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "POLURRIAN COVE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3103-29400 ;
+        def-sp:samplingPoint  so-sp:29400 ;
+        skos:notation         "SW-81915022" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-52804350>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "AVON BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2201-18800 ;
+        def-sp:samplingPoint  so-sp:18800 ;
+        skos:notation         "SW-52804350" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-SO513767>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SOUTHWOLD BEACH AT PIER"@en ;
+        def-bwq:firstSeason   "2000"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1407-10830 ;
+        def-sp:samplingPoint  so-sp:10830 ;
+        skos:notation         "AN-SO513767" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-45600059>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SALTBURN (06700)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc1202-06700 ;
+        def-sp:samplingPoint  so-sp:06700 ;
+        skos:notation         "NE-45600059" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614694>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WATCOMBE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-23200 ;
+        def-sp:samplingPoint  so-sp:23200 ;
+        skos:notation         "SW-70614694" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000102>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LITTLESTONE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4208-13800 ;
+        def-sp:samplingPoint  so-sp:13800 ;
+        skos:notation         "SO-E0000102" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004288>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ST HELENS"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-18100 ;
+        def-sp:samplingPoint  so-sp:18100 ;
+        skos:notation         "SO-Y0004288" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0017474>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SHOREHAM BEACH"@en ;
+        def-bwq:firstSeason   "2014"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2401-15200 ;
+        def-sp:samplingPoint  so-sp:15200 ;
+        skos:notation         "SO-F0017474" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88004556>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WINDERMERE AT FELL FOOT  NEWBY BRIDGE"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1203-45700 ;
+        def-sp:samplingPoint  so-sp:45700 ;
+        skos:notation         "NW-88004556" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000059>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SANDWICH BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4204-13000 ;
+        def-sp:samplingPoint  so-sp:13000 ;
+        skos:notation         "SO-E0000059" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-72815051>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HARTLAND QUAY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4307-33800 ;
+        def-sp:samplingPoint  so-sp:33800 ;
+        skos:notation         "SW-72815051" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88023689>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WINDERMERE RAYRIGG MEADOW"@en ;
+        def-bwq:firstSeason   "2015"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1203-45675 ;
+        def-sp:samplingPoint  so-sp:45675 ;
+        skos:notation         "NW-88023689" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000029>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MARGATE THE BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4210-12500 ;
+        def-sp:samplingPoint  so-sp:12500 ;
+        skos:notation         "SO-E0000029" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82615153>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WIDEMOUTH SAND"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-33400 ;
+        def-sp:samplingPoint  so-sp:33400 ;
+        skos:notation         "SW-82615153" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81210295>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PLYMOUTH HOE (WEST)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4100-26500 ;
+        def-sp:samplingPoint  so-sp:26500 ;
+        skos:notation         "SW-81210295" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009874>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SILLOTH AT LEES SCAR"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1101-46300 ;
+        def-sp:samplingPoint  so-sp:46300 ;
+        skos:notation         "NW-88009874" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81914914>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTHALLOW BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3103-28900 ;
+        def-sp:samplingPoint  so-sp:28900 ;
+        skos:notation         "SW-81914914" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81915046>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "POLDHU COVE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3103-29500 ;
+        def-sp:samplingPoint  so-sp:29500 ;
+        skos:notation         "SW-81915046" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000030>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MARGATE FULSAM ROCK"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4210-12600 ;
+        def-sp:samplingPoint  so-sp:12600 ;
+        skos:notation         "SO-E0000030" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70910108>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MOTHECOMBE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-26100 ;
+        def-sp:samplingPoint  so-sp:26100 ;
+        skos:notation         "SW-70910108" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009844>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MORETON AT PASTURE ROAD"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd5400-40900 ;
+        def-sp:samplingPoint  so-sp:40900 ;
+        skos:notation         "NW-88009844" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-E8900900>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WESTON UPHILL SLIPWY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk1202-35700 ;
+        def-sp:samplingPoint  so-sp:35700 ;
+        skos:notation         "SW-E8900900" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001919>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MIDDLETON ON SEA EC BW"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2402-15600 ;
+        def-sp:samplingPoint  so-sp:15600 ;
+        skos:notation         "SO-F0001919" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-52804344>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FRIARS CLIFF"@en ;
+        def-bwq:firstSeason   "1990"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2201-18750 ;
+        def-sp:samplingPoint  so-sp:18750 ;
+        skos:notation         "SW-52804344" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88004538>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WINDERMERE AT MILLER GROUND"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1203-45650 ;
+        def-sp:samplingPoint  so-sp:45650 ;
+        skos:notation         "NW-88004538" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-CW1430>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CLACTON BEACH OPP.EDITH ROAD (GROYNE 41)"@en ;
+        def-bwq:firstSeason   "1995"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3311-11550 ;
+        def-sp:samplingPoint  so-sp:11550 ;
+        skos:notation         "AN-CW1430" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000144>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FLAMBOROUGH SOUTH LANDING (07900)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke1200-07900 ;
+        def-sp:samplingPoint  so-sp:07900 ;
+        skos:notation         "NE-49000144" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614869>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HOLLICOMBE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-23900 ;
+        def-sp:samplingPoint  so-sp:23900 ;
+        skos:notation         "SW-70614869" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-43500298>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TYNEMOUTH LONG SANDS NORTH (05000)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2203-05000 ;
+        def-sp:samplingPoint  so-sp:05000 ;
+        skos:notation         "NE-43500298" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70414504>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LADRAM BAY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4301-22000 ;
+        def-sp:samplingPoint  so-sp:22000 ;
+        skos:notation         "SW-70414504" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50024558>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SHORE ROAD"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2102-19200 ;
+        def-sp:samplingPoint  so-sp:19200 ;
+        skos:notation         "SW-50024558" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82114973>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MARAZION AND MOUNTS BAY (WHERRY TOWN)"@en ;
+        def-bwq:finalSeason   "2010"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-30500 ;
+        def-sp:samplingPoint  so-sp:30500 ;
+        skos:notation         "SW-82114973" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70610131>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SHALDON BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4306-22900 ;
+        def-sp:samplingPoint  so-sp:22900 ;
+        skos:notation         "SW-70610131" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001920>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FELPHAM EC BW"@en ;
+        def-bwq:firstSeason   "1996"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2402-15650 ;
+        def-sp:samplingPoint  so-sp:15650 ;
+        skos:notation         "SO-F0001920" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-42400196>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DRURIDGE BAY NORTH (04280)"@en ;
+        def-bwq:firstSeason   "2008"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2104-04280 ;
+        def-sp:samplingPoint  so-sp:04280 ;
+        skos:notation         "NE-42400196" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PTTB0008>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BATHING WATER EEC - SHOEBURY"@en ;
+        def-bwq:firstSeason   "1989"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3100-11770 ;
+        def-sp:samplingPoint  so-sp:11770 ;
+        skos:notation         "TH-PTTB0008" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000042>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BROADSTAIRS STONE BAY"@en ;
+        def-bwq:firstSeason   "1997"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4210-12750 ;
+        def-sp:samplingPoint  so-sp:12750 ;
+        skos:notation         "SO-E0000042" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009856>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FLEETWOOD BEACH OFF PROMENADE ROAD"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd4312-43000 ;
+        def-sp:samplingPoint  so-sp:43000 ;
+        skos:notation         "NW-88009856" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004283>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "RYDE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-17900 ;
+        def-sp:samplingPoint  so-sp:17900 ;
+        skos:notation         "SO-Y0004283" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81814866>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTMELLON BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-28100 ;
+        def-sp:samplingPoint  so-sp:28100 ;
+        skos:notation         "SW-81814866" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-E8902100>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CLEVEDON"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk1202-36000 ;
+        def-sp:samplingPoint  so-sp:36000 ;
+        skos:notation         "SW-E8902100" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82114828>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PRAA SANDS (WEST)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3103-30000 ;
+        def-sp:samplingPoint  so-sp:30000 ;
+        skos:notation         "SW-82114828" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000030>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BRIDLINGTON NORTH (08000)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke1200-08000 ;
+        def-sp:samplingPoint  so-sp:08000 ;
+        skos:notation         "NE-49000030" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50034589>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "KIMMERIDGE BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2204-19900 ;
+        def-sp:samplingPoint  so-sp:19900 ;
+        skos:notation         "SW-50034589" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-SP430275>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEA PALLING BEACH OPPOSITE BEACH ROAD"@en ;
+        def-bwq:firstSeason   "2002"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1305-10310 ;
+        def-sp:samplingPoint  so-sp:10310 ;
+        skos:notation         "AN-SP430275" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81714886>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CHARLESTOWN BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-27600 ;
+        def-sp:samplingPoint  so-sp:27600 ;
+        skos:notation         "SW-81714886" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88010481>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WINDERMERE @ LAKESIDE YMCA"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1203-45625 ;
+        def-sp:samplingPoint  so-sp:45625 ;
+        skos:notation         "NW-88010481" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009868>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ASKAM-IN-FURNESS AT DUDDON ROAD"@en ;
+        def-bwq:finalSeason   "2014"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1102-44590 ;
+        def-sp:samplingPoint  so-sp:44590 ;
+        skos:notation         "NW-88009868" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70510107>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "EXMOUTH BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4301-22300 ;
+        def-sp:samplingPoint  so-sp:22300 ;
+        skos:notation         "SW-70510107" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0003491>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SOUTHSEA"@en ;
+        def-bwq:finalSeason   "2013"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3100-16600 ;
+        def-sp:samplingPoint  so-sp:16600 ;
+        skos:notation         "SO-G0003491" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-42400052>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "NEWBIGGIN NORTH (04400)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2106-04400 ;
+        def-sp:samplingPoint  so-sp:04400 ;
+        skos:notation         "NE-42400052" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000024>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MINNIS BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4210-12300 ;
+        def-sp:samplingPoint  so-sp:12300 ;
+        skos:notation         "SO-E0000024" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614882>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "GOODRINGTON BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-24200 ;
+        def-sp:samplingPoint  so-sp:24200 ;
+        skos:notation         "SW-70614882" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-SH162436>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SHERINGHAM BEACH AT EAST PROMENADE"@en ;
+        def-bwq:finalSeason   "2010"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1305-10100 ;
+        def-sp:samplingPoint  so-sp:10100 ;
+        skos:notation         "AN-SH162436" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000253>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SCARBOROUGH SOUTH BAY (07400)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke2206-07400 ;
+        def-sp:samplingPoint  so-sp:07400 ;
+        skos:notation         "NE-49000253" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88020958>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BLACKPOOL CENTRAL AT ST CHAD'S ROAD"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd4200-42300 ;
+        def-sp:samplingPoint  so-sp:42300 ;
+        skos:notation         "NW-88020958" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0003461>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BEACHLANDS WEST"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3307-16400 ;
+        def-sp:samplingPoint  so-sp:16400 ;
+        skos:notation         "SO-G0003461" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-42600261>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEATON SLUICE (04700)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2103-04700 ;
+        def-sp:samplingPoint  so-sp:04700 ;
+        skos:notation         "NE-42600261" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82315140>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TREVAUNANCE COVE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3102-31700 ;
+        def-sp:samplingPoint  so-sp:31700 ;
+        skos:notation         "SW-82315140" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001859>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "NEWHAVEN OLD EC SITE-*CLOSED*"@en ;
+        def-bwq:finalSeason   "2016"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2203-14700 ;
+        def-sp:samplingPoint  so-sp:14700 ;
+        skos:notation         "SO-F0001859" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82515179>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MOTHER IVEYS BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-32800 ;
+        def-sp:samplingPoint  so-sp:32800 ;
+        skos:notation         "SW-82515179" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-MU317366>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MUNDESLEY BEACH AT SLIPWAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1305-10300 ;
+        def-sp:samplingPoint  so-sp:10300 ;
+        skos:notation         "AN-MU317366" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-E8901600>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WESTON SAND BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk1202-35900 ;
+        def-sp:samplingPoint  so-sp:35900 ;
+        skos:notation         "SW-E8901600" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614683>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MAIDENCOMBE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-23100 ;
+        def-sp:samplingPoint  so-sp:23100 ;
+        skos:notation         "SW-70614683" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82514993>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FISTRAL BEACH  NEWQUAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-32200 ;
+        def-sp:samplingPoint  so-sp:32200 ;
+        skos:notation         "SW-82514993" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50904420>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SHELL BAY NORTH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2204-19600 ;
+        def-sp:samplingPoint  so-sp:19600 ;
+        skos:notation         "SW-50904420" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-66M07>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "THE WASH OLD HUNSTANTON BEACH CLIFF PATH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1304-09900 ;
+        def-sp:samplingPoint  so-sp:09900 ;
+        skos:notation         "AN-66M07" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-72915015>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WESTWARD HO! BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4307-33900 ;
+        def-sp:samplingPoint  so-sp:33900 ;
+        skos:notation         "SW-72915015" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-ANDBN001>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ANDERBY BEACH TRANSECT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukf3102-09400 ;
+        def-sp:samplingPoint  so-sp:09400 ;
+        skos:notation         "AN-ANDBN001" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-ER202427>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "EAST RUNTON BEACH"@en ;
+        def-bwq:firstSeason   "2010"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1305-10150 ;
+        def-sp:samplingPoint  so-sp:10150 ;
+        skos:notation         "AN-ER202427" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000392>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SKIPSEA (08600)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke1200-08600 ;
+        def-sp:samplingPoint  so-sp:08600 ;
+        skos:notation         "NE-49000392" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0004745>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DYMCHURCH EC"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4208-13600 ;
+        def-sp:samplingPoint  so-sp:13600 ;
+        skos:notation         "SO-E0004745" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0002801>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BRIGHTON CENTRAL BATHING"@en ;
+        def-bwq:firstSeason   "2007"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2100-14950 ;
+        def-sp:samplingPoint  so-sp:14950 ;
+        skos:notation         "SO-F0002801" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50034638>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DURDLE DOOR EAST"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2204-20100 ;
+        def-sp:samplingPoint  so-sp:20100 ;
+        skos:notation         "SW-50034638" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000277>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WILSTHORPE (08200)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke1200-08200 ;
+        def-sp:samplingPoint  so-sp:08200 ;
+        skos:notation         "NE-49000277" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-72910233>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "INSTOW BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4304-34000 ;
+        def-sp:samplingPoint  so-sp:34000 ;
+        skos:notation         "SW-72910233" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-45500109>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CRIMDON (05900)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc1404-05900 ;
+        def-sp:samplingPoint  so-sp:05900 ;
+        skos:notation         "NE-45500109" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82515216>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HARLYN BAY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-32900 ;
+        def-sp:samplingPoint  so-sp:32900 ;
+        skos:notation         "SW-82515216" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0004787>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BEXHILL BATHING SITE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2205-14200 ;
+        def-sp:samplingPoint  so-sp:14200 ;
+        skos:notation         "SO-E0004787" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70114448>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LYME REGIS FRONT BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2205-21500 ;
+        def-sp:samplingPoint  so-sp:21500 ;
+        skos:notation         "SW-70114448" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004259>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "COLWELL BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-17600 ;
+        def-sp:samplingPoint  so-sp:17600 ;
+        skos:notation         "SO-Y0004259" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-45600061>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "REDCAR STRAY (06600)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc1202-06600 ;
+        def-sp:samplingPoint  so-sp:06600 ;
+        skos:notation         "NE-45600061" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009863>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SILECROFT AT SILECROFT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1103-45200 ;
+        def-sp:samplingPoint  so-sp:45200 ;
+        skos:notation         "NW-88009863" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-73015038>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WOOLACOMBE (VILLAGE) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4304-34400 ;
+        def-sp:samplingPoint  so-sp:34400 ;
+        skos:notation         "SW-73015038" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50044442>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CASTLE COVE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2206-20800 ;
+        def-sp:samplingPoint  so-sp:20800 ;
+        skos:notation         "SW-50044442" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-43500300>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TYNEMOUTH KING EDWARDS BAY (05200)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2203-05200 ;
+        def-sp:samplingPoint  so-sp:05200 ;
+        skos:notation         "NE-43500300" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82215340>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CARBIS BAY (STATION BEACH)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-31100 ;
+        def-sp:samplingPoint  so-sp:31100 ;
+        skos:notation         "SW-82215340" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001854>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEAFORD DANE ROAD"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2203-14600 ;
+        def-sp:samplingPoint  so-sp:14600 ;
+        skos:notation         "SO-F0001854" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009875>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SKINBURNESS AT SILLOTH TOWERS"@en ;
+        def-bwq:finalSeason   "2012"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1101-46500 ;
+        def-sp:samplingPoint  so-sp:46500 ;
+        skos:notation         "NW-88009875" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-CW1280>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "JAYWICK BEACH OPPOSITE BROOME WAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3311-11600 ;
+        def-sp:samplingPoint  so-sp:11600 ;
+        skos:notation         "AN-CW1280" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000031>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WALPOLE BAY"@en ;
+        def-bwq:firstSeason   "1997"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4210-12630 ;
+        def-sp:samplingPoint  so-sp:12630 ;
+        skos:notation         "SO-E0000031" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82315201>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PERRANPORTH (VILLAGE END) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3102-31800 ;
+        def-sp:samplingPoint  so-sp:31800 ;
+        skos:notation         "SW-82315201" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81814885>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "GORRAN HAVEN (LITTLE PERHAVER) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-28200 ;
+        def-sp:samplingPoint  so-sp:28200 ;
+        skos:notation         "SW-81814885" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009845>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WALLASEY AT HARRISON DRIVE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd5400-41000 ;
+        def-sp:samplingPoint  so-sp:41000 ;
+        skos:notation         "NW-88009845" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-73215133>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LYNMOUTH BEACH"@en ;
+        def-bwq:finalSeason   "2013"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4304-34800 ;
+        def-sp:samplingPoint  so-sp:34800 ;
+        skos:notation         "SW-73215133" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81914861>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SWANPOOL BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3102-28700 ;
+        def-sp:samplingPoint  so-sp:28700 ;
+        skos:notation         "SW-81914861" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81210110>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CAWSAND BAY"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3101-26530 ;
+        def-sp:samplingPoint  so-sp:26530 ;
+        skos:notation         "SW-81210110" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000230>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "REIGHTON (07700)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke2206-07700 ;
+        def-sp:samplingPoint  so-sp:07700 ;
+        skos:notation         "NE-49000230" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70514511>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SANDY BAY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4301-22200 ;
+        def-sp:samplingPoint  so-sp:22200 ;
+        skos:notation         "SW-70514511" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-43500299>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TYNEMOUTH LONG SANDS SOUTH (05100)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2203-05100 ;
+        def-sp:samplingPoint  so-sp:05100 ;
+        skos:notation         "NE-43500299" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-E0900400>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MINEHEAD TERMINUS"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2305-35000 ;
+        def-sp:samplingPoint  so-sp:35000 ;
+        skos:notation         "SW-E0900400" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82315032>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTREATH BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3103-31500 ;
+        def-sp:samplingPoint  so-sp:31500 ;
+        skos:notation         "SW-82315032" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-42400197>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DRURIDGE BAY SOUTH (04300)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2104-04300 ;
+        def-sp:samplingPoint  so-sp:04300 ;
+        skos:notation         "NE-42400197" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82514969>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TOWAN BEACH     NEWQUAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-32300 ;
+        def-sp:samplingPoint  so-sp:32300 ;
+        skos:notation         "SW-82514969" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-SO508754>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SOUTHWOLD,THE DENES"@en ;
+        def-bwq:firstSeason   "1990"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1407-10850 ;
+        def-sp:samplingPoint  so-sp:10850 ;
+        skos:notation         "AN-SO508754" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82515060>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MAWGAN PORTH BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-32500 ;
+        def-sp:samplingPoint  so-sp:32500 ;
+        skos:notation         "SW-82515060" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009857>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HEYSHAM AT HALF MOON BAY"@en ;
+        def-bwq:finalSeason   "2013"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd4305-43100 ;
+        def-sp:samplingPoint  so-sp:43100 ;
+        skos:notation         "NW-88009857" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614997>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ST.MARYS BAY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-24600 ;
+        def-sp:samplingPoint  so-sp:24600 ;
+        skos:notation         "SW-70614997" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70710124>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DARTMOUTH CASTLE AND SUGARY COVE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-24700 ;
+        def-sp:samplingPoint  so-sp:24700 ;
+        skos:notation         "SW-70710124" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81914873>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MAENPORTH BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3102-28800 ;
+        def-sp:samplingPoint  so-sp:28800 ;
+        skos:notation         "SW-81914873" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82215364>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CARBIS BAY (PORTH KIDNEY SANDS)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-31200 ;
+        def-sp:samplingPoint  so-sp:31200 ;
+        skos:notation         "SW-82215364" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000109>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CAMBER SANDS"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2204-13900 ;
+        def-sp:samplingPoint  so-sp:13900 ;
+        skos:notation         "SO-E0000109" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50054425>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEATOWN"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2205-21200 ;
+        def-sp:samplingPoint  so-sp:21200 ;
+        skos:notation         "SW-50054425" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81214760>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTWRINKLE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3101-26600 ;
+        def-sp:samplingPoint  so-sp:26600 ;
+        skos:notation         "SW-81214760" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50024445>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BOSCOMBE PIER"@en ;
+        def-bwq:firstSeason   "1993"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2101-19060 ;
+        def-sp:samplingPoint  so-sp:19060 ;
+        skos:notation         "SW-50024445" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-H1314870>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEATON BEACH     (CORNWALL)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3101-26800 ;
+        def-sp:samplingPoint  so-sp:26800 ;
+        skos:notation         "SW-H1314870" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50604435>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WEYMOUTH CENTRAL"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2206-20700 ;
+        def-sp:samplingPoint  so-sp:20700 ;
+        skos:notation         "SW-50604435" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009869>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WALNEY BIGGAR BANK AT BIGGAR BANK"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1102-44200 ;
+        def-sp:samplingPoint  so-sp:44200 ;
+        skos:notation         "NW-88009869" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-73115135>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ILFRACOMBE (HELE) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4304-34600 ;
+        def-sp:samplingPoint  so-sp:34600 ;
+        skos:notation         "SW-73115135" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0003516>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "STOKES BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3305-16700 ;
+        def-sp:samplingPoint  so-sp:16700 ;
+        skos:notation         "SO-G0003516" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001903>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WORTHING EC BW"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2407-15400 ;
+        def-sp:samplingPoint  so-sp:15400 ;
+        skos:notation         "SO-F0001903" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-GY535105>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "GT.YARMOUTH BEACH AT COASTGUARD LOOKOUT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1303-10400 ;
+        def-sp:samplingPoint  so-sp:10400 ;
+        skos:notation         "AN-GY535105" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50044448>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SANDSFOOT CASTLE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2206-20900 ;
+        def-sp:samplingPoint  so-sp:20900 ;
+        skos:notation         "SW-50044448" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-42400053>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "NEWBIGGIN SOUTH (04500)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2106-04500 ;
+        def-sp:samplingPoint  so-sp:04500 ;
+        skos:notation         "NE-42400053" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000025>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WESTGATE BAY"@en ;
+        def-bwq:firstSeason   "1997"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4210-12350 ;
+        def-sp:samplingPoint  so-sp:12350 ;
+        skos:notation         "SO-E0000025" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88020959>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BLACKPOOL NORTH AT TOWER"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd4200-42500 ;
+        def-sp:samplingPoint  so-sp:42500 ;
+        skos:notation         "NW-88020959" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-73015075>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "COMBESGATE BEACH"@en ;
+        def-bwq:firstSeason   "1999"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4304-34410 ;
+        def-sp:samplingPoint  so-sp:34410 ;
+        skos:notation         "SW-73015075" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0003588>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CALSHOT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3308-16900 ;
+        def-sp:samplingPoint  so-sp:16900 ;
+        skos:notation         "SO-G0003588" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81914940>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "COVERACK BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3103-29100 ;
+        def-sp:samplingPoint  so-sp:29100 ;
+        skos:notation         "SW-81914940" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-52800124>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MUDEFORD SANDBANK EAST"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2201-18900 ;
+        def-sp:samplingPoint  so-sp:18900 ;
+        skos:notation         "SW-52800124" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-CW616213>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CLACTON BEACH MARTELLO TOWER"@en ;
+        def-bwq:firstSeason   "2005"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3311-11650 ;
+        def-sp:samplingPoint  so-sp:11650 ;
+        skos:notation         "AN-CW616213" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70814905>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "THURLESTONE (SOUTH) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-25500 ;
+        def-sp:samplingPoint  so-sp:25500 ;
+        skos:notation         "SW-70814905" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009870>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WALNEY SANDY GAP AT SANDY GAP"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1102-44300 ;
+        def-sp:samplingPoint  so-sp:44300 ;
+        skos:notation         "NW-88009870" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81814904>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "GORRAN HAVEN (VAULT) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-28300 ;
+        def-sp:samplingPoint  so-sp:28300 ;
+        skos:notation         "SW-81814904" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-42100092>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LOW NEWTON (04000)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2101-04000 ;
+        def-sp:samplingPoint  so-sp:04000 ;
+        skos:notation         "NE-42100092" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000037>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BOTANY BAY"@en ;
+        def-bwq:firstSeason   "1997"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4210-12660 ;
+        def-sp:samplingPoint  so-sp:12660 ;
+        skos:notation         "SO-E0000037" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-E8900600>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BREAN"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2302-35600 ;
+        def-sp:samplingPoint  so-sp:35600 ;
+        skos:notation         "SW-E8900600" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000007>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SHEERNESS"@en ;
+        def-bwq:firstSeason   "1991"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4209-11950 ;
+        def-sp:samplingPoint  so-sp:11950 ;
+        skos:notation         "SO-E0000007" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81510150>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "READYMONEY COVE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-27100 ;
+        def-sp:samplingPoint  so-sp:27100 ;
+        skos:notation         "SW-81510150" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PTTB0004>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BATHING WATER EEC - WESTCLIFF BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3100-11900 ;
+        def-sp:samplingPoint  so-sp:11900 ;
+        skos:notation         "TH-PTTB0004" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88022606>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MORECAMBE SOUTH AT MIDLAND HOTEL"@en ;
+        def-bwq:firstSeason   "2011"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd4305-43260 ;
+        def-sp:samplingPoint  so-sp:43260 ;
+        skos:notation         "NW-88022606" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001927>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PAGHAM EC BW"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2402-15800 ;
+        def-sp:samplingPoint  so-sp:15800 ;
+        skos:notation         "SO-F0001927" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0006417>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MILFORD ON SEA (NEW)"@en ;
+        def-bwq:firstSeason   "2011"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3308-17100 ;
+        def-sp:samplingPoint  so-sp:17100 ;
+        skos:notation         "SO-G0006417" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82511846>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ROCK BEACH"@en ;
+        def-bwq:finalSeason   "2016"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-33100 ;
+        def-sp:samplingPoint  so-sp:33100 ;
+        skos:notation         "SW-82511846" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82114824>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PRAA SANDS (EAST)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3103-29900 ;
+        def-sp:samplingPoint  so-sp:29900 ;
+        skos:notation         "SW-82114824" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000278>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WITHERNSEA (08900)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke1200-08900 ;
+        def-sp:samplingPoint  so-sp:08900 ;
+        skos:notation         "NE-49000278" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PGWB0001>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BATHING WATER - HAMPSTEAD LADIES POND"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uki1101-11910 ;
+        def-sp:samplingPoint  so-sp:11910 ;
+        skos:notation         "TH-PGWB0001" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70514559>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CORYTON COVE     DAWLISH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4306-22600 ;
+        def-sp:samplingPoint  so-sp:22600 ;
+        skos:notation         "SW-70514559" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009864>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEASCALE AT SEASCALE NORTH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1103-45600 ;
+        def-sp:samplingPoint  so-sp:45600 ;
+        skos:notation         "NW-88009864" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000037>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BRIDLINGTON SOUTH (08100)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke1200-08100 ;
+        def-sp:samplingPoint  so-sp:08100 ;
+        skos:notation         "NE-49000037" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001843>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BIRLING GAP"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2201-14550 ;
+        def-sp:samplingPoint  so-sp:14550 ;
+        skos:notation         "SO-F0001843" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614847>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BEACON COVE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-23700 ;
+        def-sp:samplingPoint  so-sp:23700 ;
+        skos:notation         "SW-70614847" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82315220>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PERRANPORTH (PENHALE SANDS) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3102-31900 ;
+        def-sp:samplingPoint  so-sp:31900 ;
+        skos:notation         "SW-82315220" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-C2621000>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HENGISTBURY WEST"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2101-19000 ;
+        def-sp:samplingPoint  so-sp:19000 ;
+        skos:notation         "SW-C2621000" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-45600062>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "REDCAR GRANVILLE (06500)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc1202-06500 ;
+        def-sp:samplingPoint  so-sp:06500 ;
+        skos:notation         "NE-45600062" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-LO546923>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LOWESTOFT BEACH NORTH OF CLAREMONT PIER"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1407-10750 ;
+        def-sp:samplingPoint  so-sp:10750 ;
+        skos:notation         "AN-LO546923" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50024410>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FISHERMANS WALK"@en ;
+        def-bwq:firstSeason   "1993"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2101-19030 ;
+        def-sp:samplingPoint  so-sp:19030 ;
+        skos:notation         "SW-50024410" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-MABLN001>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MABLETHORPE BEACH TRANSECT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukf3102-09100 ;
+        def-sp:samplingPoint  so-sp:09100 ;
+        skos:notation         "AN-MABLN001" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70510103>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DAWLISH WARREN BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4306-22400 ;
+        def-sp:samplingPoint  so-sp:22400 ;
+        skos:notation         "SW-70510103" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70314532>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SIDMOUTH (JACOBS LADDER) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4301-21900 ;
+        def-sp:samplingPoint  so-sp:21900 ;
+        skos:notation         "SW-70314532" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001813>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ST LEONARDS ON SEA"@en ;
+        def-bwq:firstSeason   "1996"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2202-14150 ;
+        def-sp:samplingPoint  so-sp:14150 ;
+        skos:notation         "SO-F0001813" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81210340>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PLYMOUTH HOE (EAST)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4100-26400 ;
+        def-sp:samplingPoint  so-sp:26400 ;
+        skos:notation         "SW-81210340" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-45500111>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEAHAM BEACH (05800)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc1404-05800 ;
+        def-sp:samplingPoint  so-sp:05800 ;
+        skos:notation         "NE-45500111" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0003607>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CHRISTCHURCH BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2201-17200 ;
+        def-sp:samplingPoint  so-sp:17200 ;
+        skos:notation         "SO-G0003607" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0017446>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LITTLEHAMPTON - COASTGUARD STN"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2402-15500 ;
+        def-sp:samplingPoint  so-sp:15500 ;
+        skos:notation         "SO-F0017446" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-41000219>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SPITTAL (03600)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2102-03600 ;
+        def-sp:samplingPoint  so-sp:03600 ;
+        skos:notation         "NE-41000219" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-SKEGN001>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SKEGNESS BEACH:TRANSECT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukf3102-09700 ;
+        def-sp:samplingPoint  so-sp:09700 ;
+        skos:notation         "AN-SKEGN001" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82515133>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TREYARNON BAY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-32600 ;
+        def-sp:samplingPoint  so-sp:32600 ;
+        skos:notation         "SW-82515133" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001885>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SOUTHWICK"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2401-15100 ;
+        def-sp:samplingPoint  so-sp:15100 ;
+        skos:notation         "SO-F0001885" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000092>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SANDGATE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4208-13400 ;
+        def-sp:samplingPoint  so-sp:13400 ;
+        skos:notation         "SO-E0000092" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614944>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SHOALSTONE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-24500 ;
+        def-sp:samplingPoint  so-sp:24500 ;
+        skos:notation         "SW-70614944" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82514988>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "GREAT WESTERN BEACH (NEWQUAY)"@en ;
+        def-bwq:firstSeason   "1996"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-32310 ;
+        def-sp:samplingPoint  so-sp:32310 ;
+        skos:notation         "SW-82514988" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009846>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FORMBY AT FORMBY (LIFEBOAT ROAD)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd5300-41200 ;
+        def-sp:samplingPoint  so-sp:41200 ;
+        skos:notation         "NW-88009846" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000261>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "STAITHES (06800)"@en ;
+        def-bwq:finalSeason   "2016"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke2206-06800 ;
+        def-sp:samplingPoint  so-sp:06800 ;
+        skos:notation         "NE-49000261" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-43500313>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ROKER (WHITBURN SOUTH) (05600)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2300-05600 ;
+        def-sp:samplingPoint  so-sp:05600 ;
+        skos:notation         "NE-43500313" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000176>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HORNSEA (08700)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke1200-08700 ;
+        def-sp:samplingPoint  so-sp:08700 ;
+        skos:notation         "NE-49000176" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82515145>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CONSTANTINE BAY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-32700 ;
+        def-sp:samplingPoint  so-sp:32700 ;
+        skos:notation         "SW-82515145" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50374425>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SOUTHBOURNE"@en ;
+        def-bwq:firstSeason   "2000"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2101-19020 ;
+        def-sp:samplingPoint  so-sp:19020 ;
+        skos:notation         "SW-50374425" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-HW0010>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DOVERCOURT BEACH OPPOSITE WICK LANE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3311-11100 ;
+        def-sp:samplingPoint  so-sp:11100 ;
+        skos:notation         "AN-HW0010" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81914802>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTHCURNICK BEACH"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3102-28550 ;
+        def-sp:samplingPoint  so-sp:28550 ;
+        skos:notation         "SW-81914802" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001837>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "EASTBOURNE WISH TOWER"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2201-14500 ;
+        def-sp:samplingPoint  so-sp:14500 ;
+        skos:notation         "SO-F0001837" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009858>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MORECAMBE SOUTH AT WEST END"@en ;
+        def-bwq:finalSeason   "2010"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd4305-43260 ;
+        def-sp:samplingPoint  so-sp:43260 ;
+        skos:notation         "NW-88009858" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614872>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PAIGNTON (PRESTON SANDS)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-24000 ;
+        def-sp:samplingPoint  so-sp:24000 ;
+        skos:notation         "SW-70614872" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81714901>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DUPORTH BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-27700 ;
+        def-sp:samplingPoint  so-sp:27700 ;
+        skos:notation         "SW-81714901" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004255>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "COMPTON BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-17400 ;
+        def-sp:samplingPoint  so-sp:17400 ;
+        skos:notation         "SO-Y0004255" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82215420>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "THE TOWANS (GODREVY) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-31400 ;
+        def-sp:samplingPoint  so-sp:31400 ;
+        skos:notation         "SW-82215420" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000086>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FOLKESTONE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4208-13300 ;
+        def-sp:samplingPoint  so-sp:13300 ;
+        skos:notation         "SO-E0000086" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/MD-36739550>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WEST LAKE COLWICK COUNTRY PARK, BATHING"@en ;
+        def-bwq:firstSeason   "2013"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukf1400-09750 ;
+        def-sp:samplingPoint  so-sp:09750 ;
+        skos:notation         "MD-36739550" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0004879>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MINSTER LEAS BATHING WATER"@en ;
+        def-bwq:firstSeason   "2010"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4209-11975 ;
+        def-sp:samplingPoint  so-sp:11975 ;
+        skos:notation         "SO-E0004879" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-73115166>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "COMBE MARTIN BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4304-34700 ;
+        def-sp:samplingPoint  so-sp:34700 ;
+        skos:notation         "SW-73115166" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001934>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BRACKLESHAM BAY EC BW"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2403-16000 ;
+        def-sp:samplingPoint  so-sp:16000 ;
+        skos:notation         "SO-F0001934" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88010483>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WEST KIRBY @ DEE LANE"@en ;
+        def-bwq:firstSeason   "1991"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd5400-40750 ;
+        def-sp:samplingPoint  so-sp:40750 ;
+        skos:notation         "NW-88010483" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82515254>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "POLZEATH BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-33300 ;
+        def-sp:samplingPoint  so-sp:33300 ;
+        skos:notation         "SW-82515254" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82215281>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTHGWIDDEN BEACH ST.IVES"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-30900 ;
+        def-sp:samplingPoint  so-sp:30900 ;
+        skos:notation         "SW-82215281" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000111>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WINCHELSEA"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2204-14000 ;
+        def-sp:samplingPoint  so-sp:14000 ;
+        skos:notation         "SO-E0000111" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004297>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SANDOWN AT YAVERLAND"@en ;
+        def-bwq:firstSeason   "2008"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-18350 ;
+        def-sp:samplingPoint  so-sp:18350 ;
+        skos:notation         "SO-Y0004297" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000026>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ST.MILDREDS BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4210-12400 ;
+        def-sp:samplingPoint  so-sp:12400 ;
+        skos:notation         "SO-E0000026" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-CR219425>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CROMER BEACH ADJACENT TO PIER"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1305-10200 ;
+        def-sp:samplingPoint  so-sp:10200 ;
+        skos:notation         "AN-CR219425" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PTTB0023>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BATHING WATER EEC - CHALKWELL"@en ;
+        def-bwq:firstSeason   "2003"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3100-11902 ;
+        def-sp:samplingPoint  so-sp:11902 ;
+        skos:notation         "TH-PTTB0023" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614854>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TORRE ABBEY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-23800 ;
+        def-sp:samplingPoint  so-sp:23800 ;
+        skos:notation         "SW-70614854" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009871>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WALNEY WEST SHORE AT WEST SHORE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1102-44400 ;
+        def-sp:samplingPoint  so-sp:44400 ;
+        skos:notation         "NW-88009871" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-60010408>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BURNHAM JETTY NORTH"@en ;
+        def-bwq:firstSeason   "2012"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2302-35300 ;
+        def-sp:samplingPoint  so-sp:35300 ;
+        skos:notation         "SW-60010408" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82710102>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BUDE (SUMMERLEAZE) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-33500 ;
+        def-sp:samplingPoint  so-sp:33500 ;
+        skos:notation         "SW-82710102" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82514923>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HOLYWELL BAY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3102-32000 ;
+        def-sp:samplingPoint  so-sp:32000 ;
+        skos:notation         "SW-82514923" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50704424>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BURTON BRADSTOCK-HIVE"@en ;
+        def-bwq:firstSeason   "2000"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2205-20970 ;
+        def-sp:samplingPoint  so-sp:20970 ;
+        skos:notation         "SW-50704424" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000038>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "JOSS BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4210-12700 ;
+        def-sp:samplingPoint  so-sp:12700 ;
+        skos:notation         "SO-E0000038" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-42100093>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BAMBURGH CASTLE (03700)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2102-03700 ;
+        def-sp:samplingPoint  so-sp:03700 ;
+        skos:notation         "NE-42100093" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-42400066>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "AMBLE LINKS (04250)"@en ;
+        def-bwq:firstSeason   "1991"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2101-04250 ;
+        def-sp:samplingPoint  so-sp:04250 ;
+        skos:notation         "NE-42400066" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001892>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LANCING, BEACH GREEN"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2401-15300 ;
+        def-sp:samplingPoint  so-sp:15300 ;
+        skos:notation         "SO-F0001892" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70514578>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TEIGNMOUTH (HOLCOMBE) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4306-22700 ;
+        def-sp:samplingPoint  so-sp:22700 ;
+        skos:notation         "SW-70514578" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-E8901210>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WESTON MAIN"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk1202-35800 ;
+        def-sp:samplingPoint  so-sp:35800 ;
+        skos:notation         "SW-E8901210" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81914953>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "KENNACK SANDS"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3103-29200 ;
+        def-sp:samplingPoint  so-sp:29200 ;
+        skos:notation         "SW-81914953" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82214920>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTHCURNO BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-30600 ;
+        def-sp:samplingPoint  so-sp:30600 ;
+        skos:notation         "SW-82214920" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614740>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ANSTEY'S COVE     TORQUAY"@en ;
+        def-bwq:firstSeason   "2004"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-23501 ;
+        def-sp:samplingPoint  so-sp:23501 ;
+        skos:notation         "SW-70614740" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000237>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "RUNSWICK BAY (06900)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke2206-06900 ;
+        def-sp:samplingPoint  so-sp:06900 ;
+        skos:notation         "NE-49000237" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70814894>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HOPE COVE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-25400 ;
+        def-sp:samplingPoint  so-sp:25400 ;
+        skos:notation         "SW-70814894" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0003530>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LEE-ON-SOLENT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3305-16800 ;
+        def-sp:samplingPoint  so-sp:16800 ;
+        skos:notation         "SO-G0003530" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PTTB0005>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BATHING WATER EEC - BELL WHARF, LEIGH"@en ;
+        def-bwq:firstSeason   "2003"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3100-11904 ;
+        def-sp:samplingPoint  so-sp:11904 ;
+        skos:notation         "TH-PTTB0005" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-GY532031>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "GORLESTON BEACH OPPOSITE CLIFF AVENUE"@en ;
+        def-bwq:firstSeason   "1991"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1303-10650 ;
+        def-sp:samplingPoint  so-sp:10650 ;
+        skos:notation         "AN-GY532031" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-FE305343>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FELIXSTOWE NORTH BEACH AT SPA PAVILLION"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1406-10900 ;
+        def-sp:samplingPoint  so-sp:10900 ;
+        skos:notation         "AN-FE305343" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614710>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ODDICOMBE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-23300 ;
+        def-sp:samplingPoint  so-sp:23300 ;
+        skos:notation         "SW-70614710" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-E0900100>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORLOCK WEIR"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2305-34900 ;
+        def-sp:samplingPoint  so-sp:34900 ;
+        skos:notation         "SW-E0900100" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004304>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "VENTNOR"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-18600 ;
+        def-sp:samplingPoint  so-sp:18600 ;
+        skos:notation         "SO-Y0004304" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001928>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SELSEY EC BW"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2403-15900 ;
+        def-sp:samplingPoint  so-sp:15900 ;
+        skos:notation         "SO-F0001928" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70214515>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BEER BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4301-21700 ;
+        def-sp:samplingPoint  so-sp:21700 ;
+        skos:notation         "SW-70214515" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81814989>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PENDOWER BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3102-28500 ;
+        def-sp:samplingPoint  so-sp:28500 ;
+        skos:notation         "SW-81814989" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82114910>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MARAZION AND MOUNTS BAY (HELIPORT)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-30300 ;
+        def-sp:samplingPoint  so-sp:30300 ;
+        skos:notation         "SW-82114910" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82515037>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WATERGATE BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-32400 ;
+        def-sp:samplingPoint  so-sp:32400 ;
+        skos:notation         "SW-82515037" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001874>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BRIGHTON"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2100-14900 ;
+        def-sp:samplingPoint  so-sp:14900 ;
+        skos:notation         "SO-F0001874" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-GY533074>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "GT.YARMOUTH BEACH OPP MARINA LEISURE CEN"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1303-10500 ;
+        def-sp:samplingPoint  so-sp:10500 ;
+        skos:notation         "AN-GY533074" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PGWB0002>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BATHING WATER - HAMPSTEAD MENS POND"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uki1101-11920 ;
+        def-sp:samplingPoint  so-sp:11920 ;
+        skos:notation         "TH-PGWB0002" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000051>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BROADSTAIRS, VIKING BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4210-12800 ;
+        def-sp:samplingPoint  so-sp:12800 ;
+        skos:notation         "SO-E0000051" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-45600063>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "REDCAR LIFEBOAT STATION (06400)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc1202-06400 ;
+        def-sp:samplingPoint  so-sp:06400 ;
+        skos:notation         "NE-45600063" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009865>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ST.BEES AT ST.BEES"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1103-45920 ;
+        def-sp:samplingPoint  so-sp:45920 ;
+        skos:notation         "NW-88009865" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70314533>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SIDMOUTH (TOWN WEST END) BEACH"@en ;
+        def-bwq:firstSeason   "2016"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4301-21800 ;
+        def-sp:samplingPoint  so-sp:21800 ;
+        skos:notation         "SW-70314533" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000021>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HERNE BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4202-12200 ;
+        def-sp:samplingPoint  so-sp:12200 ;
+        skos:notation         "SO-E0000021" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50024507>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DURLEY CHINE"@en ;
+        def-bwq:firstSeason   "1993"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2101-19150 ;
+        def-sp:samplingPoint  so-sp:19150 ;
+        skos:notation         "SW-50024507" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50034611>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LULWORTH COVE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2204-20000 ;
+        def-sp:samplingPoint  so-sp:20000 ;
+        skos:notation         "SW-50034611" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81014770>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WEMBURY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-26200 ;
+        def-sp:samplingPoint  so-sp:26200 ;
+        skos:notation         "SW-81014770" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-45500112>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEAHAM HALL BEACH (05700)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc1404-05700 ;
+        def-sp:samplingPoint  so-sp:05700 ;
+        skos:notation         "NE-45500112" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0003608>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HIGHCLIFFE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2201-17300 ;
+        def-sp:samplingPoint  so-sp:17300 ;
+        skos:notation         "SO-G0003608" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81210130>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BOVISAND BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-26300 ;
+        def-sp:samplingPoint  so-sp:26300 ;
+        skos:notation         "SW-81210130" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82315106>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CHAPEL PORTH BEACH"@en ;
+        def-bwq:firstSeason   "2012"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3102-31650 ;
+        def-sp:samplingPoint  so-sp:31650 ;
+        skos:notation         "SW-82315106" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50024483>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BOURNEMOUTH PIER"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2101-19100 ;
+        def-sp:samplingPoint  so-sp:19100 ;
+        skos:notation         "SW-50024483" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-WL914456>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WELLS BEACH OPPOSITE COASTGUARD LOOKOUT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1305-10000 ;
+        def-sp:samplingPoint  so-sp:10000 ;
+        skos:notation         "AN-WL914456" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000093>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HYTHE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4208-13500 ;
+        def-sp:samplingPoint  so-sp:13500 ;
+        skos:notation         "SO-E0000093" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81414820>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "EAST LOOE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3101-27000 ;
+        def-sp:samplingPoint  so-sp:27000 ;
+        skos:notation         "SW-81414820" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000063>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DEAL CASTLE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4204-13100 ;
+        def-sp:samplingPoint  so-sp:13100 ;
+        skos:notation         "SO-E0000063" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81814815>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PENTEWAN BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-27900 ;
+        def-sp:samplingPoint  so-sp:27900 ;
+        skos:notation         "SW-81814815" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-60110129>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HENLEAZE LAKE"@en ;
+        def-bwq:firstSeason   "2014"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk1100-36050 ;
+        def-sp:samplingPoint  so-sp:36050 ;
+        skos:notation         "SW-60110129" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-NE0450>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BRIGHTLINGSEA BEACH AT BATEMANS TOWER"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3311-11700 ;
+        def-sp:samplingPoint  so-sp:11700 ;
+        skos:notation         "AN-NE0450" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009847>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "AINSDALE AT AINSDALE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd5300-41300 ;
+        def-sp:samplingPoint  so-sp:41300 ;
+        skos:notation         "NW-88009847" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-CSLEN001>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CHAPEL ST LEONARDS BEACH:TRANSECT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukf3102-09500 ;
+        def-sp:samplingPoint  so-sp:09500 ;
+        skos:notation         "AN-CSLEN001" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70811724>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SALCOMBE NORTH SANDS"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-25200 ;
+        def-sp:samplingPoint  so-sp:25200 ;
+        skos:notation         "SW-70811724" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82614940>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TREBARWITH STRAND BEACH"@en ;
+        def-bwq:firstSeason   "2002"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-33350 ;
+        def-sp:samplingPoint  so-sp:33350 ;
+        skos:notation         "SW-82614940" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-43500314>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEABURN (WHITBURN NORTH) (05500)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2300-05500 ;
+        def-sp:samplingPoint  so-sp:05500 ;
+        skos:notation         "NE-43500314" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81614829>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "POLKERRIS BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-27200 ;
+        def-sp:samplingPoint  so-sp:27200 ;
+        skos:notation         "SW-81614829" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81314810>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DOWNDERRY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3101-26700 ;
+        def-sp:samplingPoint  so-sp:26700 ;
+        skos:notation         "SW-81314810" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81814942>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTHLUNEY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-28400 ;
+        def-sp:samplingPoint  so-sp:28400 ;
+        skos:notation         "SW-81814942" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000232>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ROBIN HOODS BAY (07200)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke2206-07200 ;
+        def-sp:samplingPoint  so-sp:07200 ;
+        skos:notation         "NE-49000232" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614831>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MEADFOOT BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-23600 ;
+        def-sp:samplingPoint  so-sp:23600 ;
+        skos:notation         "SW-70614831" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-GY530120>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CAISTER BEACH OPPOSITE LIFEBOAT STATION"@en ;
+        def-bwq:firstSeason   "1991"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1303-10350 ;
+        def-sp:samplingPoint  so-sp:10350 ;
+        skos:notation         "AN-GY530120" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70114403>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LYME REGIS CHURCH CLIFF BEACH"@en ;
+        def-bwq:finalSeason   "2016"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2205-21400 ;
+        def-sp:samplingPoint  so-sp:21400 ;
+        skos:notation         "SW-70114403" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82114850>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PERRANUTHNOE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-30100 ;
+        def-sp:samplingPoint  so-sp:30100 ;
+        skos:notation         "SW-82114850" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0017452>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HERNE BAY CENTRAL EC BW"@en ;
+        def-bwq:firstSeason   "1999"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4202-12150 ;
+        def-sp:samplingPoint  so-sp:12150 ;
+        skos:notation         "SO-E0017452" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70214510>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEATON BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4301-21600 ;
+        def-sp:samplingPoint  so-sp:21600 ;
+        skos:notation         "SW-70214510" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009859>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MORECAMBE NORTH AT TOWN HALL"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd4305-43550 ;
+        def-sp:samplingPoint  so-sp:43550 ;
+        skos:notation         "NW-88009859" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82215270>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTHMEOR BEACH ST.IVES"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-30800 ;
+        def-sp:samplingPoint  so-sp:30800 ;
+        skos:notation         "SW-82215270" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70811736>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SALCOMBE SOUTH SANDS"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-25300 ;
+        def-sp:samplingPoint  so-sp:25300 ;
+        skos:notation         "SW-70811736" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004286>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEAGROVE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-18000 ;
+        def-sp:samplingPoint  so-sp:18000 ;
+        skos:notation         "SO-Y0004286" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70814659>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SLAPTON SANDS (MONUMENT)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-24900 ;
+        def-sp:samplingPoint  so-sp:24900 ;
+        skos:notation         "SW-70814659" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0001808>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HASTINGS -CLOSED-"@en ;
+        def-bwq:finalSeason   "2014"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2202-14100 ;
+        def-sp:samplingPoint  so-sp:14100 ;
+        skos:notation         "SO-F0001808" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000015>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WEST BEACH, WHITSTABLE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4202-12100 ;
+        def-sp:samplingPoint  so-sp:12100 ;
+        skos:notation         "SO-E0000015" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81915062>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CHURCH COVE"@en ;
+        def-bwq:firstSeason   "2004"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3103-29501 ;
+        def-sp:samplingPoint  so-sp:29501 ;
+        skos:notation         "SW-81915062" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50600151>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LODMOOR"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2206-20600 ;
+        def-sp:samplingPoint  so-sp:20600 ;
+        skos:notation         "SW-50600151" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PTTB0012>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BATHING WATER EEC - 3 SHELLS"@en ;
+        def-bwq:firstSeason   "2001"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3100-11850 ;
+        def-sp:samplingPoint  so-sp:11850 ;
+        skos:notation         "TH-PTTB0012" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82515002>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LUSTY GLAZE"@en ;
+        def-bwq:firstSeason   "1996"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-32330 ;
+        def-sp:samplingPoint  so-sp:32330 ;
+        skos:notation         "SW-82515002" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82014856>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PORTHLEVEN (WEST) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3103-29800 ;
+        def-sp:samplingPoint  so-sp:29800 ;
+        skos:notation         "SW-82014856" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81614842>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "PAR BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3106-27300 ;
+        def-sp:samplingPoint  so-sp:27300 ;
+        skos:notation         "SW-81614842" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-E0000057>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "RAMSGATE WESTERN UNDERCLIFF"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj4210-12900 ;
+        def-sp:samplingPoint  so-sp:12900 ;
+        skos:notation         "SO-E0000057" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614728>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BABBACOMBE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4200-23400 ;
+        def-sp:samplingPoint  so-sp:23400 ;
+        skos:notation         "SW-70614728" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-Y0004298>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SANDOWN"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3400-18400 ;
+        def-sp:samplingPoint  so-sp:18400 ;
+        skos:notation         "SO-Y0004298" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50034689>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BOWLEAZE COVE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2206-20400 ;
+        def-sp:samplingPoint  so-sp:20400 ;
+        skos:notation         "SW-50034689" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009872>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ALLONBY SOUTH AT SALT PANS"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd1101-46000 ;
+        def-sp:samplingPoint  so-sp:46000 ;
+        skos:notation         "NW-88009872" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-F0017484>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HASTINGS PELHAM BEACH"@en ;
+        def-bwq:firstSeason   "2015"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2202-14100 ;
+        def-sp:samplingPoint  so-sp:14100 ;
+        skos:notation         "SO-F0017484" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70614644>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "NESS COVE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4306-23000 ;
+        def-sp:samplingPoint  so-sp:23000 ;
+        skos:notation         "SW-70614644" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50034659>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "RINGSTEAD BAY"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2206-20300 ;
+        def-sp:samplingPoint  so-sp:20300 ;
+        skos:notation         "SW-50034659" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-42300050>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WARKWORTH (04200)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2101-04200 ;
+        def-sp:samplingPoint  so-sp:04200 ;
+        skos:notation         "NE-42300050" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-CW1850>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FRINTON BEACH OFF CONNAUGHT AVENUE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3311-11300 ;
+        def-sp:samplingPoint  so-sp:11300 ;
+        skos:notation         "AN-CW1850" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-CW1765>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HOLLAND BEACH OFF CHEVAUX DE FRISE POINT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3311-11350 ;
+        def-sp:samplingPoint  so-sp:11350 ;
+        skos:notation         "AN-CW1765" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-73015017>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CROYDE BAY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4304-34200 ;
+        def-sp:samplingPoint  so-sp:34200 ;
+        skos:notation         "SW-73015017" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0003591>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LEPE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3308-17000 ;
+        def-sp:samplingPoint  so-sp:17000 ;
+        skos:notation         "SO-G0003591" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50054566>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CHARMOUTH WEST"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2205-21300 ;
+        def-sp:samplingPoint  so-sp:21300 ;
+        skos:notation         "SW-50054566" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-HUMBN003>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "NEW HUMBERSTON FITTIES BEACH TRANSECT"@en ;
+        def-bwq:firstSeason   "2011"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke1301-09020 ;
+        def-sp:samplingPoint  so-sp:09020 ;
+        skos:notation         "AN-HUMBN003" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-42100094>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEAHOUSES NORTH (03800)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc2102-03800 ;
+        def-sp:samplingPoint  so-sp:03800 ;
+        skos:notation         "NE-42100094" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-49000087>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DANES DYKE, FLAMBOROUGH (07950)"@en ;
+        def-bwq:firstSeason   "1999"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uke1200-07950 ;
+        def-sp:samplingPoint  so-sp:07950 ;
+        skos:notation         "NE-49000087" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-HUTTN001>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HUTTOFT BEACH:TRANSECT"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukf3102-09300 ;
+        def-sp:samplingPoint  so-sp:09300 ;
+        skos:notation         "AN-HUTTN001" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82515237>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "TREVONE BAY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-33000 ;
+        def-sp:samplingPoint  so-sp:33000 ;
+        skos:notation         "SW-82515237" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-60010410>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BURNHAM JETTY"@en ;
+        def-bwq:finalSeason   "2011"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2302-35300 ;
+        def-sp:samplingPoint  so-sp:35300 ;
+        skos:notation         "SW-60010410" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82518034>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DAYMER BAY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3104-33200 ;
+        def-sp:samplingPoint  so-sp:33200 ;
+        skos:notation         "SW-82518034" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70514549>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DAWLISH (TOWN) BEACH"@en ;
+        def-bwq:finalSeason   "2015"^^xsd:gYear ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4306-22500 ;
+        def-sp:samplingPoint  so-sp:22500 ;
+        skos:notation         "SW-70514549" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PGWL0118>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "KEYNES COUNTRY PARK LAKE 32, SHORNCOTE"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk1302-11760 ;
+        def-sp:samplingPoint  so-sp:11760 ;
+        skos:notation         "TH-PGWL0118" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70814980>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CHALLABOROUGH BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-26000 ;
+        def-sp:samplingPoint  so-sp:26000 ;
+        skos:notation         "SW-70814980" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SO-G0003531>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HILLHEAD"@en ;
+        def-bwq:firstSeason   "1990"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj3304-16850 ;
+        def-sp:samplingPoint  so-sp:16850 ;
+        skos:notation         "SO-G0003531" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-50044589>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "CHURCH OPE COVE"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk2206-20500 ;
+        def-sp:samplingPoint  so-sp:20500 ;
+        skos:notation         "SW-50044589" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-GY509174>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "HEMSBY BEACH OPPOSITE BEACH ROAD"@en ;
+        def-bwq:firstSeason   "1991"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1303-10325 ;
+        def-sp:samplingPoint  so-sp:10325 ;
+        skos:notation         "AN-GY509174" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-LO543910>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "LOWESTOFT BEACH AT VICTORIA BATHING STN."@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1407-10800 ;
+        def-sp:samplingPoint  so-sp:10800 ;
+        skos:notation         "AN-LO543910" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NW-88009854>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BISPHAM AT BISPHAM"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukd4200-42600 ;
+        def-sp:samplingPoint  so-sp:42600 ;
+        skos:notation         "NW-88009854" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-73115120>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "ILFRACOMBE WILDERSMOUTH BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4304-34500 ;
+        def-sp:samplingPoint  so-sp:34500 ;
+        skos:notation         "SW-73115120" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-82215391>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "THE TOWANS (HAYLE) BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3105-31300 ;
+        def-sp:samplingPoint  so-sp:31300 ;
+        skos:notation         "SW-82215391" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70811731>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "MILL BAY BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4305-25100 ;
+        def-sp:samplingPoint  so-sp:25100 ;
+        skos:notation         "SW-70811731" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/NE-45400488>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "SEATON CAREW NORTH GARE (06200)"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukc1101-06200 ;
+        def-sp:samplingPoint  so-sp:06200 ;
+        skos:notation         "NE-45400488" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-70514550>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "DAWLISH (TOWN RAIL STATION) BEACH"@en ;
+        def-bwq:firstSeason   "2016"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk4306-22500 ;
+        def-sp:samplingPoint  so-sp:22500 ;
+        skos:notation         "SW-70514550" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-66M11>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "THE WASH N BEACH HEACHAM S SANDS CLUB"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh1304-09800 ;
+        def-sp:samplingPoint  so-sp:09800 ;
+        skos:notation         "AN-66M11" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PGWL0034>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "FRENSHAM GREAT POND, BEACH"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukj2310-11945 ;
+        def-sp:samplingPoint  so-sp:11945 ;
+        skos:notation         "TH-PGWL0034" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/SW-81914840>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "GYLLYNGVASE BEACH"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukk3102-28600 ;
+        def-sp:samplingPoint  so-sp:28600 ;
+        skos:notation         "SW-81914840" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/TH-PGWB0003>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "BATHING WATER - HAMPSTEAD MIXED POND"@en ;
+        def-bwq:firstSeason   "1998"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:uki1101-11930 ;
+        def-sp:samplingPoint  so-sp:11930 ;
+        skos:notation         "TH-PGWB0003" .
+
+<http://environment.data.gov.uk/water-quality/id/sampling-point/AN-CW2200>
+        a                     wqa-sp:SamplingPoint ;
+        rdfs:label            "WALTON BEACH OFF NEWGATE STREET"@en ;
+        def-bwq:firstSeason   "1988"^^xsd:gYear ;
+        def-bw:bathingWater   id-bw:ukh3311-11250 ;
+        def-sp:samplingPoint  so-sp:11250 ;
+        skos:notation         "AN-CW2200" .
