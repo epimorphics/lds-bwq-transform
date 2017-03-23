@@ -1,0 +1,84 @@
+controller_name,dclg_uri,ons_uri,os_uri
+Adur,http://opendatacommunities.org/id/district-council/adur,http://statistics.data.gov.uk/id/statistical-geography/E07000223,http://data.ordnancesurvey.co.uk/id/7000000000016223
+Allerdale,http://opendatacommunities.org/id/district-council/allerdale,http://statistics.data.gov.uk/id/statistical-geography/E07000026,http://data.ordnancesurvey.co.uk/id/7000000000013065
+Arun,http://opendatacommunities.org/id/district-council/arun,http://statistics.data.gov.uk/id/statistical-geography/E07000224,http://data.ordnancesurvey.co.uk/id/7000000000016438
+Barrow-in-Furness,http://opendatacommunities.org/id/district-council/barrow-in-furness,http://statistics.data.gov.uk/id/statistical-geography/E07000027,http://data.ordnancesurvey.co.uk/id/7000000000012941
+Blackpool,http://opendatacommunities.org/id/unitary-authority/blackpool,http://statistics.data.gov.uk/id/statistical-geography/E06000009,http://data.ordnancesurvey.co.uk/id/7000000000038861
+Bournemouth,http://opendatacommunities.org/id/unitary-authority/bournemouth,http://statistics.data.gov.uk/id/statistical-geography/E06000028,http://data.ordnancesurvey.co.uk/id/7000000000038340
+Canterbury,http://opendatacommunities.org/id/district-council/canterbury,http://statistics.data.gov.uk/id/statistical-geography/E07000106,http://data.ordnancesurvey.co.uk/id/7000000000018139
+Chapel St. Leonards,http://data.ordnancesurvey.co.uk/id/7000000000005174,http://statistics.data.gov.uk/id/statistical-geography/E04005615,http://data.ordnancesurvey.co.uk/id/7000000000005174
+Chichester,http://opendatacommunities.org/id/district-council/chichester,http://statistics.data.gov.uk/id/statistical-geography/E07000225,http://data.ordnancesurvey.co.uk/id/7000000000016444
+Christchurch,http://opendatacommunities.org/id/district-council/christchurch,http://statistics.data.gov.uk/id/statistical-geography/E07000048,http://data.ordnancesurvey.co.uk/id/7000000000014202
+City and County of the City of London,http://opendatacommunities.org/id/london-borough-council/city-of-london,http://statistics.data.gov.uk/id/statistical-geography/E09000001,http://data.ordnancesurvey.co.uk/id/7000000000011105
+City of Bristol,http://opendatacommunities.org/id/unitary-authority/bristol,http://statistics.data.gov.uk/id/statistical-geography/E06000023,http://data.ordnancesurvey.co.uk/id/7000000000025523
+City of Nottingham,http://opendatacommunities.org/id/unitary-authority/nottingham,http://statistics.data.gov.uk/id/statistical-geography/E06000018,http://data.ordnancesurvey.co.uk/id/7000000000038857
+City of Plymouth,http://opendatacommunities.org/id/unitary-authority/plymouth,http://statistics.data.gov.uk/id/statistical-geography/E06000026,http://data.ordnancesurvey.co.uk/id/7000000000038872
+City of Portsmouth,http://opendatacommunities.org/id/unitary-authority/portsmouth,http://statistics.data.gov.uk/id/statistical-geography/E06000044,http://data.ordnancesurvey.co.uk/id/7000000000037254
+City of Westminster,http://opendatacommunities.org/id/london-borough-council/westminster,http://statistics.data.gov.uk/id/statistical-geography/E09000033,http://data.ordnancesurvey.co.uk/id/7000000000011164
+Colchester,http://opendatacommunities.org/id/district-council/colchester,http://statistics.data.gov.uk/id/statistical-geography/E07000071,http://data.ordnancesurvey.co.uk/id/7000000000019569
+Combe Martin,http://data.ordnancesurvey.co.uk/id/7000000000023081,http://statistics.data.gov.uk/id/statistical-geography/E04003083,http://data.ordnancesurvey.co.uk/id/7000000000023081
+Copeland,http://opendatacommunities.org/id/district-council/copeland,http://statistics.data.gov.uk/id/statistical-geography/E07000029,http://data.ordnancesurvey.co.uk/id/7000000000012966
+Cornwall,http://opendatacommunities.org/id/unitary-authority/cornwall,http://statistics.data.gov.uk/id/statistical-geography/E06000052,http://data.ordnancesurvey.co.uk/id/7000000000043750
+Cotswold,http://opendatacommunities.org/id/district-council/cotswold,http://statistics.data.gov.uk/id/statistical-geography/E07000079,http://data.ordnancesurvey.co.uk/id/7000000000020224
+County Durham,http://opendatacommunities.org/id/unitary-authority/county-durham,http://statistics.data.gov.uk/id/statistical-geography/E06000047,http://data.ordnancesurvey.co.uk/id/7000000000043607
+Dover,http://opendatacommunities.org/id/district-council/dover,http://statistics.data.gov.uk/id/statistical-geography/E07000108,http://data.ordnancesurvey.co.uk/id/7000000000017977
+East Devon,http://opendatacommunities.org/id/district-council/east-devon,http://statistics.data.gov.uk/id/statistical-geography/E07000040,http://data.ordnancesurvey.co.uk/id/7000000000022713
+East Lindsey,http://opendatacommunities.org/id/district-council/east-lindsey,http://statistics.data.gov.uk/id/statistical-geography/E07000137,http://data.ordnancesurvey.co.uk/id/7000000000005317
+East Riding of Yorkshire,http://opendatacommunities.org/id/unitary-authority/east-riding,http://statistics.data.gov.uk/id/statistical-geography/E06000011,http://data.ordnancesurvey.co.uk/id/7000000000025635
+Eastbourne,http://opendatacommunities.org/id/district-council/eastbourne,http://statistics.data.gov.uk/id/statistical-geography/E07000061,http://data.ordnancesurvey.co.uk/id/7000000000002632
+Fareham,http://opendatacommunities.org/id/district-council/fareham,http://statistics.data.gov.uk/id/statistical-geography/E07000087,http://data.ordnancesurvey.co.uk/id/7000000000017544
+Fylde,http://opendatacommunities.org/id/district-council/fylde,http://statistics.data.gov.uk/id/statistical-geography/E07000119,http://data.ordnancesurvey.co.uk/id/7000000000004985
+Gosport,http://opendatacommunities.org/id/district-council/gosport,http://statistics.data.gov.uk/id/statistical-geography/E07000088,http://data.ordnancesurvey.co.uk/id/7000000000017378
+Great Yarmouth,http://opendatacommunities.org/id/district-council/great-yarmouth,http://statistics.data.gov.uk/id/statistical-geography/E07000145,http://data.ordnancesurvey.co.uk/id/7000000000006392
+Hampshire,http://opendatacommunities.org/id/county-council/hampshire,http://statistics.data.gov.uk/id/statistical-geography/E10000014,http://data.ordnancesurvey.co.uk/id/7000000000017765
+Hartlepool,http://opendatacommunities.org/id/unitary-authority/hartlepool,http://statistics.data.gov.uk/id/statistical-geography/E06000001,http://data.ordnancesurvey.co.uk/id/7000000000025589
+Hastings,http://opendatacommunities.org/id/district-council/hastings,http://statistics.data.gov.uk/id/statistical-geography/E07000062,http://data.ordnancesurvey.co.uk/id/7000000000002583
+Havant,http://opendatacommunities.org/id/district-council/havant,http://statistics.data.gov.uk/id/statistical-geography/E07000090,http://data.ordnancesurvey.co.uk/id/7000000000017297
+Instow,http://data.ordnancesurvey.co.uk/id/7000000000023050,http://statistics.data.gov.uk/id/statistical-geography/E04003096,http://data.ordnancesurvey.co.uk/id/7000000000023050
+Isle of Wight,http://opendatacommunities.org/id/unitary-authority/isle-of-wight,http://statistics.data.gov.uk/id/statistical-geography/E06000046,http://data.ordnancesurvey.co.uk/id/7000000000025469
+King's Lynn and West Norfolk,http://opendatacommunities.org/id/district-council/west-norfolk,http://statistics.data.gov.uk/id/statistical-geography/E07000146,http://data.ordnancesurvey.co.uk/id/7000000000007016
+Lancaster,http://opendatacommunities.org/id/district-council/lancaster,http://statistics.data.gov.uk/id/statistical-geography/E07000121,http://data.ordnancesurvey.co.uk/id/7000000000004925
+Lewes,http://opendatacommunities.org/id/district-council/lewes,http://statistics.data.gov.uk/id/statistical-geography/E07000063,http://data.ordnancesurvey.co.uk/id/7000000000002896
+Lincolnshire,http://opendatacommunities.org/id/county-council/lincolnshire,http://statistics.data.gov.uk/id/statistical-geography/E10000019,http://data.ordnancesurvey.co.uk/id/7000000000005942
+Mortehoe,http://data.ordnancesurvey.co.uk/id/7000000000023101,http://statistics.data.gov.uk/id/statistical-geography/E04003108,http://data.ordnancesurvey.co.uk/id/7000000000023101
+New Forest,http://opendatacommunities.org/id/district-council/new-forest,http://statistics.data.gov.uk/id/statistical-geography/E07000091,http://data.ordnancesurvey.co.uk/id/7000000000017733
+North Devon,http://opendatacommunities.org/id/district-council/north-devon,http://statistics.data.gov.uk/id/statistical-geography/E07000043,http://data.ordnancesurvey.co.uk/id/7000000000022933
+North East Lincolnshire,http://opendatacommunities.org/id/unitary-authority/north-east-lincolnshire,http://statistics.data.gov.uk/id/statistical-geography/E06000012,http://data.ordnancesurvey.co.uk/id/7000000000025650
+North Norfolk,http://opendatacommunities.org/id/district-council/north-norfolk,http://statistics.data.gov.uk/id/statistical-geography/E07000147,http://data.ordnancesurvey.co.uk/id/7000000000007024
+North Somerset,http://opendatacommunities.org/id/unitary-authority/north-somerset,http://statistics.data.gov.uk/id/statistical-geography/E06000024,http://data.ordnancesurvey.co.uk/id/7000000000025504
+North Tyneside,http://opendatacommunities.org/id/metropolitan-district-council/north-tyneside,http://statistics.data.gov.uk/id/statistical-geography/E08000022,http://data.ordnancesurvey.co.uk/id/7000000000009699
+Northumberland,http://opendatacommunities.org/id/unitary-authority/northumberland,http://statistics.data.gov.uk/id/statistical-geography/E06000057,http://data.ordnancesurvey.co.uk/id/7000000000043674
+Perranzabuloe,http://data.ordnancesurvey.co.uk/id/7000000000024488,http://statistics.data.gov.uk/id/statistical-geography/E04011508,http://data.ordnancesurvey.co.uk/id/7000000000024488
+Poole,http://opendatacommunities.org/id/unitary-authority/poole,http://statistics.data.gov.uk/id/statistical-geography/E06000029,http://data.ordnancesurvey.co.uk/id/7000000000038339
+Purbeck,http://opendatacommunities.org/id/district-council/purbeck,http://statistics.data.gov.uk/id/statistical-geography/E07000051,http://data.ordnancesurvey.co.uk/id/7000000000014363
+Redcar and Cleveland,http://opendatacommunities.org/id/unitary-authority/redcar-and-cleveland,http://statistics.data.gov.uk/id/statistical-geography/E06000003,http://data.ordnancesurvey.co.uk/id/7000000000025588
+Rother,http://opendatacommunities.org/id/district-council/rother,http://statistics.data.gov.uk/id/statistical-geography/E07000064,http://data.ordnancesurvey.co.uk/id/7000000000002852
+Scarborough,http://opendatacommunities.org/id/district-council/scarborough,http://statistics.data.gov.uk/id/statistical-geography/E07000168,http://data.ordnancesurvey.co.uk/id/7000000000021355
+Sedgemoor,http://opendatacommunities.org/id/district-council/sedgemoor,http://statistics.data.gov.uk/id/statistical-geography/E07000188,http://data.ordnancesurvey.co.uk/id/7000000000010575
+Sefton,http://opendatacommunities.org/id/metropolitan-district-council/sefton,http://statistics.data.gov.uk/id/statistical-geography/E08000014,http://data.ordnancesurvey.co.uk/id/7000000000005960
+Shepway,http://opendatacommunities.org/id/district-council/shepway,http://statistics.data.gov.uk/id/statistical-geography/E07000112,http://data.ordnancesurvey.co.uk/id/7000000000018085
+South Hams,http://opendatacommunities.org/id/district-council/south-hams,http://statistics.data.gov.uk/id/statistical-geography/E07000044,http://data.ordnancesurvey.co.uk/id/7000000000022569
+South Lakeland,http://opendatacommunities.org/id/district-council/south-lakeland,http://statistics.data.gov.uk/id/statistical-geography/E07000031,http://data.ordnancesurvey.co.uk/id/7000000000012934
+South Tyneside,http://opendatacommunities.org/id/metropolitan-district-council/south-tyneside,http://statistics.data.gov.uk/id/statistical-geography/E08000023,http://data.ordnancesurvey.co.uk/id/7000000000009685
+Southend-on-Sea,http://opendatacommunities.org/id/unitary-authority/southend,http://statistics.data.gov.uk/id/statistical-geography/E06000033,http://data.ordnancesurvey.co.uk/id/7000000000038907
+St Goran,http://data.ordnancesurvey.co.uk/id/7000000000024182,http://statistics.data.gov.uk/id/statistical-geography/E04011552,http://data.ordnancesurvey.co.uk/id/7000000000024182
+St. Gennys,http://data.ordnancesurvey.co.uk/id/7000000000024566,http://statistics.data.gov.uk/id/statistical-geography/E04011549,http://data.ordnancesurvey.co.uk/id/7000000000024566
+Suffolk Coastal,http://opendatacommunities.org/id/district-council/suffolk-coastal,http://statistics.data.gov.uk/id/statistical-geography/E07000205,http://data.ordnancesurvey.co.uk/id/7000000000015508
+Sunderland,http://opendatacommunities.org/id/metropolitan-district-council/sunderland,http://statistics.data.gov.uk/id/statistical-geography/E08000024,http://data.ordnancesurvey.co.uk/id/7000000000009731
+Swale,http://opendatacommunities.org/id/district-council/swale,http://statistics.data.gov.uk/id/statistical-geography/E07000113,http://data.ordnancesurvey.co.uk/id/7000000000018242
+Swanage,http://data.ordnancesurvey.co.uk/id/7000000000014268,http://statistics.data.gov.uk/id/statistical-geography/E04003483,http://data.ordnancesurvey.co.uk/id/7000000000014268
+Teignbridge,http://opendatacommunities.org/id/district-council/teignbridge,http://statistics.data.gov.uk/id/statistical-geography/E07000045,http://data.ordnancesurvey.co.uk/id/7000000000022881
+Tendring,http://opendatacommunities.org/id/district-council/tendring,http://statistics.data.gov.uk/id/statistical-geography/E07000076,http://data.ordnancesurvey.co.uk/id/7000000000019547
+Thanet,http://opendatacommunities.org/id/district-council/thanet,http://statistics.data.gov.uk/id/statistical-geography/E07000114,http://data.ordnancesurvey.co.uk/id/7000000000018130
+The City of Brighton and Hove,http://opendatacommunities.org/id/unitary-authority/brighton-and-hove,http://statistics.data.gov.uk/id/statistical-geography/E06000043,http://data.ordnancesurvey.co.uk/id/7000000000036749
+Torbay,http://opendatacommunities.org/id/unitary-authority/torbay,http://statistics.data.gov.uk/id/statistical-geography/E06000027,http://data.ordnancesurvey.co.uk/id/7000000000038883
+Torridge,http://opendatacommunities.org/id/district-council/torridge,http://statistics.data.gov.uk/id/statistical-geography/E07000046,http://data.ordnancesurvey.co.uk/id/7000000000022970
+Waveney,http://opendatacommunities.org/id/district-council/waveney,http://statistics.data.gov.uk/id/statistical-geography/E07000206,http://data.ordnancesurvey.co.uk/id/7000000000015440
+Waverley,http://opendatacommunities.org/id/district-council/waverley,http://statistics.data.gov.uk/id/statistical-geography/E07000216,http://data.ordnancesurvey.co.uk/id/7000000000014119
+Wealden,http://opendatacommunities.org/id/district-council/wealden,http://statistics.data.gov.uk/id/statistical-geography/E07000065,http://data.ordnancesurvey.co.uk/id/7000000000002678
+West Dorset,http://opendatacommunities.org/id/district-council/west-dorset,http://statistics.data.gov.uk/id/statistical-geography/E07000052,http://data.ordnancesurvey.co.uk/id/7000000000014539
+West Somerset,http://opendatacommunities.org/id/district-council/west-somerset,http://statistics.data.gov.uk/id/statistical-geography/E07000191,http://data.ordnancesurvey.co.uk/id/7000000000010687
+Weymouth and Portland,http://opendatacommunities.org/id/district-council/weymouth-and-portland,http://statistics.data.gov.uk/id/statistical-geography/E07000053,http://data.ordnancesurvey.co.uk/id/7000000000014503
+Wirral,http://opendatacommunities.org/id/metropolitan-district-council/wirral,http://statistics.data.gov.uk/id/statistical-geography/E08000015,http://data.ordnancesurvey.co.uk/id/7000000000006068
+Worthing,http://opendatacommunities.org/id/district-council/worthing,http://statistics.data.gov.uk/id/statistical-geography/E07000229,http://data.ordnancesurvey.co.uk/id/7000000000016261
+Wyre,http://opendatacommunities.org/id/district-council/wyre,http://statistics.data.gov.uk/id/statistical-geography/E07000128,http://data.ordnancesurvey.co.uk/id/7000000000004922

@@ -1,0 +1,13 @@
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix odc:  <http://opendatacommunities.org/def/local-government/>
+
+select ?controller_name ?dclg_uri ?ons_uri ?os_uri 
+where {
+  ?controller rdfs:label ?controller_name ;
+              odc:governsGSS ?ons ;
+			  odc:governs    ?os.
+			  
+  BIND(str(?controller) as ?dclg_uri)
+  BIND(str(?ons) as ?ons_uri)
+  BIND(str(?os) as ?os_uri)
+} order by ?controller_name
