@@ -20,6 +20,7 @@
 @prefix def-bw:  <http://environment.data.gov.uk/def/bathing-water/> .
 @prefix def-bwp: <http://environment.data.gov.uk/def/bathing-water-profile/> .
 @prefix def-bwq: <http://environment.data.gov.uk/def/bathing-water-quality/> .
+@prefix def-ddr: <http://environment.data.gov.uk/def/dedesignation-reason/> .
 @prefix def-sp:  <http://location.data.gov.uk/def/ef/SamplingPoint/> .
 @prefix def-stp: <http://environment.data.gov.uk/def/bwq-stp/> .
 @prefix def-som: <http://environment.data.gov.uk/def/bwq-som/> .
