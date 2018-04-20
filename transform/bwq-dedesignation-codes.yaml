@@ -16,20 +16,23 @@ oneOffs :
 - name : bwq-dedesignation-code-class
   "@id"               : "<def-ddr:DedesignationReasonCode>"
   "<rdf:type>"        : "<owl:Class>"
-  "<rdfs:label>"      : "A subclass of SKOS Concept for bathing water dedesignation coded reasons.@en"
+  "<rdfs:label>"      : "DedesignationReasonCode"
+  "<rdfs:comment>"    : "A subclass of SKOS Concept for bathing water dedesignation coded reasons.@en"
   "<rdfs:subClassOf>" : "<skos:Concept>"
 
 - name  : bwq-dedesignation-code-prop
   "@id"          : "<def-ddr:dedesignationReasonCode>"
   "<rdf:type>"   : "<owl:ObjectProperty>"
-  "<rdfs:label>" : "A property for associating a dedesignated bathing-water with a coded reason for its dedesignation.@en"
+  "<rdfs:label>" : "dedesignationReasonCode"
+  "<rdfs:comment>" : "A property for associating a dedesignated bathing-water with a coded reason for its dedesignation.@en"
   "<rdfs:range>" : "<def-ddr:DedesignationReasonCode>"
   "<rdfs:domain>" : "<def-bw:BathingWater>"
   
 - name  : bwq-dedesignation-text-prop
   "@id"          : "<def-ddr:dedesignationReasonText>"
+  "<rdfs:label>" : "dedesignationReasonText"
   "<rdf:type>"   : "<owl:DatatypeProperty>"
-  "<rdfs:label>" : "A property for associating a dedesignated bathing-water with a narrative reason for its dedesignation.@en"
+  "<rdfs:comment>" : "A property for associating a dedesignated bathing-water with a narrative reason for its dedesignation.@en"
   "<rdfs:range>" : "<def-ddr:DedesignationReasonCode>"
   "<rdfs:domain>" : "<def-bw:BathingWater>"
 
