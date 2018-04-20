@@ -1,10 +1,7 @@
 parent-notation,notation,De_des_desc
-PAAB,CP,Classified poor 
 ,CBO,De-listed access closed by private owner
 ,LOW,De-listed low usage for bathing
-PAAB,DEXP,Disproportionately expensive 
 ,PAAB,Permanent advice against bathing 
-,PAAB-CP,"Permanent advice against bathing, Classified poor "
-,PAAB-DEXP,"Permanent advice against bathing, Disproportionately expensive "
-,PAAB-TI,"Permanent advice against bathing, Technically infeasible"
-PAAB,TI,Technically infeasible
+PAAB,PAAB-CP,"Permanent advice against bathing, Classified poor "
+PAAB,PAAB-DEXP,"Permanent advice against bathing, Disproportionately expensive "
+PAAB,PAAB-TI,"Permanent advice against bathing, Technically infeasible"
