@@ -1,7 +1,8 @@
-parent-notation,notation,De_des_desc
-,CBO,De-listed access closed by private owner
-,LOW,De-listed low usage for bathing
-,PAAB,Permanent advice against bathing 
-PAAB,PAAB-CP,"Permanent advice against bathing, Classified poor "
-PAAB,PAAB-DEXP,"Permanent advice against bathing, Disproportionately expensive "
-PAAB,PAAB-TI,"Permanent advice against bathing, Technically infeasible"
+parent-notation,notation,De_des_desc,comment
+,CBO,De-listed access closed by private owner,
+,LOW,De-listed low usage for bathing,
+,PAAB,Permanent advice against bathing ,
+PAAB,PAAB-CP,"Permanent advice against bathing, Classified poor ",Permanent advice against bathing is in place at this water. It is no longer designated as a bathing water under the Bathing Water Regulations 2013 because the water has been classified as poor for five consecutive years.
+PAAB,PAAB-DEXP,"Permanent advice against bathing, Disproportionately expensive ","Permanent advice against bathing is in place at this water.
+It is no longer designated as a bathing water under the Bathing Water Regulations 2013 because the costs of meeting the minimum, legally required bathing water quality standard are disproportionately expensive."
+PAAB,PAAB-TI,"Permanent advice against bathing, Technically infeasible","Permanent advice against bathing is in place at this water. It is no longer designated as a bathing water under the Bathing Water Regulations 2013 because it is infeasible to meet the minimum, legally required bathing water quality standard at this location."

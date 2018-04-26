@@ -5,6 +5,7 @@ requiredColumns :
 - parent_notation
 - notation
 - de_des_desc
+- comment
 
 bind:
 - r_ddf    : "<def-ddr:{notation}>"
@@ -51,6 +52,7 @@ templates :
   "<rdfs:label>"          : "{de_des_desc}@en"
   "<skos:prefLabel>"      : "{de_des_desc}@en"
   "<skos:notation>"       : "{notation}"
+  "<rdfs:comment>"        : "{comment}@en"
   "<skos:broader>"        : "<{r_parent}>"
   "^<skos:narrower>"      : "<{r_parent}>"
   "<skos:topConceptOf>"   : "<{empty(r_parent) ? r_scheme : null}>"
